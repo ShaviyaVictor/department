@@ -1,8 +1,6 @@
 package com.shavic.department.controller;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 //  @Component --> is a stereotype annotation that defines SpringBoot classes as Components so that whenever the app runs the classes are added to the Spring container
 //  Controllers however are not just any class, they are an app resource given they are the Presentational layer of the app container the apps CRUD operations defined here in
@@ -12,11 +10,19 @@ import org.springframework.web.bind.annotation.RestController;
 //  @RequestMapping --> maps requests from the client to the method annotated and can have params, such as,
 //                      value - that assigns the endpoint url path and,
 //                      method - defines the CRUD operation request from the client
+//                  To avoid being verbose; @RequestMapping has some other more specific annotations:
+//                  @GetMapping - for GET method and then you just define the endpoint path
+//                  @PostMapping - for POST method
+//                  @DeleteMapping - for DELETE method
+
+
+
 
 @RestController
 public class HelloController {
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+//    @RequestMapping(value = "/", method = RequestMethod.GET)
+    @GetMapping("/")
     public String helloWorld() {
         return "Hello World Java!";
     }
