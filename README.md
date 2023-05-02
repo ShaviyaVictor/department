@@ -57,17 +57,11 @@ Implementing Complete registration and Login flow with Email validation
 
 This project is licensed under the [Apache License 2.0](https://github.com/ShaviyaVictor/custom_setup_template/blob/main/LICENSE).
 
-## Resources
-- [Spring Guides: Caching Data with Spring](https://spring.io/guides/gs/caching/#scratch)
-- [YouTube](https://www.youtube.com/watch?v=zvR-Oif_nxg&t=7665s)
+## Resources && Acknowledgments
 - [Spring Initializr](https://start.spring.io/#!type=maven-project&language=java&platformVersion=3.0.6&packaging=jar&jvmVersion=17&groupId=com.shavic&artifactId=department&name=department&description=Spring%20Boot%20Department%20RESTful%20API%20project%20geared%20towards%20learning%20Spring%20Boot%20and%20its%20convention...&packageName=com.shavic.department&dependencies=web,h2)
+- [@daily_code_buffer](https://www.youtube.com/watch?v=zvR-Oif_nxg&t=7665s)
+- [@shaviyavictor](https://www.youtube.com/watch?v=xz_7l0qyVrw)
 
-## Acknowledgments
-
-* @shaviyavictor
-* @daily_code_buffer
-
-### Author
 
 * **Victor Shaviya**
     - [BioLink](https://bio.link/shaviya)

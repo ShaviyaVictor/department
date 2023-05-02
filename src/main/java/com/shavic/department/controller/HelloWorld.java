@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.*;
 
 
 @RestController
-public class HelloController {
+public class HelloWorld {
 
 //    @RequestMapping(value = "/", method = RequestMethod.GET)
     @GetMapping("/")
