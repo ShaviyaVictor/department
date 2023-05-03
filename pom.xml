@@ -54,3 +54,13 @@
 	</build>
 
 </project>
+
+<!--IntelliJ IDEA keyboard shortcuts-->
+<!--
+
+Ctrl + Shift + F 	=== to search for files
+Ctrl + Shift + A 	=== to search globally
+Ctrl + D 	=== to duplicate a line
+Ctrl + Alt + O 	 === to remove all unused imports from a file
+
+-->
