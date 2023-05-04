@@ -30,5 +30,21 @@ public class HelloWorld {
 
 
 
-
+//    Web Development architectural structure:
+//    1. The Front End technologies will consume the API's to communicate with the DB
+//    2. Then the Back End responsible for providing the API's
+//         Spring Boot's REST API architecture:
+//             1. Controller Layer      ===> this is the Presentational layer
+//                                      ===> it basically handles the client requests and gives back responses through the CRUD; POST, GET, UPDATE, DELETE operations
+//                                      ===> this is a Class
+//             2. Service Layer     ===> this is the Business logic layer
+//                                  ===> it contains the logic for our API's
+//                                  ===> it basically implements the Repository/DAO layer to provide logic for how and what to do with the Data contained in the DataBase
+//                                  ===> this is a Class
+//             3. Data Access Object(DAO)       ===> this is the Repository layer or the Repository layer
+//                                              ===> it is the Data Access Layer of our API since it is the layer that interacts with the DataBase
+//                                              ===> this interface and allows us to work with the Spring Data JPA to work on our Entity
+//             4. DataBase      ===> whwre our Data is stored
+//                              ===> Spring Boot offers H2 in-memory DB which can later be switched to a real DB such as PostgreSQL or mySQL or MSSQL
+//                              ===> Spring Boot provides us with a browser-based console that helps us interact with our H2 in-memory DB
 
