@@ -41,7 +41,7 @@ public class HelloWorld {
 //                                  ===> it contains the logic for our API's
 //                                  ===> it basically implements the Repository/DAO layer to provide logic for how and what to do with the Data contained in the DataBase
 //                                  ===> this is a Class
-//             3. Data Access Object(DAO)       ===> this is the Repository layer or the Repository layer
+//             3. Data Access Object(DAO)       ===> this is the Repository layer or the Repository layer or the Persistence layer
 //                                              ===> it is the Data Access Layer of our API since it is the layer that interacts with the DataBase
 //                                              ===> this interface and allows us to work with the Spring Data JPA to work on our Entity
 //             4. DataBase      ===> whwre our Data is stored
