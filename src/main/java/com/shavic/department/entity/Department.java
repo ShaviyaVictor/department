@@ -1,5 +1,8 @@
 package com.shavic.department.entity;
 
+import jakarta.persistence.Entity;
+
+@Entity
 public class Department {
 
 //    Entity properties
@@ -63,4 +66,5 @@ public class Department {
                 ", departmentRole='" + departmentRole + '\'' +
                 '}';
     }
+
 }
