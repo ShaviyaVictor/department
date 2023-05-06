@@ -2,6 +2,7 @@ package com.shavic.department.entity;
 
 public class Department {
 
+//    Entity properties
     private Long departmentId;
     private String departmentName;
     private String departmentHead;
@@ -11,6 +12,7 @@ public class Department {
         return departmentId;
     }
 
+//    Getters and Setters for the properties
     public void setDepartmentId(Long departmentId) {
         this.departmentId = departmentId;
     }
@@ -36,6 +38,14 @@ public class Department {
     }
 
     public void setDepartmentRole(String departmentRole) {
+        this.departmentRole = departmentRole;
+    }
+
+//    constructors for the Entity properties
+    public Department(Long departmentId, String departmentName, String departmentHead, String departmentRole) {
+        this.departmentId = departmentId;
+        this.departmentName = departmentName;
+        this.departmentHead = departmentHead;
         this.departmentRole = departmentRole;
     }
 }
