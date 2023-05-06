@@ -48,4 +48,19 @@ public class Department {
         this.departmentHead = departmentHead;
         this.departmentRole = departmentRole;
     }
+
+//    default constructor
+    public Department() {
+    }
+
+//    call toString() method for the properties
+    @Override
+    public String toString() {
+        return "Department{" +
+                "departmentId=" + departmentId +
+                ", departmentName='" + departmentName + '\'' +
+                ", departmentHead='" + departmentHead + '\'' +
+                ", departmentRole='" + departmentRole + '\'' +
+                '}';
+    }
 }
