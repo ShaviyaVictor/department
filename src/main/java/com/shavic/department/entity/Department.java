@@ -16,11 +16,11 @@ public class Department {
     private String departmentHead;
     private String departmentRole;
 
+    //    Getters and Setters for the properties
     public Long getDepartmentId() {
         return departmentId;
     }
 
-//    Getters and Setters for the properties
     public void setDepartmentId(Long departmentId) {
         this.departmentId = departmentId;
     }

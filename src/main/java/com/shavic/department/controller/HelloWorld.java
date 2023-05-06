@@ -57,5 +57,5 @@ public class HelloWorld {
 //    The Entity contains: * properties defining our table columns
 //                          * Getters and Setters
 //                          * main Constructor and a default Constructor
-//                          * toString() method to call the properties for printing
+//                          * toString() method to call the properties for printing on the console
 //                          * @Entity annotation
