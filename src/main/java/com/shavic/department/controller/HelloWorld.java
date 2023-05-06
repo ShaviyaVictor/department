@@ -15,6 +15,10 @@ import org.springframework.web.bind.annotation.*;
 //                  @PostMapping - for POST method
 //                  @DeleteMapping - for DELETE method
 
+//    Entity
+//  @Entity --> is a persistence API interface that enables our Entity to interact with the DB
+//  @Id --> place don top of the property that is to be used as the Primary key
+//  @GeneratedValue --> contains a strategy as a parameter defining how the primary key should be generated
 
 
 @RestController
@@ -48,3 +52,10 @@ public class HelloWorld {
 //                              ===> Spring Boot offers H2 in-memory DB which can later be switched to a real DB such as PostgreSQL or mySQL or MSSQL
 //                              ===> Spring Boot provides us with a browser-based console that helps us interact with our H2 in-memory DB
 
+//  Entity
+//    A deafult Model can be equatted to an Entity in Spring Boot
+//    The Entity contains: * properties defining our table columns
+//                          * Getters and Setters
+//                          * main Constructor and a default Constructor
+//                          * toString() method to call the properties for printing
+//                          * @Entity annotation
