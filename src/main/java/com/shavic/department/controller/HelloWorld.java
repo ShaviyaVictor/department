@@ -27,11 +27,8 @@ import org.springframework.web.bind.annotation.*;
 
 //    Repository
 //  @Repository --> stereotype annotation for the Persistence layer; the Data Access Object
-//  The Repository Class must have the @Repository annotation.
-//  JpaRepository will be extended for this project which will take in 2 properties;
-//      1st one will be the Entity that'll enables us connect to the DB, then the
-//      2nd one will be the Type for the Entity Property being used as the Primary Key
-//  JpaRepository gives us a lot of methods that we can use directly for interacting our Entity with the DB
+
+//  @RequestBody --> annotation that tells Spring Boot to get whwtever JSON Data it is getting and convert it into the declared Object
 
 
 
@@ -84,6 +81,13 @@ public class HelloWorld {
 //    Thus the Interface in the Service package and then create the Impl package that'll contain the Impl Classes for the Interfaces.
 //    This Interface doesn't have to have the @Interface annotation, but the ServiceImpl Class must have the @Service annotation
 
+
+//    Repository
+//  The Repository Class must have the @Repository annotation.
+//  JpaRepository will be extended for this project which will take in 2 properties;
+//      1st one will be the Entity that'll enables us connect to the DB, then the
+//      2nd one will be the Type for the Entity Property being used as the Primary Key
+//  JpaRepository gives us a lot of methods that we can use directly for interacting our Entity with the DB
 
 
 
