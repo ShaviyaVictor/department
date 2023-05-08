@@ -2,7 +2,9 @@ package com.shavic.department.controller;
 
 import org.springframework.web.bind.annotation.*;
 
-//  @Component --> is a stereotype annotation that defines SpringBoot classes as Components so that whenever the app runs the classes are added to the Spring container
+//  @Component --> is a generic stereotype annotation that defines SpringBoot classes as Components so that whenever the app runs the classes are added to the Spring container
+//  @Controller, @Service and @Repository annotations are specializations of @Component annotation.
+//  Check here:--> https://stackoverflow.com/questions/6827752/whats-the-difference-between-component-repository-service-annotations-in
 //  Controllers however are not just any class, they are an app resource given they are the Presentational layer of the app container having the app's CRUD operations defined here in
 //  @Controller --> a stereotype annotation that clearly defines a class as both a Controller given it has the @Component annotation in it and the Controller as the name suggests
 //  @RestController --> defines a class as a Component since it contains the @Controller annotation within it which has @Component within it thus also defining the class as a Controller;
@@ -19,6 +21,18 @@ import org.springframework.web.bind.annotation.*;
 //  @Entity --> is a persistence API interface that enables our Entity to interact with the DB
 //  @Id --> place don top of the property that is to be used as the Primary key
 //  @GeneratedValue --> contains a strategy as a parameter defining how the primary key should be generated
+
+//    Service
+//  @Service --> stereotype annotation for the Service/Business layer
+
+//    Repository
+//  @Repository --> stereotype annotation for the Persistence layer; the Data Access Object
+//  The Repository Class must have the @Repository annotation.
+//  JpaRepository will be extended for this project which will take in 2 properties;
+//      1st one will be the Entity that'll enables us connect to the DB, then the
+//      2nd one will be the Type for the Entity Property being used as the Primary Key
+//  JpaRepository gives us a lot of methods that we can use directly for interacting our Entity with the DB
+
 
 
 @RestController
@@ -59,3 +73,18 @@ public class HelloWorld {
 //                          * main Constructor and a default Constructor
 //                          * toString() method to call the properties for printing on the console
 //                          * @Entity annotation
+
+//  Controller
+//    Create the EntityController Class where the RESTful API's will be created';
+//    and annotate it with the @RestController annotation
+
+//  Service
+//    The convention is Creating an Interface for our service and then create the Class Implementing the service;
+//    given a Service can have several Implementations - thus create an Interface then create the class implementing that Service Interface
+//    Thus the Interface in the Service package and then create the Impl package that'll contain the Impl Classes for the Interfaces.
+//    This Interface doesn't have to have the @Interface annotation, but the ServiceImpl Class must have the @Service annotation
+
+
+
+
+
