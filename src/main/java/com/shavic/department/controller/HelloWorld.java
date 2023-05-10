@@ -2,6 +2,7 @@ package com.shavic.department.controller;
 
 import org.springframework.web.bind.annotation.*;
 
+//    Controller
 //  @Component --> is a generic stereotype annotation that defines SpringBoot classes as Components so that whenever the app runs the classes are added to the Spring container
 //  @Controller, @Service and @Repository annotations are specializations of @Component annotation.
 //  Check here:--> https://stackoverflow.com/questions/6827752/whats-the-difference-between-component-repository-service-annotations-in
@@ -17,18 +18,25 @@ import org.springframework.web.bind.annotation.*;
 //                  @PostMapping - for POST method
 //                  @DeleteMapping - for DELETE method
 
+//  @RequestBody --> annotation that tells Spring Boot to get whwtever JSON Data it is getting and convert it into the declared Object
+
+
 //    Entity
 //  @Entity --> is a persistence API interface that enables our Entity to interact with the DB
 //  @Id --> place don top of the property that is to be used as the Primary key
 //  @GeneratedValue --> contains a strategy as a parameter defining how the primary key should be generated
 
+
 //    Service
 //  @Service --> stereotype annotation for the Service/Business layer
+
 
 //    Repository
 //  @Repository --> stereotype annotation for the Persistence layer; the Data Access Object
 
-//  @RequestBody --> annotation that tells Spring Boot to get whwtever JSON Data it is getting and convert it into the declared Object
+
+//  @Autowired --> annotation that tells Spring Boot to Autowire the defined Object and create it and attach it to the particular reference created
+//              hence allowing the use of Dependency Injection and Inversion Control of Spring's functionality feature
 
 
 
@@ -74,6 +82,7 @@ public class HelloWorld {
 //  Controller
 //    Create the EntityController Class where the RESTful API's will be created';
 //    and annotate it with the @RestController annotation
+//    After creating the Controller, you call the Service Layer which will pass the logic to the DAO
 
 //  Service
 //    The convention is Creating an Interface for our service and then create the Class Implementing the service;
