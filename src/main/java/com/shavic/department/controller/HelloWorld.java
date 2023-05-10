@@ -54,25 +54,25 @@ public class HelloWorld {
 
 
 //    Web Development architectural structure:
-//    1. The Front End technologies will consume the API's to communicate with the DB
-//    2. Then the Back End responsible for providing the API's
+//    1. The Front End technologies will consume the APIs to communicate with the DB
+//    2. Then the Back End responsible for providing the APIs
 //         Spring Boot's REST API architecture:
 //             1. Controller Layer      ===> this is the Presentational layer
 //                                      ===> it basically handles the client requests and gives back responses through the CRUD; POST, GET, UPDATE, DELETE operations
 //                                      ===> this is a Class
 //             2. Service Layer     ===> this is the Business logic layer
-//                                  ===> it contains the logic for our API's
+//                                  ===> it contains the logic for our APIs
 //                                  ===> it basically implements the Repository/DAO layer to provide logic for how and what to do with the Data contained in the DataBase
 //                                  ===> this is a Class
 //             3. Data Access Object(DAO)       ===> this is the Repository layer or the Repository layer or the Persistence layer
 //                                              ===> it is the Data Access Layer of our API since it is the layer that interacts with the DataBase
 //                                              ===> this interface and allows us to work with the Spring Data JPA to work on our Entity
-//             4. DataBase      ===> whwre our Data is stored
+//             4. DataBase      ===> where our Data is stored
 //                              ===> Spring Boot offers H2 in-memory DB which can later be switched to a real DB such as PostgreSQL or mySQL or MSSQL
 //                              ===> Spring Boot provides us with a browser-based console that helps us interact with our H2 in-memory DB
 
 //  Entity
-//    A deafult Model can be equatted to an Entity in Spring Boot
+//    A default Model can be equated to an Entity in Spring Boot
 //    The Entity contains: * properties defining our table columns
 //                          * Getters and Setters
 //                          * main Constructor and a default Constructor
@@ -80,7 +80,7 @@ public class HelloWorld {
 //                          * @Entity annotation
 
 //  Controller
-//    Create the EntityController Class where the RESTful API's will be created';
+//    Create the EntityController Class where the RESTful APIs will be created';
 //    and annotate it with the @RestController annotation
 //    After creating the Controller, you call the Service Layer which will pass the logic to the DAO
 
@@ -94,10 +94,21 @@ public class HelloWorld {
 //    Repository
 //  The Repository Class must have the @Repository annotation.
 //  JpaRepository will be extended for this project which will take in 2 properties;
-//      1st one will be the Entity that'll enables us connect to the DB, then the
+//      1st one will be the Entity that'll enable us connect to the DB, then the
 //      2nd one will be the Type for the Entity Property being used as the Primary Key
 //  JpaRepository gives us a lot of methods that we can use directly for interacting our Entity with the DB
 
 
+
+//    Design Flow for the saveDepartment POST API call
+//    Controller Layer Flow
+//  Create the saveDepartment method with the @RequestBody annotation referencing to the Created Entity;
+//  In the same Controller, Inject the Service Layer Impl class that communicates with the DAO;
+//  Then return the newly created ServiceImpl Class calling the saveDepartment method which takes in the Class-level created Entity.
+//    Service Layer Flow
+//  Create saveDepartment method in the Service Layer Interface which will be implemented in the ServiceImpl Class;
+//  In the ServiceImpl Class, create the same saveDepartment method that takes in the Department Entity, and it will be an @Override annotated method;
+//  Then Autowire the Repository Class which will connect us to the DB and allow us to use JPA methods;
+//  Then return the newly created/referenced Repository class calling JPA save methods that takes in the class-referenced department Entity.
 
 
