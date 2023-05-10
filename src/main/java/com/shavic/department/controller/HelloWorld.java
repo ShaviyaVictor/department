@@ -94,7 +94,7 @@ public class HelloWorld {
 //    Repository
 //  The Repository Class must have the @Repository annotation.
 //  JpaRepository will be extended for this project which will take in 2 properties;
-//      1st one will be the Entity that'll enable us connect to the DB, then the
+//      1st one will be the Entity defining our DB Properties, then the
 //      2nd one will be the Type for the Entity Property being used as the Primary Key
 //  JpaRepository gives us a lot of methods that we can use directly for interacting our Entity with the DB
 
