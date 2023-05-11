@@ -23,8 +23,10 @@ import org.springframework.web.bind.annotation.*;
 
 //    Entity
 //  @Entity --> is a persistence API interface that enables our Entity to interact with the DB
-//  @Id --> place don top of the property that is to be used as the Primary key
-//  @GeneratedValue --> contains a strategy as a parameter defining how the primary key should be generated
+//  @Id --> annotation that indicates the member field below is the primary key of current entity, inherited from javax.persistence.Id，
+//      --> placed on top of the property that is to be used as the Primary key
+//  @GeneratedValue --> annotation that configures the way of increment of the specified column(field).
+//                  --> contains a strategy as a parameter defining how the primary key should be generated
 
 
 //    Service
