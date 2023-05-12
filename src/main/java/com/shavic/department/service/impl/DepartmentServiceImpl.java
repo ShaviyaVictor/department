@@ -20,7 +20,7 @@ public class DepartmentServiceImpl implements DepartmentService {
 
     @Override
     public List<Department> fetchDepartmentList() {
-        return null;
+        return departmentRepository.findAll();
     }
 
 }
