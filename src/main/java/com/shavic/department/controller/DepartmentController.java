@@ -2,7 +2,6 @@ package com.shavic.department.controller;
 
 import com.shavic.department.entity.Department;
 import com.shavic.department.service.DepartmentService;
-import com.shavic.department.service.impl.DepartmentServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;

@@ -105,12 +105,32 @@ public class HelloWorld {
 //    Design Flow for the saveDepartment POST API call
 //    Controller Layer Flow
 //  Create the saveDepartment method with the @RequestBody annotation referencing to the Created Entity;
+//  @PostMapping() annotation is used with the path parameter defined inside the parenthesis
 //  In the same Controller, Inject the Service Layer Impl class that communicates with the DAO;
 //  Then return the newly created ServiceImpl Class calling the saveDepartment method which takes in the Class-level created Entity.
 //    Service Layer Flow
 //  Create saveDepartment method in the Service Layer Interface which will be implemented in the ServiceImpl Class;
-//  In the ServiceImpl Class, create the same saveDepartment method that takes in the Department Entity, and it will be an @Override annotated method;
+//  In the ServiceImpl Class, create the same saveDepartment method that takes in the Department Entity,
+//  and it will be an @Override annotated method;
 //  Then Autowire the Repository Class which will connect us to the DB and allow us to use JPA methods;
 //  Then return the newly created/referenced Repository class calling JPA save methods that takes in the class-referenced department Entity.
+
+
+
+//    Design Flow for the fetchDepartment GET API call
+//    Controller Layer Flow
+//  Create the fetchDepartment method which fetches the Data available in the Entity as a List<> that takes in the Department Entity;
+//  @GetMapping() annotation is used with the path parameter defined inside the parenthesis
+//  fetchDepartment() will not take in any input since we are fetching Data from the Entity
+//  The Service Layer Impl class that communicates with the DAO is already injected;
+//  Then return the newly created ServiceImpl Class calling the fetchDepartment method which does not take in any input.
+//    Service Layer Flow
+//  Create fetchDepartment method in the Service Layer Interface which will be implemented in the ServiceImpl Class;
+//  In the ServiceImpl Class, create the same fetchDepartment method which fetches the Data available in the Entity as a List<> that takes in the Department Entity,
+//  and it will be an @Override annotated method;
+//  The Repository Class is already Autowired to connect us to the DB and allow us to use JPA methods;
+//  Then return the newly created/referenced Repository class calling JPA findAll method that does not take in any input since we are fetching Data.
+
+
 
 
