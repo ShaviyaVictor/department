@@ -133,4 +133,20 @@ public class HelloWorld {
 
 
 
+//    Design Flow for the fetchDepartment GET API call
+//    Controller Layer Flow
+//  Create the fetchDepartmentById method which will make the Request
+//  This method will take in the @GetMapping() ...
+//  which takes in the url path that ends with a pathVariable call for the particular Entity property needed @GetMapping("/departments/{id}"
+//  In our case we'll request for the data present in the specified Id declared in the URL path
+//  The method itself will not take in List but will Call the Department Entity since we just want a particular set of Data for the specified ID: public Department fetch...()
+//  The method now will Define the Entity being used as the Primary Key, which in this case is the ID: Long departmentId which will be taken in as an input
+//  Then before the Entity Definition in the method input, add the @PathVariable("id") annotation that takes in the value put in the @GetMapping pathVariable
+//      to enhance the communication and linkage of the pathVariable
+//  Then finally call the return method to return the Autowired Service Interface then calls the created method which takes in the Entity property call as an input
+//    Service Layer Flow
+//
+
+
+
 
