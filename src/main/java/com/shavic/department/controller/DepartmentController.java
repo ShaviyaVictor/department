@@ -30,5 +30,8 @@ public class DepartmentController {
         return departmentService.fetchDepartmentList();
     }
 
+    public Department fetchDepartmentById() {
+        return null;
+    }
 
 }
