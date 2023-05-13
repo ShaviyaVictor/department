@@ -41,6 +41,13 @@ import org.springframework.web.bind.annotation.*;
 //              hence allowing the use of Dependency Injection and Inversion Control of Spring's functionality feature
 
 
+//      https://stackoverflow.com/questions/13715811/requestparam-vs-pathvariable
+//  @PathVariable --> annotation used to identify the patter that is used in the URI for the incoming request
+//                 --> annotation used to obtain some placeholder from the URI
+//  @RequestParam --> annotation used for accessing the query parameter values from the request
+//                 --> annotation used to obtain a parameter from the URI
+
+
 
 @RestController
 public class HelloWorld {
