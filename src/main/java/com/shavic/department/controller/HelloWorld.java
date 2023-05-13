@@ -152,7 +152,10 @@ public class HelloWorld {
 //      to enhance the communication and linkage of the pathVariable
 //  Then finally call the return method to return the Autowired Service Interface then calls the created method which takes in the Entity property call as an input
 //    Service Layer Flow
-//
+//  Then create the method in the ServiceInterface which takes in the defined Entity property
+//  Again create the method in the ServiceImpl class to implement the GetMethod request coming from the Presentational layer
+//  Here in the ServiceImpl class, the return method call the DAO method that has been Autowired which then shall call in a JPA method findById() and takes in the defined Entity property
+//  Then the get() method is called: findById(departmentId).get()
 
 
 
