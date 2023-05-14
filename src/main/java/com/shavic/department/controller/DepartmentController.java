@@ -13,6 +13,7 @@ public class DepartmentController {
     @Autowired
     private DepartmentService departmentService;
 
+//    Post all departments
     @PostMapping("/add/department")
     public Department saveDepartment(@RequestBody Department department) {
 //        1st way of creating the service object
@@ -22,11 +23,13 @@ public class DepartmentController {
         return departmentService.saveDepartment(department);
     }
 
+//    Get all departments
     @GetMapping("/departments")
     public List<Department> fetchDepartmentList() {
         return departmentService.fetchDepartmentList();
     }
 
+//    Get department by Id
     @GetMapping("/departments/{id}")
     public Department fetchDepartmentById(@PathVariable("id") Long departmentId) {
         return departmentService.fetchDepartmentById(departmentId);
