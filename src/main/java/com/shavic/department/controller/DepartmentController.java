@@ -13,7 +13,7 @@ public class DepartmentController {
     @Autowired
     private DepartmentService departmentService;
 
-//    Post all departments
+//    Post to Department Table Entity
     @PostMapping("/add/department")
     public Department saveDepartment(@RequestBody Department department) {
 //        1st way of creating the service object
