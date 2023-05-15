@@ -110,12 +110,12 @@ public class HelloWorld {
 
 
 //    Design Flow for the saveDepartment POST API call
-//    Controller Layer Flow
+//    ***   Controller Layer Flow
 //  Create the saveDepartment method with the @RequestBody annotation referencing to the Created Entity;
 //  @PostMapping() annotation is used with the path parameter defined inside the parenthesis
 //  In the same Controller, Inject the Service Layer Impl class that communicates with the DAO;
 //  Then return the newly created ServiceImpl Class calling the saveDepartment method which takes in the Class-level created Entity.
-//    Service Layer Flow
+//    ***   Service Layer Flow
 //  Create saveDepartment method in the Service Layer Interface which will be implemented in the ServiceImpl Class;
 //  In the ServiceImpl Class, create the same saveDepartment method that takes in the Department Entity,
 //  and it will be an @Override annotated method;
@@ -124,14 +124,14 @@ public class HelloWorld {
 
 
 
-//    Design Flow for the fetchDepartment GET API call
-//    Controller Layer Flow
+//    Design Flow for the fetchDepartment GET All Items API call
+//    ***   Controller Layer Flow
 //  Create the fetchDepartment method which fetches the Data available in the Entity as a List<> that takes in the Department Entity;
 //  @GetMapping() annotation is used with the path parameter defined inside the parenthesis
 //  fetchDepartment() will not take in any input since we are fetching Data from the Entity
 //  The Service Layer Impl class that communicates with the DAO is already injected;
 //  Then return the newly created ServiceImpl Class calling the fetchDepartment method which does not take in any input.
-//    Service Layer Flow
+//    ***   Service Layer Flow
 //  Create fetchDepartment method in the Service Layer Interface which will be implemented in the ServiceImpl Class;
 //  In the ServiceImpl Class, create the same fetchDepartment method which fetches the Data available in the Entity as a List<> that takes in the Department Entity,
 //  and it will be an @Override annotated method;
@@ -141,7 +141,7 @@ public class HelloWorld {
 
 
 //    Design Flow for the fetchDepartment GET By ID API call
-//    Controller Layer Flow
+//    ***   Controller Layer Flow
 //  Create the fetchDepartmentById method which will make the Request
 //  This method will take in the @GetMapping() ...
 //      which takes in the url path that ends with a pathVariable call for the particular Entity property needed; @GetMapping("/departments/{id}"
@@ -151,12 +151,29 @@ public class HelloWorld {
 //  Then before the Entity Definition in the method input, add the @PathVariable("id") annotation that takes in the value put in the @GetMapping pathVariable
 //      to enable the communication and linkage of the Variable defined in the path
 //  Then finally call the return method to return the Autowired Service Interface then calls the created method which takes in the Entity property call as an input
-//    Service Layer Flow
+//    ***   Service Layer Flow
 //  Then create the method in the ServiceInterface which takes in the defined Entity property
 //  Again create the method in the ServiceImpl class to implement the GetMethod request coming from the Presentational layer
 //  Here in the ServiceImpl class, the return method calls the DAO method that has been Autowired
 //      which then calls the JPA method findById() and takes in the defined Entity property
 //  Then the get() method is called: findById(departmentId).get()
+
+
+
+//    Design Flow for the deleteById DELETE By ID API call
+//    ***   Controller Layer Flow
+//  Create the deleteById() method/function which is to make the API request
+//  This method is to take the @DeleteMapping() annotation ...
+//      which takes in the basic same URL path just as the GetById URL path which ends with a pathVariable call for the particular Entity property needed; @DeleteMapping("/departments/{id}"
+//  In this case the data that will be deleted will be the data present in the specified Id declared in the URL path
+//  The itself won't have the DAO defined on it since we are not returning an Object after the call but instead we'll be deleting an Object after the request is actioned
+//  The method in this case will have a String definition which will help us define the message to be printed for us once the API request has been actioned successfully;
+//  The method then will take in the @PathVariable() annotation that takes in the value defined in the Mapping annotation
+//      and after the PathVariable definition the Entity defined as the Primary Key is defined with its Type
+//  Then call the Service Interface that was Autowired which then calls the just created method taking in the Entity property as an input: departmentService.deleteById(departmentId)
+//  Then return a String statement that will be printed on the REST client(Postman) after a successful actioning of the API call
+//    ***   Service Layer Flow
+//  Then create the
 
 
 
