@@ -165,8 +165,8 @@ public class HelloWorld {
 //  Create the deleteById() method/function which is to make the API request
 //  This method is to take the @DeleteMapping() annotation ...
 //      which takes in the basic same URL path just as the GetById URL path which ends with a pathVariable call for the particular Entity property needed; @DeleteMapping("/departments/{id}"
-//  In this case the data that will be deleted will be the data present in the specified Id declared in the URL path
-//  The itself won't have the DAO defined on it since we are not returning an Object after the call but instead we'll be deleting an Object after the request is actioned
+//  In this case, the data that will be deleted will be the data present in the specified Id declared in the URL path
+//  The method creation itself won't have the DAO defined on it since we are not returning an Object after the call but instead we'll be deleting an Object after the request is actioned
 //  The method in this case will have a String definition which will help us define the message to be printed for us once the API request has been actioned successfully;
 //  The method then will take in the @PathVariable() annotation that takes in the value defined in the Mapping annotation
 //      and after the PathVariable definition the Entity defined as the Primary Key is defined with its Type
@@ -178,6 +178,23 @@ public class HelloWorld {
 //  This will be an @Override method that will be public and void meaning it won't return any value after it's actioning and;
 //      thus the request actioning shall be to call our DAO, departmentRepository that will call a JPA method deleteById(departmentId) which takes in the Entity property definition
 
+
+
+//    Design Flow for the updateDepartment UPDATE By ID API call
+//    ***   Controller Layer Flow
+//  Create the updateDepartment method which is to make the API request
+//  This method is to take the @PutMapping annotation ...
+//      which is to take in the URL path with the {id} path variable for updating the particular declared Id
+//  Thus, in this case, the data that will be updated will be the data present in the specified Id declared in the URL path
+//  This method creation will have the Department Entity declaration since some data will be outputted after an update is made to the specified Entity by Id;
+//      then the method updateDepartment() will take in 2 input parameters;
+//          the @PathVariable("Id") which links the declared Id in the URL path and also defines the Primary Key to which to check for updating
+//          then @RequestBody annotation which defines the Entity Body to which the changes are to be matched against and updated
+//          Thus updateDepartment(@PathVariable("id") Long departmentId,
+//                                  @RequestBody Department department)
+//  Then the method will return the Service Interface calling the method which takes in both the Defined Primary Key Entity Property as well as the department Entity Object
+//    ***   Service Layer Flow
+//  Then create the method call in the Service Interface for implementation
 
 
 
