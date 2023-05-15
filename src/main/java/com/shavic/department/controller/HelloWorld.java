@@ -173,7 +173,10 @@ public class HelloWorld {
 //  Then call the Service Interface that was Autowired which then calls the just created method taking in the Entity property as an input: departmentService.deleteById(departmentId)
 //  Then return a String statement that will be printed on the REST client(Postman) after a successful actioning of the API call
 //    ***   Service Layer Flow
-//  Then create the
+//  Then create a Void method in the Service Interface with the deleteById() that takes in the Entity property type and definition
+//  Then create another method in the ServiceImpl class that implements the void method created in the Interface;
+//  This will be an @Override method that will be public and void meaning it won't return any value after it's actioning and;
+//      thus the request actioning shall be to call our DAO, departmentRepository that will call a JPA method deleteById(departmentId) which takes in the Entity property definition
 
 
 
