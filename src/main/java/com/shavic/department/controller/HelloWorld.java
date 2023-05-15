@@ -42,9 +42,9 @@ import org.springframework.web.bind.annotation.*;
 
 
 //      https://stackoverflow.com/questions/13715811/requestparam-vs-pathvariable
-//  @PathVariable --> annotation used to identify the patter that is used in the URI for the incoming request
+//  @PathVariable() --> annotation used to identify the patter that is used in the URI for the incoming request
 //                 --> annotation used to obtain some placeholder from the URI
-//  @RequestParam --> annotation used for accessing the query parameter values from the request
+//  @RequestParam() --> annotation used for accessing the query parameter values from the request
 //                 --> annotation used to obtain a parameter from the URI
 
 
@@ -140,21 +140,22 @@ public class HelloWorld {
 
 
 
-//    Design Flow for the fetchDepartment GET API call
+//    Design Flow for the fetchDepartment GET By ID API call
 //    Controller Layer Flow
 //  Create the fetchDepartmentById method which will make the Request
 //  This method will take in the @GetMapping() ...
-//  which takes in the url path that ends with a pathVariable call for the particular Entity property needed @GetMapping("/departments/{id}"
+//      which takes in the url path that ends with a pathVariable call for the particular Entity property needed; @GetMapping("/departments/{id}"
 //  In our case we'll request for the data present in the specified Id declared in the URL path
 //  The method itself will not take in List but will Call the Department Entity since we just want a particular set of Data for the specified ID: public Department fetch...()
 //  The method now will Define the Entity being used as the Primary Key, which in this case is the ID: Long departmentId which will be taken in as an input
 //  Then before the Entity Definition in the method input, add the @PathVariable("id") annotation that takes in the value put in the @GetMapping pathVariable
-//      to enhance the communication and linkage of the pathVariable
+//      to enable the communication and linkage of the Variable defined in the path
 //  Then finally call the return method to return the Autowired Service Interface then calls the created method which takes in the Entity property call as an input
 //    Service Layer Flow
 //  Then create the method in the ServiceInterface which takes in the defined Entity property
 //  Again create the method in the ServiceImpl class to implement the GetMethod request coming from the Presentational layer
-//  Here in the ServiceImpl class, the return method call the DAO method that has been Autowired which then shall call in a JPA method findById() and takes in the defined Entity property
+//  Here in the ServiceImpl class, the return method calls the DAO method that has been Autowired
+//      which then calls the JPA method findById() and takes in the defined Entity property
 //  Then the get() method is called: findById(departmentId).get()
 
 
