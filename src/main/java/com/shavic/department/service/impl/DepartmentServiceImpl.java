@@ -54,7 +54,7 @@ public class DepartmentServiceImpl implements DepartmentService {
             departmentObject.setDepartmentRole(department.getDepartmentRole());
         }
 
-        return null;
+        return departmentRepository.save(departmentObject);
 
     }
 
