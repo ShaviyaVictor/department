@@ -12,8 +12,11 @@ import java.util.Objects;
 @Service
 public class DepartmentServiceImpl implements DepartmentService {
 
+//    there isn't a difference from my tests so far btwn having plainly calling the Autowired class,
+//    and calling it as a private class like we did in the Controller layer
     @Autowired
     DepartmentRepository departmentRepository;
+
     @Override
     public Department saveDepartment(Department department) {
         return departmentRepository.save(department);

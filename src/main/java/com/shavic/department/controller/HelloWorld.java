@@ -195,7 +195,7 @@ public class HelloWorld {
 //  Then the method will return the Service Interface calling the method which takes in both the Defined Primary Key Entity Property as well as the department Entity Object
 //    ***   Service Layer Flow
 //  Then create the method call in the Service Interface for implementation
-//  The ServiceImpl Class shall include a logic to check if the Entity Properties are either NotNull or not blank and the casing is the same, nothing unchanged,
+//  The ServiceImpl Class in implementing the Service Interface shall include a logic to check if the Entity Properties are either NotNull or not blank and the casing is the same, nothing unchanged,
 //      if this check passes, then that particular Property is skipped without being changed thus retaining it's initial value;
 //      but if either of the checks is not passed, then the newly detected value is set on the particular Entity Property for the defined id
 
