@@ -124,7 +124,7 @@ public class HelloWorld {
 
 
 
-//    Design Flow for the fetchDepartment GET All Items API call
+//    Design Flow for the fetchDepartment GET All Departments API call
 //    ***   Controller Layer Flow
 //  Create the fetchDepartment method which fetches the Data available in the Entity as a List<> that takes in the Department Entity;
 //  @GetMapping() annotation is used with the path parameter defined inside the parenthesis
@@ -148,9 +148,9 @@ public class HelloWorld {
 //  In our case we'll request for the data present in the specified Id declared in the URL path
 //  The method itself will not take in List but will Call the Department Entity since we just want a particular set of Data for the specified ID: public Department fetch...()
 //  The method now will Define the Entity being used as the Primary Key, which in this case is the ID: Long departmentId which will be taken in as an input
-//  Then before the Entity Definition in the method input, add the @PathVariable("id") annotation that takes in the value put in the @GetMapping pathVariable
-//      to enable the communication and linkage of the Variable defined in the path
-//  Then finally call the return method to return the Autowired Service Interface then calls the created method which takes in the Entity property call as an input
+//  Then before the Entity Definition in the method input, add the @PathVariable("id") annotation that takes in the value put in the @GetMapping URL path
+//      to enable the communication and Binding/linkage of the Variable defined in the path as well as with the Entity Type and Identity defined as the method Input
+//  Then finally call the return method to return the Autowired Service Interface then calls the created method which takes in the Entity property Identity as an input
 //    ***   Service Layer Flow
 //  Then create the method in the ServiceInterface which takes in the defined Entity property
 //  Again create the method in the ServiceImpl class to implement the GetMethod request coming from the Presentational layer
@@ -201,3 +201,20 @@ public class HelloWorld {
 
 
 
+//    Design Flow for the fetchDepartment GET Department By Name API call
+//    ***   Controller Layer Flow
+//  Create the fetchDepartmentByName method which will make the Request
+//  This method will take in the @GetMapping() ...
+//      which takes in the url path that ends with a pathVariable call for the particular Entity property needed; @GetMapping("/departments/{name}"
+//  In our case we'll request for the data present with the specified name declared in the URL path
+//  The method itself will not take in List but will Call the Department Entity since we just want a particular set of Data for the specified name: public Department fetch...()
+//  The method now will Define the Entity being used as the Point of Reference for binding with the Entity Type and Identifier defined, which in this case is the name: String departmentName which will be taken in as an input
+//  Then before the Entity Definition in the method input, add the @PathVariable("name") annotation that takes in the value put in the @GetMapping URL path
+//      to enable the communication and Binding/linkage of the Variable defined in the path as well as with the Entity Type and Identity defined as the method Input
+//  Then finally call the return method to return the Autowired Service Interface then calls the created method which takes in the Entity property Identity as an input
+//    ***   Service Layer Flow
+//  Then create the method in the ServiceInterface which takes in the defined Entity property
+//  Again create the method in the ServiceImpl class to implement the GetMethod request coming from the Presentational layer
+//  Here in the ServiceImpl class, the return method calls the DAO method that has been Autowired
+//      which then calls the JPA method findById() and takes in the defined Entity property
+//  Then the get() method is called: findById(departmentId).get()
