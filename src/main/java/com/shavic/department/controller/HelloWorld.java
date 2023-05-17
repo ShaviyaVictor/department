@@ -220,4 +220,6 @@ public class HelloWorld {
 //      we custom create a fetchByDepartmentName() method in the DAO layer that the Service Impl Class will call
 //  The naming convention of fetchByDepartmentName() method is key in that it should match the Entity Property Identity that is to be called;
 //      and then take in the Entity Property Type and Identity as Input Parameters
-//  Then get back to the ServiceImpl Class and call the custom method created in the DAO through the Autowired DAO
+//  Then get back to the ServiceImpl Class and call the custom method created in the DAO through the Autowired DAO;
+//      ANd this time round we don't need to add the get() method after the call since we custom created the method ourselves and thus the DAO shall get the depertmentByName
+//      if tye naming convention is okay
