@@ -9,6 +9,6 @@ import org.springframework.stereotype.Repository;
 public interface DepartmentRepository extends JpaRepository<Department, Long> {
 
 //    Modifier 'public' is redundant for interface members hence no initializing the methods in Interfaces with public declaration
-    Department fetchByDepartmentName(String departmentName);
+    Department findByDepartmentName(String departmentName);
 
 }
