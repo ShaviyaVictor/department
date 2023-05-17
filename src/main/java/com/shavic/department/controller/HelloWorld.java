@@ -210,11 +210,14 @@ public class HelloWorld {
 //  The method itself will not take in List but will Call the Department Entity since we just want a particular set of Data for the specified name: public Department fetch...()
 //  The method now will Define the Entity being used as the Point of Reference for binding with the Entity Type and Identifier defined, which in this case is the name: String departmentName which will be taken in as an input
 //  Then before the Entity Definition in the method input, add the @PathVariable("name") annotation that takes in the value put in the @GetMapping URL path
-//      to enable the communication and Binding/linkage of the Variable defined in the path as well as with the Entity Type and Identity defined as the method Input
+//      to enable the communication and Binding/linkage of the Variable defined in the path as well as with the Entity Property Type and Identity defined as the method Input
 //  Then finally call the return method to return the Autowired Service Interface then calls the created method which takes in the Entity property Identity as an input
 //    ***   Service Layer Flow
 //  Then create the method in the ServiceInterface which takes in the defined Entity property
 //  Again create the method in the ServiceImpl class to implement the GetMethod request coming from the Presentational layer
 //  Here in the ServiceImpl class, the return method calls the DAO method that has been Autowired
-//      which then calls the JPA method findById() and takes in the defined Entity property
-//  Then the get() method is called: findById(departmentId).get()
+//      which then is to call a default JPA method findByName() and takes in the defined Entity property, but since the default method is not there,
+//      we custom create a fetchByDepartmentName() method in the DAO layer that the Service Impl Class will call
+//  The naming convention of fetchByDepartmentName() method is key in that it should match the Entity Property Identity that is to be called;
+//      and then take in the Entity Property Type and Identity as Input Parameters
+//  Then get back to the ServiceImpl Class and call the custom method created in the DAO through the Autowired DAO
