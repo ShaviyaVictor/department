@@ -30,7 +30,7 @@ public class DepartmentController {
     }
 
 //    Get department by Id
-    @GetMapping("/departments/{id}")
+    @GetMapping("/departmentById/{id}")
     public Department fetchDepartmentById(@PathVariable("id") Long departmentId) {
         return departmentService.fetchDepartmentById(departmentId);
     }
@@ -51,7 +51,9 @@ public class DepartmentController {
     }
 
 //    Get department by name
-    @GetMapping("/departments/{name}")
+//    Getting this error with current setup: https://stackoverflow.com/questions/35155916/handling-ambiguous-handler-methods-mapped-in-rest-application-with-spring
+//    Adding a difference in the path URL to avoid the ambiguity
+    @GetMapping("/departmentByName/{name}")
     public Department fetchDepartmentByName(@PathVariable("name") String departmentName) {
         return departmentService.fetchDepartmentByName(departmentName);
     }
