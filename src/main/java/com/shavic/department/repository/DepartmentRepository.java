@@ -11,4 +11,8 @@ public interface DepartmentRepository extends JpaRepository<Department, Long> {
 //    Modifier 'public' is redundant for interface members hence no initializing the methods in Interfaces with public declaration
     Department findByDepartmentName(String departmentName);
 
+//    to loosen the check on the name by ignoring the Case checks we add the Keyword: IgnoreCase in our custom method
+//    and now with the below method call, as long as the method matches an object in the DB, regardless of the case mismatch, the results will be found
+    Department findByDepartmentNameIgnoreCase(String departmentName);
+
 }
