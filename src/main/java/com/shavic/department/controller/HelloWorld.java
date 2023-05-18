@@ -118,32 +118,33 @@ public class HelloWorld {
 //  JpaRepository will be extended for this project which will take in 2 properties;
 //      1st one will be the Entity defining our DB Properties, then the
 //      2nd one will be the Type for the Entity Property being used as the Primary Key, having the @Id annotation
-//  JpaRepository gives us several commonly used methods that we can use directly for interacting our Entity with the DB eg. findById(), findAll()
+//  JpaRepository gives us several commonly used built-in methods that we can use directly for interacting our Entity with the DB eg. findAll(), findById(),
 
+
+//  In the created Controller, Inject the Service Layer Interface that will pass the created methods to the Service Impl class that passes the same to the DAO;
 
 
 //    Design Flow for the saveDepartment POST API call
 //    ***   Controller Layer Flow
 //  Create the saveDepartment method with the @RequestBody annotation referencing to the Entity where the Data Object is to be mapped to in the DB;
-//  @PostMapping() annotation is used with the path parameter defined inside the parenthesis
-//  In the same Controller, Inject the Service Layer Interface that will pass the created methods to the Service Impl class that passes the same to the DAO;
-//  Then return the Autowired Service Interface calling the saveDepartment method which takes in the Class-level created Entity Object.
+//  @PostMapping() annotation is used with the path parameter defined inside the parenthesis as a String
+//  Then return the Autowired Service Interface calling the saveDepartment method which takes in the Method-level created Entity Object called as a RequestBody.
 //    ***   Service Layer Flow
 //  Create saveDepartment method in the Service Layer Interface which will be implemented in the ServiceImpl Class;
 //  In the ServiceImpl Class, create the same saveDepartment method that takes in the Department Entity,
 //      and it will be an @Override annotated method;
 //  Then Autowire the Repository Class which will connect us to the DB and allow us to use JPA methods;
-//  Then return the newly created/referenced Repository class calling JPA save method that takes in the class-referenced department Entity.
+//  Then return the Autowired Repository class that is calling JPA built-in save method that takes in the class-referenced department Entity.
 
 
 
 //    Design Flow for the fetchDepartment GET All Departments API call
 //    ***   Controller Layer Flow
 //  Create the fetchDepartment method which fetches the Data available in the Entity as a List<> that takes in the Department Entity;
-//  @GetMapping() annotation is used with the path parameter defined inside the parenthesis
+//  @GetMapping() annotation is used with the URL path defined inside the parenthesis as a String parameter
 //  fetchDepartment() will not take in any input since we are fetching Data from the Entity
 //  The Service Layer Interface to be Implemented is already injected;
-//  Then return the Autowired Service Interface calling the fetchDepartment method which does not take in any input.
+//  Then return the Autowired Service Interface calling the fetchDepartment method which does not take in any input parameter.
 //    ***   Service Layer Flow
 //  Create fetchDepartment method in the Service Layer Interface which will be implemented in the ServiceImpl Class;
 //  In the ServiceImpl Class, create the same fetchDepartment method which fetches the Data available in the Entity as a List<> that takes in the Department Entity,
@@ -157,12 +158,12 @@ public class HelloWorld {
 //    ***   Controller Layer Flow
 //  Create the fetchDepartmentById method which will make the Request
 //  This method will take in the @GetMapping() ...
-//      which takes in the url path that ends with a pathVariable call for the particular Entity property needed; @GetMapping("/departments/{id}"
-//  In our case we'll request for the data present in the specified Id declared in the URL path
+//      which takes in the url path that ends with a Variable declaration call for the particular Entity property needed; @GetMapping("/departments/{id}"
+//  In our case we'll request for the data present in the Id as declared in the URL path
 //  The method itself will not take in List but will Call the Department Entity since we just want a particular set of Data for the specified ID: public Department fetch...()
 //  The method now will Define the Entity being used as the Primary Key, which in this case is the ID: Long departmentId which will be taken in as an input
 //  Then before the Entity Definition in the method input, add the @PathVariable("id") annotation that takes in the value put in the @GetMapping URL path
-//      to enable the communication and Binding/linkage of the Variable defined in the path as well as with the Entity Type and Identity defined as the method Input
+//      to enable the communication and Binding/linkage of the Variable defined in the path as well as with the Entity Type and Identity defined in the method Input
 //  Then finally call the return method to return the Autowired Service Interface then calls the created method which takes in the Entity property Identity as an input
 //    ***   Service Layer Flow
 //  Then create the method in the ServiceInterface which takes in the defined Entity property
@@ -175,18 +176,18 @@ public class HelloWorld {
 
 //    Design Flow for the deleteById DELETE By ID API call
 //    ***   Controller Layer Flow
-//  Create the deleteById() method/function which is to make the API request
+//  Create the deleteDepartmentById() method/function which is to make the API request
 //  This method is to take the @DeleteMapping() annotation ...
-//      which takes in the basic same URL path just as the GetById URL path which ends with a pathVariable call for the particular Entity property needed; @DeleteMapping("/departments/{id}"
+//      which takes in the basic same URL path just as the GetById URL path which ends with a Variable call for the particular Entity property needed; @DeleteMapping("/departments/{id}"
 //  In this case, the data that will be deleted will be the data present in the specified Id declared in the URL path
-//  The method creation itself won't have the DAO defined on it since we are not returning an Object after the call but instead we'll be deleting an Object after the request is actioned
-//  The method in this case will have a String definition which will help us define the message to be printed for us once the API request has been actioned successfully;
-//  The method then will take in the @PathVariable() annotation that takes in the value defined in the Mapping annotation
+//  The method creation itself won't have the Entity defined on it since we are not returning an Object after the call but instead we'll be deleting an Object after the request is actioned
+//  The method in this case will have a String definition which will help us define the return String message to be printed for us once the API request has been actioned successfully;
+//  The method then will take in the @PathVariable() annotation that takes in the variable defined in the Mapping annotation
 //      and after the PathVariable definition the Entity defined as the Primary Key is defined with its Type
 //  Then call the Service Interface that was Autowired which then calls the just created method taking in the Entity property as an input: departmentService.deleteById(departmentId)
 //  Then return a String statement that will be printed on the REST client(Postman) after a successful actioning of the API call
 //    ***   Service Layer Flow
-//  Then create a Void method in the Service Interface with the deleteById() that takes in the Entity property type and definition
+//  Then create a Void method in the Service Interface with the deleteDepartmentById() that takes in the Entity property type and definition
 //  Then create another method in the ServiceImpl class that implements the void method created in the Interface;
 //  This will be an @Override method that will be public and void meaning it won't return any value after it's actioning and;
 //      thus the request actioning shall be to call our DAO, departmentRepository that will call a JPA method deleteById(departmentId) which takes in the Entity property definition
@@ -208,31 +209,32 @@ public class HelloWorld {
 //  Then the method will return the Service Interface calling the method which takes in both the Defined Primary Key Entity Property as well as the department Entity Object
 //    ***   Service Layer Flow
 //  Then create the method call in the Service Interface for implementation
-//  The ServiceImpl Class in implementing the Service Interface shall include a logic to check if the Entity Properties are either NotNull or not blank and the casing is the same, nothing unchanged,
+//  The ServiceImpl Class in implementing the Service Interface shall include a logic to check if the Entity Properties are either NotNull or not blank and nothing unchanged, ignoring the casing;
 //      if this check passes, then that particular Property is skipped without being changed thus retaining it's initial value;
 //      but if either of the checks is not passed, then the newly detected value is set on the particular Entity Property for the defined id
 
 
 
-//    Design Flow for the fetchDepartment GET Department By Name API call
+//    Design Flow for the fetchDepartment another Entity Property, say GET Department By Name API call
 //    ***   Controller Layer Flow
 //  Create the fetchDepartmentByName method which will make the Request
 //  This method will take in the @GetMapping() ...
-//      which takes in the url path that ends with a pathVariable call for the particular Entity property needed; @GetMapping("/departments/{name}"
+//      which takes in the url path that ends with a Variable call for the particular Entity property needed; @GetMapping("/departments/{name}"
 //  In our case we'll request for the data present with the specified name declared in the URL path
 //  The method itself will not take in List but will Call the Department Entity since we just want a particular set of Data for the specified name: public Department fetch...()
-//  The method now will Define the Entity being used as the Point of Reference for binding with the Entity Type and Identifier defined, which in this case is the name: String departmentName which will be taken in as an input
+//  The method now will Define the Entity being used as the Point of Reference for binding;
+//      with the Entity Type and Identifier defined, which in this case is the name: String departmentName which will be taken in as an input
 //  Then before the Entity Definition in the method input, add the @PathVariable("name") annotation that takes in the value put in the @GetMapping URL path
 //      to enable the communication and Binding/linkage of the Variable defined in the path as well as with the Entity Property Type and Identity defined as the method Input
-//  Then finally call the return method to return the Autowired Service Interface then calls the created method which takes in the Entity property Identity as an input
+//  Then finally call the return method which returns the Autowired Service Interface that calls the created method which takes in the Entity property Identity as an input
 //    ***   Service Layer Flow
 //  Then create the method in the ServiceInterface which takes in the defined Entity property
 //  Again create the method in the ServiceImpl class to implement the GetMethod request coming from the Presentational layer
 //  Here in the ServiceImpl class, the return method calls the DAO method that has been Autowired
 //      which then is to call a default JPA method findByName() and takes in the defined Entity property, but since the default method is not there,
-//      we custom create a findByDepartmentName() method in the DAO layer that the Service Impl Class will call
+//      we first custom create a findByDepartmentName() method in the DAO layer that the Service Impl Class will call
 //  The naming convention of findByDepartmentName() method is key in that it should match the Entity Property Identity that is to be called; and it should be findBy NOT fetch or any other terminology
 //      and then take in the Entity Property Type and Identity as Input Parameters
 //  Then get back to the ServiceImpl Class and call the custom method created in the DAO through the Autowired DAO;
-//      ANd this time round we don't need to add the get() method after the call since we custom created the method ourselves and thus the DAO shall get the depertmentByName
-//      if tye naming convention is okay
+//      And this time round we don't need to add the get() method after the call since we custom created the method ourselves and thus the DAO shall get the depertmentByName
+//      if tye naming convention is okay!

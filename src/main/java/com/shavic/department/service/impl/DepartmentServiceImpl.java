@@ -44,7 +44,7 @@ public class DepartmentServiceImpl implements DepartmentService {
 //        logic to check the Entity properties that are null in the incoming changes and if null, skip;
 //        and if an update is present, then update the specified object
 
-//        if departmentName is NOT NULL and is also not blank equals to the available departmentName ignoring the casing;
+//        if departmentName is NOT NULL and is also not blank as well as equals to the available departmentName ignoring the casing;
 //        then skip the departmentName or in other words let the same available value remain.
 //        Same logic check for the other Entity properties: departmentHead and departmentRole
         if (Objects.nonNull(department.getDepartmentName()) && !"".equalsIgnoreCase(department.getDepartmentName())) {
