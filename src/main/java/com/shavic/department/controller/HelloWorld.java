@@ -56,6 +56,34 @@ import org.springframework.web.bind.annotation.*;
 //                 --> annotation used to obtain a parameter from the URI
 
 
+//      https://stackoverflow.com/questions/17137307/in-hibernate-validator-4-1-what-is-the-difference-between-notnull-notempty
+//      HIBERNATE VALIDATIONS
+//  @NotNull --> The CharSequence, Collection, Map or Array object is NOT null, BUT can be empty
+//  @NotEmpty --> The CharSequence, Collection, Map or Array object is NOT null and size > 0
+//  @NotBlank --> The String is NOT null  and the trimmed length is greater than 0
+//  See Below examples
+//        String name = null;
+//@NotNull: false
+//@NotEmpty: false
+//@NotBlank: false
+//
+//        String name = "";
+//@NotNull: true
+//@NotEmpty: false
+//@NotBlank: false
+//
+//        String name = " ";
+//@NotNull: true
+//@NotEmpty: true
+//@NotBlank: false
+//
+//        String name = "Great answer!";
+//@NotNull: true
+//@NotEmpty: true
+//@NotBlank: true
+
+
+
 
 @RestController
 public class HelloWorld {
@@ -243,6 +271,7 @@ public class HelloWorld {
 
 
 //      HIBERNATE VALIDATIONS
+
 //  Add the validation dependency
 //  Then add the @NotBlank annotation on the Entity property you want to always be present on the JSON RequestBody
 //      and ypu can also add a message within the parenthesis for printing when the property is passed blank
