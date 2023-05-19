@@ -21,4 +21,6 @@ public interface DepartmentRepository extends JpaRepository<Department, Long> {
 //    and now with the below method call, as long as the method matches an object in the DB, regardless of the case mismatch, the results will be found
     Department findByDepartmentNameIgnoreCase(String departmentName);
 
+//    For complex queries, you can also use the @Query() annotation and pass your SQL query statement within the parenthesis and create the custom method below it
+
 }
