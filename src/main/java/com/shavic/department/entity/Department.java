@@ -5,15 +5,20 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 
 @Entity
 public class Department {
 
 //    Entity properties
+//    more VALIDATION RESOURCES - check HelloWorld file on Hibernate Validations section
+//      https://www.geeksforgeeks.org/spring-boot-validation-using-hibernate-validator/
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long departmentId;
     @NotBlank(message = "Please add the department name")
+    @Size(min = 5, message = "The Name should be at least 5 characters")
+    @Size(max = 16, message = "The Name should at most be 16 characters")
     private String departmentName;
     private String departmentHead;
     private String departmentRole;

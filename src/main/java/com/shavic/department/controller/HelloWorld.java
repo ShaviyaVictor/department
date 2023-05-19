@@ -56,11 +56,12 @@ import org.springframework.web.bind.annotation.*;
 //                 --> annotation used to obtain a parameter from the URI
 
 
+//      https://www.geeksforgeeks.org/spring-boot-validation-using-hibernate-validator/
 //      https://stackoverflow.com/questions/17137307/in-hibernate-validator-4-1-what-is-the-difference-between-notnull-notempty
 //      HIBERNATE VALIDATIONS
-//  @NotNull --> The CharSequence, Collection, Map or Array object is NOT null, BUT can be empty
-//  @NotEmpty --> The CharSequence, Collection, Map or Array object is NOT null and size > 0
-//  @NotBlank --> The String is NOT null  and the trimmed length is greater than 0
+//  @NotNull --> The CharSequence, Collection, Map or Array object is NOT Null, BUT can be Empty
+//  @NotEmpty --> The CharSequence, Collection, Map or Array object is NOT Null nor Empty meaning the size > 0; even if it is Blank
+//  @NotBlank --> The String is NOT Null, NOT Empty, NOT Blank and thus the trimmed length is greater than 0.
 //  See Below examples
 //        String name = null;
 //@NotNull: false
