@@ -281,6 +281,22 @@ public class HelloWorld {
 
 
 
+//      ADDING LOGGERS
+
+//  All applications should have Logging functionality available for better tracing from: INFO, WARN, TRACE etc.
+//  For Development purposes, a simple Logging system can word but for Production purposes;
+//      a more Logging structure would be useful to have the Logs written in a external file within the machine;
+//      This can be achieved using Dependency Libraries like Log4j
+//  For Development purposes, you can use 2 approaches:
+//      1. This one wouldn't need a dependency added for the Logging to work:
+//          You just create a private static final Logger class and initialize a log class for it within the Java Class that you want logs for
+//              The Logger should be a Slf4j Interface
+//          then call LoggerFactory which calls the getLogger method which will take in then Java Class as an input parameter;
+//          Check this implementation in DepartmentController Java Class...
+//      2. The second one would be as simple as annotating the Java Class with @Slf4j annotation which Spring Boot will add a lombok dependency that enables us use the logging interface
+//          Then start making the log calls within the file and you good to go
+//          Check this implementation in DepartmentServiceImpl Java Class...
+
 
 
 
