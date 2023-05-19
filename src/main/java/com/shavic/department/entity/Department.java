@@ -17,8 +17,9 @@ public class Department {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long departmentId;
     @NotBlank(message = "Please add the department name")
-    @Size(min = 5, message = "The Name should be at least 5 characters")
-    @Size(max = 16, message = "The Name should at most be 16 characters")
+//    @Size(min = 5, message = "The Name should be at least 5 characters")
+//    @Size(max = 16, message = "The Name should at most be 16 characters")
+    @Size(min = 5, max = 16, message = "The Name should be between a character count of 5 - 16 characters")
     private String departmentName;
     private String departmentHead;
     private String departmentRole;

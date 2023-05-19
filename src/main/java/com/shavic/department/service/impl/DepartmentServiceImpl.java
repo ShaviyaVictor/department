@@ -3,12 +3,14 @@ package com.shavic.department.service.impl;
 import com.shavic.department.entity.Department;
 import com.shavic.department.repository.DepartmentRepository;
 import com.shavic.department.service.DepartmentService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Objects;
 
+@Slf4j
 @Service
 public class DepartmentServiceImpl implements DepartmentService {
 
@@ -56,6 +58,8 @@ public class DepartmentServiceImpl implements DepartmentService {
         if (Objects.nonNull(department.getDepartmentRole()) && !"".equalsIgnoreCase(department.getDepartmentRole())) {
             departmentObject.setDepartmentRole(department.getDepartmentRole());
         }
+
+        log.info("\n\nYeah, the UPDATE request has been actioned!\n");
 
         return departmentRepository.save(departmentObject);
 

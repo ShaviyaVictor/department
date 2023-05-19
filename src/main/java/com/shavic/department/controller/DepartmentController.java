@@ -3,6 +3,8 @@ package com.shavic.department.controller;
 import com.shavic.department.entity.Department;
 import com.shavic.department.service.DepartmentService;
 import jakarta.validation.Valid;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,6 +16,8 @@ public class DepartmentController {
     @Autowired
     private DepartmentService departmentService;
 
+    private static final Logger log = LoggerFactory.getLogger(DepartmentController.class);
+
 //    Post to Department Table Entity
     @PostMapping("/add/department")
     public Department saveDepartment(@Valid @RequestBody Department department) {
@@ -21,6 +25,7 @@ public class DepartmentController {
 //        DepartmentService departmentService = new DepartmentServiceImpl();
 //                or
 //        var departmentService = new DepartmentServiceImpl();
+        log.info("\n\nYeah, the POST request has been actioned!\n");
         return departmentService.saveDepartment(department);
     }
 
