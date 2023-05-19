@@ -238,3 +238,26 @@ public class HelloWorld {
 //  Then get back to the ServiceImpl Class and call the custom method created in the DAO through the Autowired DAO;
 //      And this time round we don't need to add the get() method after the call since we custom created the method ourselves and thus the DAO shall get the depertmentByName
 //      if tye naming convention is okay!
+
+
+
+
+//      HIBERNATE VALIDATIONS
+//  Add the validation dependency
+//  Then add the @NotBlank annotation on the Entity property you want to always be present on the JSON RequestBody
+//      and ypu can also add a message within the parenthesis for printing when the property is passed blank
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
