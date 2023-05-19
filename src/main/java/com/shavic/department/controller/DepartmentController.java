@@ -2,6 +2,7 @@ package com.shavic.department.controller;
 
 import com.shavic.department.entity.Department;
 import com.shavic.department.service.DepartmentService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,7 +16,7 @@ public class DepartmentController {
 
 //    Post to Department Table Entity
     @PostMapping("/add/department")
-    public Department saveDepartment(@RequestBody Department department) {
+    public Department saveDepartment(@Valid @RequestBody Department department) {
 //        1st way of creating the service object
 //        DepartmentService departmentService = new DepartmentServiceImpl();
 //                or

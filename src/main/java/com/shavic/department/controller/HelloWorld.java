@@ -246,7 +246,8 @@ public class HelloWorld {
 //  Add the validation dependency
 //  Then add the @NotBlank annotation on the Entity property you want to always be present on the JSON RequestBody
 //      and ypu can also add a message within the parenthesis for printing when the property is passed blank
-
+//    Then add @Valid annotation just before the @RequestBody of our POST method call;
+//    this way, whenever the JSON body comes in to be added in the DB, that body will be validated against the @NotBlank annotation that we added in the Entity class
 
 
 
