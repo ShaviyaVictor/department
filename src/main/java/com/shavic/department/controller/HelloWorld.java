@@ -309,7 +309,7 @@ public class HelloWorld {
       2. The second one would be as simple as annotating the Java Class with @Slf4j annotation which Spring Boot will add a lombok dependency that enables us use the logging interface
           Then start making the log calls within the file and you good to go
           Check this implementation in DepartmentServiceImpl Java Class...
-
+  Logging prints the particular log Type(INFO, WARN); Thread count; the Class printing the log & the Log message
 
 
 
