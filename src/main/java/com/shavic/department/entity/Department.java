@@ -24,7 +24,7 @@ public class Department {
     private String departmentHead;
     private String departmentRole;
 
-    //    Getters and Setters for the properties
+    //    Getters and Setters for the pro perties
     public Long getDepartmentId() {
         return departmentId;
     }
