@@ -110,6 +110,14 @@ import org.springframework.web.bind.annotation.RestController;
             --> generating all appropriate toString, equals and hashCode implementations that involve the fields of the class
             --> generating a Constructor that initializes all final fields, as well as non-final fields with no initializer that have been marked with @NonNull, in order to ensure the fields are never null.
 
+ https://stackoverflow.com/questions/68314072/why-to-use-allargsconstructor-and-noargsconstructor-together-over-an-entity
+
+ @ALlArgsConstructor --> generates a constructor requiring an argument for every field in the annotated class
+                     --> it also allows the creation of static factory methods using the staticName attribute
+ @NoArgsConstructor --> generates a default constructor with no parameters
+                    --> it can create a static factory method for construction purposes
+ Lombok can't call the super constructor unless it has a no-args constructor
+ And the JPA specification requires that all persistent classes(Entity) have a no-arg constructor, either public or protected
 
 
 
