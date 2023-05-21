@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
  **
  *
     Controller
+
   @Component --> is a generic stereotype annotation that defines SpringBoot classes as Components so that whenever the app runs the classes are added to the Spring container
   @Controller/@RestController, @Service and @Repository annotations are specializations of @Component annotation.
       Check here:--> https://stackoverflow.com/questions/6827752/whats-the-difference-between-component-repository-service-annotations-in
@@ -28,8 +29,16 @@ import org.springframework.web.bind.annotation.RestController;
   @RequestBody --> annotation that tells Spring Boot to take whatever JSON Data it is getting and convert it into the declared Object;
                --> mainly used in methods that send back Data to the DB i.e in @PostMapping & @PutMapping annotated methods
 
+  https://stackoverflow.com/questions/13715811/requestparam-vs-pathvariable
+ @PathVariable() --> annotation used to identify the pattern that is used in the URI for a request being actioned per a certain criteria
+ --> annotation used to obtain some placeholder from the URI
+ @RequestParam() --> annotation used for accessing the query parameter values from the request
+ --> annotation used to obtain a parameter from the URI
+
+
 
     Entity
+
   @Entity --> is a persistence API interface that enables our defined Entity Object to interact with the DB
   @Id --> annotation that indicates the member field below is the primary key of current entity, inherited from javax.persistence.Id，
       --> placed on top of the property that is to be used as the Primary key
@@ -37,11 +46,15 @@ import org.springframework.web.bind.annotation.RestController;
                   --> contains a strategy as a parameter defining how the primary key should be generated using the GenerationType call
 
 
+
     Service
+
   @Service --> stereotype annotation for the Service/Business logic layer
 
 
+
     Repository
+
   @Repository --> stereotype annotation for the Persistence layer; the Data Access Object(DAO)
 
 
@@ -54,17 +67,13 @@ import org.springframework.web.bind.annotation.RestController;
   @Qualifier --> annotation used to resolve the autowiring conflict, when there are multiple beans of the same type
 
 
-      https://stackoverflow.com/questions/13715811/requestparam-vs-pathvariable
-  @PathVariable() --> annotation used to identify the pattern that is used in the URI for a request being actioned per a certain criteria
-                 --> annotation used to obtain some placeholder from the URI
-  @RequestParam() --> annotation used for accessing the query parameter values from the request
-                 --> annotation used to obtain a parameter from the URI
 
+    HIBERNATE VALIDATIONS
 
-      https://www.geeksforgeeks.org/spring-boot-validation-using-hibernate-validator/
-      https://stackoverflow.com/questions/17137307/in-hibernate-validator-4-1-what-is-the-difference-between-notnull-notempty
-      HIBERNATE VALIDATIONS
-  @NotNull --> The CharSequence, Collection, Map or Array object is NOT Null, BUT can be Empty
+  https://www.geeksforgeeks.org/spring-boot-validation-using-hibernate-validator/
+  https://stackoverflow.com/questions/17137307/in-hibernate-validator-4-1-what-is-the-difference-between-notnull-notempty
+
+ @NotNull --> The CharSequence, Collection, Map or Array object is NOT Null, BUT can be Empty
   @NotEmpty --> The CharSequence, Collection, Map or Array object is NOT Null nor Empty meaning the size > 0; even if it is Blank
   @NotBlank --> The String is NOT Null, NOT Empty, NOT Blank and thus the trimmed length is greater than 0.
   See Below examples
@@ -87,6 +96,23 @@ import org.springframework.web.bind.annotation.RestController;
 @NotNull: true
 @NotEmpty: true
 @NotBlank: true
+
+
+
+    PROJECT LOMBOK
+
+ https://projectlombok.org/features/Data#:~:text=%40Data%20is%20a%20convenient%20shortcut,beans%3A%20getters%20for%20all%20fields%2C
+
+ @Data --> is a Lombok convenient shortcut annotation that bundles the features of @Getter; @Setter; @ToString; @EqualsAndHashCode and @RequiredArgsConstructor annotations all together in one annotation
+       --> this annotation basically generates all the boilerplate code that is normally associated with simple Plain Old Java Objects(POJOs) and beans;
+            --> generating setters for all fields
+            --> generating setters for all non-final fields
+            --> generating all appropriate toString, equals and hashCode implementations that involve the fields of the class
+            --> generating a Constructor that initializes all final fields, as well as non-final fields with no initializer that have been marked with @NonNull, in order to ensure the fields are never null.
+
+
+
+
 
 
  *
@@ -318,8 +344,12 @@ public class HelloWorld {
  When working with Java applications, we tend to create a lot of Plain Old Java Objects(POJO's) aka Entities.
     And the POJO's come with creation of their respective  Properties; Getters; Setters; POJO Constructors: Default Constructors and the toString method for the POJO
     It is easy to create all these but then our project will have huge lines of Code and this is where Lombok comes in handy to help reduce this boilerplate code
- Lombok will thus create for us the Getters; Setters; POJO Constructors with arguments; Default Constructors for the POJO without Arguments as well as the respective toString() method
+ Lombok will thus create for us the Getters; Setters; POJO Constructors with arguments; Default Constructors for the POJO without Arguments and the respective toString() method
  Thus all you need now to do is just add Lombok Dependency and its Plugin and add the respective Annotations
+
+ Now comment out the Getters; Setters; POJO Constructors with arguments; Default Constructors for the POJO without Arguments and the respective toString() method
+ Then add their respective Lombok Annotations described above on the Annotations section
+
 
 
 
