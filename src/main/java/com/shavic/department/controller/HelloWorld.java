@@ -313,6 +313,13 @@ public class HelloWorld {
 
 
 
+        PROJECT LOMBOK
+  lombok is Java annotation library that helps us reduce the boilerplate code in our Java applications
+ When working with Java applications, we tend to create a lot of Plain Old Java Objects(POJO's) aka Entities.
+    And the POJO's come with creation of their respective  Properties; Getters; Setters; POJO Constructors: Default Constructors and the toString method for the POJO
+    It is easy to create all these but then our project will have huge lines of Code and this is where Lombok comes in handy to help reduce this boilerplate code
+ Lombok will thus create for us the Getters; Setters; POJO Constructors with arguments; Default Constructors for the POJO without Arguments as well as the respective toString() method
+ Thus all you need now to do is just add Lombok Dependency and its Plugin and add the respective Annotations
 
 
 
