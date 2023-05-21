@@ -6,8 +6,16 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 public class Department {
 
 //    Entity properties
@@ -25,6 +33,8 @@ public class Department {
     private String departmentRole;
 
     //    Getters and Setters for the pro perties
+    /*
+
     public Long getDepartmentId() {
         return departmentId;
     }
@@ -57,7 +67,11 @@ public class Department {
         this.departmentRole = departmentRole;
     }
 
+    */
+
 //    constructors for the Entity properties
+    /*
+
     public Department(Long departmentId, String departmentName, String departmentHead, String departmentRole) {
         this.departmentId = departmentId;
         this.departmentName = departmentName;
@@ -65,11 +79,19 @@ public class Department {
         this.departmentRole = departmentRole;
     }
 
+    */
+
 //    default constructor
+    /*
+
     public Department() {
     }
 
+    */
+
 //    call toString() method for the properties
+    /*
+
     @Override
     public String toString() {
         return "Department{" +
@@ -79,5 +101,7 @@ public class Department {
                 ", departmentRole='" + departmentRole + '\'' +
                 '}';
     }
+
+    */
 
 }
