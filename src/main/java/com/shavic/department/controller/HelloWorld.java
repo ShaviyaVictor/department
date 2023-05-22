@@ -360,8 +360,18 @@ public class HelloWorld {
 
 
 
-
-
+        EXCEPTION HANDLING
+ Exception Handling helps us avoid getting error stack trace with all irrelevant details and thus customize the trace to particular relevant details that we need!
+ Create a Package for the various Custom Error Handling Java Classes:
+    Inside the package Create the Custom Exception Handling Class
+    Override the Class using the Shortcut keys: ALT + INSERT
+        The above will create the public methods that override:
+            exception method class only
+            exception taking in the String message as the only input argument
+            exception taking in the String message and the Throwable cause as input arguments
+            exception taking in the Throwable cause as the only input argument
+            exception taking in the String message, Throwable cause, and a separation as input arguments
+ Add the Custom Exception Class as method signatures to the Service Impl method call, Service Interface method call and the Controller method call
 
 
 
