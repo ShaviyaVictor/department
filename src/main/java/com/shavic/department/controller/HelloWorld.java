@@ -129,8 +129,8 @@ import org.springframework.web.bind.annotation.RestController;
  @ControllerAdvioce --> Is a Specialization of @Component annotation for classes that declare @ExceptionHandler; @InitBinder; or @ModelAttribute methods
                         which are to be shared across multiple @Controller classes
                     --> can be used in REST web services but you will need to add the @ResponseBody annotation
-
  @RestControllerAdvice --> Is a syntactic sugar for @ControllerAdvice + @ResponseBody annotations bundled up together
+ @ExceptionHandler --> Annotation for handling exceptions in specific handler classes and/or handler methods
 
 
 
@@ -389,6 +389,10 @@ public class HelloWorld {
  Create an ExceptionHandler class that will be responsible for sending all Responses based on the Exception caught;
     and annotate it with @RestControllerAdvice so as to make it globally available to all Controllers
  Then create a new POJO/Entity class that will contain the properties that we need sent for the Error trace instances: HttpStatus && String message fields
+ Then create a public method inside the Global Exception Handling class;
+    The method shall be an instance of the Error Entity created
+    And the method call shall take in an instance of the custom exception being handled as well as WebRequest instance as input parameters
+    Annotate the method with @ExceptionHandler annotation that will take in the Custom Exception handling class being called
 
 
 
