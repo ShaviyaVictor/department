@@ -87,7 +87,7 @@ Ctrl + Shift + F 	=== to search for files
 Ctrl + Shift + A 	=== to search globally
 Ctrl + D 	=== to duplicate a line
 Ctrl + Alt + O 	 === to remove all unused imports from a file
-Alt + Insert	=== to generate either a dependency in pom or Constructors/Getters/Setters in the Entity etc...
+Alt + Insert	=== to Generate either a dependency in pom or Constructors/Getters/Setters in the Entity etc...
 Alt + Enter	   === to show you options on a red highlighted method that needs an extra implementation; an alternative to hover 4 more info rather than just guidance
 
 \n		=== to create 1 new line on the console when like logging stuff
