@@ -384,6 +384,11 @@ public class HelloWorld {
             exception taking in the String message, Throwable cause, and a separation as input arguments
  Add the Custom Exception Class as method signatures to the Service Impl method call, Service Interface method call and the Controller method call
 
+ To ensure that we get just the necessary Log Trace that are relevant to the User;
+    we need to configure the Controller layer so that it identifies Exceptions when they are thrown and sends back a Response in place of the Exception caught
+ Create an ExceptionHandler class that will be responsible for sending all Responses based on the Exception caught;
+    and annotate it with @RestControllerAdvice so as to make it globally available to all Controllers
+ Then create a new POJO/Entity class that will contain the properties that we need sent for the Error trace instances: HttpStatus && String message fields
 
 
 
