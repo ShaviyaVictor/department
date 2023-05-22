@@ -1,6 +1,7 @@
 package com.shavic.department.service;
 
 import com.shavic.department.entity.Department;
+import com.shavic.department.exception.DepartmentNotFoundException;
 
 import java.util.List;
 
@@ -14,7 +15,7 @@ public interface DepartmentService {
 
     List<Department> fetchDepartmentList();
 
-    Department fetchDepartmentById(Long departmentId);
+    Department fetchDepartmentById(Long departmentId) throws DepartmentNotFoundException;
 
     void deleteDepartmentById(Long departmentId);
 
