@@ -37,16 +37,16 @@ public class DepartmentServiceImpl implements DepartmentService {
 
     @Override
     public Department fetchDepartmentById(Long departmentId) {
-//        fetching data without any exception handling
+//        1.) fetching data without any exception handling
 //        return departmentRepository.findById(departmentId).get();
 
-//        fetching data while handling an exception(NotFound)
+//        2.) fetching data while handling an exception(NotFound)
         Optional<Department> department = departmentRepository.findById(departmentId);
 //        check if the new department object has value of not
-//        if (!department.isPresent()) {
-//            throw new DepartmentNotFoundException("Department Object Not Found!");
-//        }
-        return null;
+        if (!department.isPresent()) {
+            throw new DepartmentNotFoundException("Department with that ID is NOT present" + departmentId);
+        }
+        return department.get();
     }
 
     @Override
