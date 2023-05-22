@@ -47,16 +47,16 @@ public class DepartmentServiceImpl implements DepartmentService {
         Optional<Department> department = departmentRepository.findById(departmentId);
 //        check if the new department object has value of not
         if (!department.isPresent()) {
-            throw new DepartmentNotFoundException("Department with that ID is NOT present" + departmentId);
+            throw new DepartmentNotFoundException("Department with ID - " + departmentId + "is NOT present!\n");
         }
-        log.info("\n\nFetching Department Object by ID - \n" + departmentId);
+        log.info("\n\nFetching Department Object by ID - " + departmentId + "\n");
         return department.get();
 
     }
 
     @Override
     public void deleteDepartmentById(Long departmentId) {
-        log.info("\n\nDeleting Department Object by ID - \n" + departmentId);
+        log.info("\n\nDeleting Department Object by ID - " + departmentId + "\n");
         departmentRepository.deleteById(departmentId);
     }
 
@@ -80,7 +80,7 @@ public class DepartmentServiceImpl implements DepartmentService {
             departmentObject.setDepartmentRole(department.getDepartmentRole());
         }
 
-        log.info("\n\nUpdating Department Object by ID - \n" + departmentId);
+        log.info("\n\nUpdating Department Object by ID - " + departmentId + "\n");
 
         return departmentRepository.save(departmentObject);
 
@@ -88,7 +88,7 @@ public class DepartmentServiceImpl implements DepartmentService {
 
     @Override
     public Department fetchDepartmentByName(String departmentName) {
-        log.info("\n\nFetching Department Object by Name - \n" + departmentName);
+        log.info("\n\nFetching Department Object by Name - " + departmentName + "\n");
         return departmentRepository.findByDepartmentNameIgnoreCase(departmentName);
     }
 
