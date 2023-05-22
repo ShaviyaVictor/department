@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 
 @Slf4j
 @Service
@@ -31,7 +32,12 @@ public class DepartmentServiceImpl implements DepartmentService {
 
     @Override
     public Department fetchDepartmentById(Long departmentId) {
-        return departmentRepository.findById(departmentId).get();
+//        fetching data without any exception handling
+//        return departmentRepository.findById(departmentId).get();
+
+//        fetching data while handling an exception(NotFound)
+        Optional<Department> department = departmentRepository.findById(departmentId);
+        return null;
     }
 
     @Override
