@@ -1,6 +1,7 @@
 package com.shavic.department.controller;
 
 import com.shavic.department.entity.Department;
+import com.shavic.department.exception.DepartmentNotFoundException;
 import com.shavic.department.service.DepartmentService;
 import jakarta.validation.Valid;
 import org.slf4j.Logger;
@@ -40,7 +41,7 @@ public class DepartmentController {
 
 //    Get department by Id
     @GetMapping("/departmentById/{id}")
-    public Department fetchDepartmentById(@PathVariable("id") Long departmentId) {
+    public Department fetchDepartmentById(@PathVariable("id") Long departmentId) throws DepartmentNotFoundException {
         return departmentService.fetchDepartmentById(departmentId);
     }
 
