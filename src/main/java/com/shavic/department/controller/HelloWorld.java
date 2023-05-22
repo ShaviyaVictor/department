@@ -121,6 +121,17 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 
+    EXCEPTION HANDLING
+
+ https://stackoverflow.com/questions/43124391/restcontrolleradvice-vs-controlleradvice
+ https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/bind/annotation/ControllerAdvice.html
+
+ @ControllerAdvioce --> Is a Specialization of @Component annotation for classes that declare @ExceptionHandler; @InitBinder; or @ModelAttribute methods
+                        which are to be shared across multiple @Controller classes
+                    --> can be used in REST web services but you will need to add the @ResponseBody annotation
+
+ @RestControllerAdvice --> Is a syntactic sugar for @ControllerAdvice + @ResponseBody annotations bundled up together
+
 
 
  *
