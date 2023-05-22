@@ -10,6 +10,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+/**
+ * The REST Controller that defines the various API's(CRUD operations for the app)
+ */
 @RestController
 public class DepartmentController {
 

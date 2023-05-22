@@ -4,6 +4,10 @@ import com.shavic.department.entity.Department;
 
 import java.util.List;
 
+/**
+ * The Service Interface that takes in the CRUD methods from the Controller and pass them to the ServiceImpl Class
+ *
+ */
 public interface DepartmentService {
 
     Department saveDepartment(Department department);

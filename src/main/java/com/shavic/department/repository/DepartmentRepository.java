@@ -5,13 +5,15 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 
-//Spring_Docs:
-//      https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#repository-query-keywords
-//      https://docs.spring.io/spring-data/jpa/docs/current/reference/html/
-
-
+/**
+ * Repository Interface that extends JpaRepository which:
+ *       takes in the Entity Object and the Primary Key Type
+ * Spring_Docs:
+ *      https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#repository-query-keywords
+ *      https://docs.spring.io/spring-data/jpa/docs/current/reference/html/
+ *
+ */
 @Repository
-//JpaRepository takes in the Entity Object and the Primary Key Type
 public interface DepartmentRepository extends JpaRepository<Department, Long> {
 
 //    Modifier 'public' is redundant for interface members hence no initializing the methods in Interfaces with public declaration

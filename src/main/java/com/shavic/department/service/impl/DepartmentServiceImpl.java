@@ -12,6 +12,10 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 
+/**
+ * Service Class Implementation that defines the main logic
+ *
+ */
 @Slf4j
 @Service
 public class DepartmentServiceImpl implements DepartmentService {
