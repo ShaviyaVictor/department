@@ -1,6 +1,7 @@
 package com.shavic.department.service.impl;
 
 import com.shavic.department.entity.Department;
+import com.shavic.department.exception.DepartmentNotFoundException;
 import com.shavic.department.repository.DepartmentRepository;
 import com.shavic.department.service.DepartmentService;
 import lombok.extern.slf4j.Slf4j;
@@ -37,6 +38,10 @@ public class DepartmentServiceImpl implements DepartmentService {
 
 //        fetching data while handling an exception(NotFound)
         Optional<Department> department = departmentRepository.findById(departmentId);
+//        check if the new department object has value of not
+//        if (!department.isPresent()) {
+//            throw new DepartmentNotFoundException("Department Object Not Found!");
+//        }
         return null;
     }
 
