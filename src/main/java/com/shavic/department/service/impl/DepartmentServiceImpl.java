@@ -27,11 +27,13 @@ public class DepartmentServiceImpl implements DepartmentService {
 
     @Override
     public Department saveDepartment(Department department) {
+        log.info("\n\nSaving Department Object!\n");
         return departmentRepository.save(department);
     }
 
     @Override
     public List<Department> fetchDepartmentList() {
+        log.info("\n\nRetrieving Department List!\n");
         return departmentRepository.findAll();
     }
 
@@ -47,12 +49,14 @@ public class DepartmentServiceImpl implements DepartmentService {
         if (!department.isPresent()) {
             throw new DepartmentNotFoundException("Department with that ID is NOT present" + departmentId);
         }
+        log.info("\n\nFetching Department Object by ID - \n" + departmentId);
         return department.get();
 
     }
 
     @Override
     public void deleteDepartmentById(Long departmentId) {
+        log.info("\n\nDeleting Department Object by ID - \n" + departmentId);
         departmentRepository.deleteById(departmentId);
     }
 
@@ -76,7 +80,7 @@ public class DepartmentServiceImpl implements DepartmentService {
             departmentObject.setDepartmentRole(department.getDepartmentRole());
         }
 
-        log.info("\n\nYeah, the UPDATE request has been actioned!\n");
+        log.info("\n\nUpdating Department Object by ID - \n" + departmentId);
 
         return departmentRepository.save(departmentObject);
 
@@ -84,6 +88,7 @@ public class DepartmentServiceImpl implements DepartmentService {
 
     @Override
     public Department fetchDepartmentByName(String departmentName) {
+        log.info("\n\nFetching Department Object by Name - \n" + departmentName);
         return departmentRepository.findByDepartmentNameIgnoreCase(departmentName);
     }
 
