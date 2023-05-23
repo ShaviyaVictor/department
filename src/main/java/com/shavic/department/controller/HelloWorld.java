@@ -392,10 +392,10 @@ public class HelloWorld {
     also annotate it with @ResponseStatus to get the HttpStatus response
  Then create a new POJO/Entity class that will contain the properties that we need sent for the Error trace instances: HttpStatus && String message fields
  Then create a public method inside the Global Exception Handling class;
-    The method shall be an instance of the Error Entity created
+    The method shall be an instance of the ErrorMessage Entity created and it should be an instance of ResponseEntity Type: ResponseEntity<ErrorMessage>
     And the method call shall take in an instance of the custom exception being handled as well as WebRequest instance as input parameters
     Annotate the method with @ExceptionHandler annotation that will take in the Custom Exception handling class being called as an input class parameter
-
+ Create a new ErrorMessage Class Instance to be sent back once an exception is thrown and caught by the Controller
 
 
 
