@@ -131,6 +131,7 @@ import org.springframework.web.bind.annotation.RestController;
                     --> can be used in REST web services but you will need to add the @ResponseBody annotation
  @RestControllerAdvice --> Is a syntactic sugar for @ControllerAdvice + @ResponseBody annotations bundled up together
  @ExceptionHandler --> Annotation for handling exceptions in specific handler classes and/or handler methods
+ @ResponseStatus --> Annotation used to mark a method or exception class with the status code and reason message that should be returned
 
 
 
@@ -376,7 +377,7 @@ public class HelloWorld {
  Create a Package for the various Custom Error Handling Java Classes:
     Inside the package Create the Custom Exception Handling Class
     Override the Class using the Shortcut keys: ALT + INSERT
-        The above will create the public methods that override:
+        The above step will allow you create the public methods that override(select all):
             exception method class only
             exception taking in the String message as the only input argument
             exception taking in the String message and the Throwable cause as input arguments
@@ -386,13 +387,14 @@ public class HelloWorld {
 
  To ensure that we get just the necessary Log Trace that are relevant to the User;
     we need to configure the Controller layer so that it identifies Exceptions when they are thrown and sends back a Response in place of the Exception caught
- Create an ExceptionHandler class that will be responsible for sending all Responses based on the Exception caught;
+ Create a Global Exception Handler class that will be responsible for sending all Responses based on the Exception caught;
     and annotate it with @RestControllerAdvice so as to make it globally available to all Controllers
+    also annotate it with @ResponseStatus to get the HttpStatus response
  Then create a new POJO/Entity class that will contain the properties that we need sent for the Error trace instances: HttpStatus && String message fields
  Then create a public method inside the Global Exception Handling class;
     The method shall be an instance of the Error Entity created
     And the method call shall take in an instance of the custom exception being handled as well as WebRequest instance as input parameters
-    Annotate the method with @ExceptionHandler annotation that will take in the Custom Exception handling class being called
+    Annotate the method with @ExceptionHandler annotation that will take in the Custom Exception handling class being called as an input class parameter
 
 
 
