@@ -2,6 +2,8 @@ package com.shavic.department.exception.handler;
 
 import com.shavic.department.entity.ErrorMessage;
 import com.shavic.department.exception.DepartmentNotFoundException;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
@@ -18,7 +20,10 @@ public class GlobalRestResponseEntityExceptionHandler
         extends ResponseEntityExceptionHandler {
 
     @ExceptionHandler(DepartmentNotFoundException.class)
-    public ErrorMessage departmentNotFoundException(DepartmentNotFoundException e, WebRequest webRequest) {
+    public ResponseEntity<ErrorMessage> departmentNotFoundException(DepartmentNotFoundException exception, WebRequest webRequest) {
+
+//        response class
+        ErrorMessage message = new ErrorMessage(HttpStatus.NOT_FOUND, exception.getMessage());
 
         return null;
 
