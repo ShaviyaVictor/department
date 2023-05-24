@@ -133,6 +133,10 @@ import org.springframework.web.bind.annotation.RestController;
  @ExceptionHandler --> Annotation for handling exceptions in specific handler classes and/or handler methods
  @ResponseStatus --> Annotation used to mark a method or exception class with the status code and reason message that should be returned
 
+ Optional<> --> Is a container object which may or may not contain a non-null value;
+                if a value is present, isPresent() will return TRUE and get() will return the value
+                If no value is present, the object is considered empty and isPresent() returns false.
+
 
 
  *
@@ -404,6 +408,9 @@ public class HelloWorld {
         which contains the logic to handle the particular exception that has been thrown by the Controller Class
     The Logic with the message is in the ServiceImpl and will be called through the ExceptionHandling Class that was called in the Impl class with the message
 
+ Just implemented Exception Handling for throwing an Exception when trying to UPDATE a Department Object which does not exist
+ Then also implemented another Exception Handling Logic that entailed changing the Department object Instance of the DAO custom method turned to Class Type Optional;
+    Then adjusting all the method level Department Instances to Optional Type and adding the signature to the inherited methods and throwing the NotFoundException
 
 
  *
