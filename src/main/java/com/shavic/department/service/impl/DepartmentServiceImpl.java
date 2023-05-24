@@ -61,9 +61,19 @@ public class DepartmentServiceImpl implements DepartmentService {
     }
 
     @Override
-    public Department updateDepartment(Long departmentId, Department department) {
+    public Department updateDepartment(Long departmentId, Department department) throws DepartmentNotFoundException {
+
 //        get the object Entity of the specified Id from the DB
-        Department departmentObject = departmentRepository.findById(departmentId).get();
+//        Department departmentObject = departmentRepository.findById(departmentId).get();
+
+//        trying to throw an exception when updating an object that is npt present - is working!! Thank You Jesus!
+//        !departmentObject1.isPresent() == departmentObject1.isEmpty()
+        Optional<Department> departmentObject1 = departmentRepository.findById(departmentId);
+        if (departmentObject1.isEmpty()) {
+            throw new DepartmentNotFoundException("Department with ID - " + departmentId + " is NOT present for an UPDATE to occur");
+        }
+        Department departmentObject = departmentObject1.get();
+
 //        logic to check the Entity properties that are null in the incoming changes and if null, skip;
 //        and if an update is present, then update the specified object
 
