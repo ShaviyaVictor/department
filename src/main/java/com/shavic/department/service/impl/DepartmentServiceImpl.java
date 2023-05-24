@@ -47,7 +47,7 @@ public class DepartmentServiceImpl implements DepartmentService {
         Optional<Department> department = departmentRepository.findById(departmentId);
 //        check if the new department object has value of not
         if (!department.isPresent()) {
-            throw new DepartmentNotFoundException("Department with ID - " + departmentId + "is NOT present!\n");
+            throw new DepartmentNotFoundException("Department with ID - " + departmentId + " is NOT present!\n");
         }
         log.info("\n\nFetching Department Object by ID - " + departmentId + "\n");
         return department.get();
