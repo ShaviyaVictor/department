@@ -4,6 +4,8 @@ import com.shavic.department.entity.Department;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.Optional;
+
 
 /**
  * Repository Interface that extends JpaRepository which:
@@ -21,7 +23,7 @@ public interface DepartmentRepository extends JpaRepository<Department, Long> {
 
 //    to loosen the check on the name by ignoring the Case checks we add the Keyword: IgnoreCase in our custom method
 //    and now with the below method call, as long as the method matches an object in the DB, regardless of the case mismatch, the results will be found
-    Department findByDepartmentNameIgnoreCase(String departmentName);
+    Optional<Department> findByDepartmentNameIgnoreCase(String departmentName);
 
 //    For complex queries, you can also use the @Query() annotation and pass your SQL query statement within the parenthesis and create the custom method below it
 

@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 /**
  * The REST Controller that defines the various API's(CRUD operations for the app)
@@ -64,7 +65,7 @@ public class DepartmentController {
 //    Getting this error with current setup: https://stackoverflow.com/questions/35155916/handling-ambiguous-handler-methods-mapped-in-rest-application-with-spring
 //    Adding a difference in the path URL to avoid the ambiguity
     @GetMapping("/departmentByName/{name}")
-    public Department fetchDepartmentByName(@PathVariable("name") String departmentName) {
+    public Optional<Department> fetchDepartmentByName(@PathVariable("name") String departmentName) throws DepartmentNotFoundException {
         return departmentService.fetchDepartmentByName(departmentName);
     }
 }

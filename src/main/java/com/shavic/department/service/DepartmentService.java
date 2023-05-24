@@ -4,6 +4,7 @@ import com.shavic.department.entity.Department;
 import com.shavic.department.exception.DepartmentNotFoundException;
 
 import java.util.List;
+import java.util.Optional;
 
 /**
  * The Service Interface that takes in the CRUD methods from the Controller and pass them to the ServiceImpl Class
@@ -21,6 +22,6 @@ public interface DepartmentService {
 
     Department updateDepartment(Long departmentId, Department department) throws DepartmentNotFoundException;
 
-    Department fetchDepartmentByName(String departmentName);
+    Optional<Department> fetchDepartmentByName(String departmentName) throws DepartmentNotFoundException;
 
 }
