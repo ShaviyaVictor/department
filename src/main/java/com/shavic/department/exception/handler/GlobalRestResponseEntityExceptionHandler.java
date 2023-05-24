@@ -23,9 +23,11 @@ public class GlobalRestResponseEntityExceptionHandler
     public ResponseEntity<ErrorMessage> departmentNotFoundException(DepartmentNotFoundException exception, WebRequest webRequest) {
 
 //        response class
-        ErrorMessage message = new ErrorMessage(HttpStatus.NOT_FOUND, exception.getMessage());
+        ErrorMessage errorMessage = new ErrorMessage(HttpStatus.NOT_FOUND, exception.getMessage());
 
-        return null;
+//        Object message = ResponseEntity.status(HttpStatus.NOT_FOUND).body(errorMessage);
+
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(errorMessage);
 
     }
 

@@ -396,6 +396,8 @@ public class HelloWorld {
     And the method call shall take in an instance of the custom exception being handled as well as WebRequest instance as input parameters
     Annotate the method with @ExceptionHandler annotation that will take in the Custom Exception handling class being called as an input class parameter
  Create a new ErrorMessage Class Instance to be sent back once an exception is thrown and caught by the Controller
+ Make the return call that will be the ResponseEntity Instance calling the status which takes in a parameter the HttpStatus calling the expected status description
+    and then call the body method that will take in the just created ErrorMessage Class Instance
 
 
 
