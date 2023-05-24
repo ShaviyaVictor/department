@@ -49,14 +49,14 @@ public class DepartmentServiceImpl implements DepartmentService {
         if (!department.isPresent()) {
             throw new DepartmentNotFoundException("Department with ID - " + departmentId + " is NOT present!");
         }
-        log.info("\n\nFetching Department Object by ID - " + departmentId + "\n");
+        log.info("\n\nFetching Department Object by ID - {}\n", departmentId);
         return department.get();
 
     }
 
     @Override
     public void deleteDepartmentById(Long departmentId) {
-        log.info("\n\nDeleting Department Object by ID - " + departmentId + "\n");
+        log.info("\n\nDeleting Department Object by ID - {}\n", departmentId);
         departmentRepository.deleteById(departmentId);
     }
 
@@ -104,7 +104,7 @@ public class DepartmentServiceImpl implements DepartmentService {
 //        logic to throw an exception when trying to find a departmentByName for an Object that does not exist
         Optional<Department> department = departmentRepository.findByDepartmentNameIgnoreCase(departmentName);
         if (department.isEmpty()) {
-            throw new DepartmentNotFoundException("Department with ID - " + departmentName + " is NOT present!");
+            throw new DepartmentNotFoundException("Department with NAME - " + departmentName + " is NOT present!");
         }
         return department;
         
