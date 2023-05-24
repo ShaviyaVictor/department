@@ -5,6 +5,7 @@ This Spring Boot Master Class covers a wide range of topics to Master Spring and
 
 We will understand all below topics in detail in this Spring Boot complete Course [Master Class/Boot Camp]
 
+  Phase 1
 Why Spring Framework?           
 Features and Advantages of Spring Framework           
 Spring Bean Lifecycle         
@@ -16,12 +17,15 @@ What is Spring Boot?
 Advantages of Spring Boot         
 Spring Initializr         
 Spring Boot Starters           
-Creating REST APIs with Spring Boot     
-Spring Boot DevTools      
-Hibernate validations     
-Exception handling      
-Logging in Spring Boot.     
-Database Migration      
+Spring Boot DevTools        
+Creating REST APIs with Spring Boot   
+Hibernate validations  
+Logging in Spring Boot    
+Project Lombok
+Exception handling        
+Database Migration H2 -> MySQL/Postgres
+
+  Phase 2
 Creating Different Layers of the Application      
 Implementing Unit Testing     
 Implementing JUnit and Mockito for all layers.      
