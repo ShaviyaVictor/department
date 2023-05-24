@@ -399,6 +399,10 @@ public class HelloWorld {
  Make the return call that will be the ResponseEntity Instance calling the status which takes in a parameter the HttpStatus calling the expected status description
     and then call the body method that will take in the just created ErrorMessage Class Instance
 
+ And it's all good:
+    Whenever the requests comes to the Controller, the Controller shall throw the task to the GlobalExceptionHandler which has been annotated with the @RestControllerAdvice;
+        which contains the logic to handle the particular exception that has been thrown by the Controller Class
+    The Logic with the message is in the ServiceImpl and will be called through the ExceptionHandling Class that was called in the Impl class with the message
 
 
 
