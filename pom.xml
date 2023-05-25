@@ -29,6 +29,12 @@
 			<artifactId>h2</artifactId>
 			<scope>runtime</scope>
 		</dependency>
+<!--		a JDBC driver that allows the program to connect to a PostgreSQL database-->
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<scope>runtime</scope>
+		</dependency>
 <!--		provides a dev toolkit kinda thing for fast app restarts, LiveReloads for enhanced development-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
