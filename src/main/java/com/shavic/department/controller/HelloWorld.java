@@ -429,6 +429,8 @@ public class HelloWorld {
  Creating a new server on pgAdmin 4 which shall contain the Databases for projects in Development phases
  Then inside the server is where the various Databases for the projects shall be contained
 
+ Create the Database for the project: department_api under User Postgres for development purposes
+
 
 
 
