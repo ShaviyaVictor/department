@@ -426,7 +426,8 @@ public class HelloWorld {
 
             MIGRATING FROM H2 to POSTGRES DB   - @ 03:21:50
 
-
+    https://medium.com/@tonykay001/how-to-connect-a-springboot-application-to-postgresql-on-your-local-machine-a1e16c8626ef
+    https://www.codejava.net/frameworks/spring-boot/connect-to-postgresql-database-examples
 
  Creating a new server on pgAdmin 4 which shall contain the Databases for projects in Development phases
  Then inside the server is where the various Databases for the projects shall be contained
