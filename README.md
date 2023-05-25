@@ -17,13 +17,15 @@ What is Spring Boot?
 Advantages of Spring Boot         
 Spring Initializr         
 Spring Boot Starters           
-Spring Boot DevTools        
-Creating REST APIs with Spring Boot   
-Hibernate validations  
-Logging in Spring Boot    
-Project Lombok
-Exception handling        
-Database Migration H2 -> MySQL/Postgres
+Spring Boot DevTools    
+    #########
+Creating REST APIs with Spring Boot   - @ 01:22:54   
+Hibernate validations   - @ 02:47:20
+Logging in Spring Boot    - @ 02:57:15
+Project Lombok   - @ 03:02:55
+Exception handling   - @ 03:08:25       
+Database Migration H2 -> MySQL/Postgres   - @ 03:21:50
+    #########
 
   Phase 2
 Creating Different Layers of the Application      

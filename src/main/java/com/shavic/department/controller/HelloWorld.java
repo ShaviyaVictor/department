@@ -185,7 +185,7 @@ public class HelloWorld {
                               ===> Spring Boot offers H2 in-memory DB which can later be switched to a real DB such as PostgreSQL or mySQL or MSSQL
                               ===> Spring Boot h2 dependency provides us with a browser-based console that helps us interact with our H2 in-memory DB
 
-  Entity
+  Entity   - @ 01:35:10
     A default Model can be equated to an Entity in Spring Boot
     The Entity contains: * properties defining our table columns
                           * Getters and Setters
@@ -213,12 +213,12 @@ public class HelloWorld {
   JpaRepository gives us several commonly used built-in methods that we can use directly for interacting our Entity with the DB eg. findAll(), findById(),
 
 
-            CREATING REST APIs FLOW
+            CREATING REST APIs FLOW   - @ 01:56:35
 
   In the created Controller, Inject the Service Layer Interface that will pass the created methods to the Service Impl class that passes the same to the DAO;
 
 
-    Design Flow for the saveDepartment POST API call
+    Design Flow for the saveDepartment POST API call   - @ 02:13:45
     ***   Controller Layer Flow
 
   Create the saveDepartment method with the @RequestBody annotation referencing to the Entity where the Data Object is to be mapped to in the DB;
@@ -233,7 +233,7 @@ public class HelloWorld {
 
 
 
-    Design Flow for the fetchDepartment GET All Departments API call
+    Design Flow for the fetchDepartment GET All Departments API call   - @ 02:27:40
     ***   Controller Layer Flow
 
   Create the fetchDepartment method which fetches the Data available in the Entity as a List<> that takes in the Department Entity;
@@ -271,7 +271,7 @@ public class HelloWorld {
 
 
 
-    Design Flow for the deleteById DELETE By ID API call
+    Design Flow for the deleteById DELETE By ID API call   - @ 02:30:00
     ***   Controller Layer Flow
 
   Create the deleteDepartmentById() method/function which is to make the API request
@@ -292,7 +292,7 @@ public class HelloWorld {
 
 
 
-    Design Flow for the updateDepartment UPDATE By ID API call
+    Design Flow for the updateDepartment UPDATE By ID API call   - @ 02:35:30
     ***   Controller Layer Flow
 
   Create the updateDepartment method which is to make the API request
@@ -314,7 +314,7 @@ public class HelloWorld {
 
 
 
-    Design Flow for the fetchDepartment another Entity Property, say GET Department By Name API call
+    Design Flow for the fetchDepartment another Entity Property, say GET Department By Name API call   - @ 02:43:33
     ***   Controller Layer Flow
 
   Create the fetchDepartmentByName method which will make the Request
@@ -342,7 +342,7 @@ public class HelloWorld {
 
 
 
-      HIBERNATE VALIDATIONS
+      HIBERNATE VALIDATIONS   - @ 02:47:20
 
   Add the validation dependency
   Then add the @NotBlank annotation on the Entity property you want to always be present on the JSON RequestBody
@@ -352,7 +352,7 @@ public class HelloWorld {
 
 
 
-      ADDING LOGGERS
+      ADDING LOGGERS    - @ 02:57:15
 
   All applications should have Logging functionality available for better tracing from: INFO, WARN, TRACE etc.
   For Development purposes, a simple Logging system can word but for Production purposes;
@@ -371,7 +371,7 @@ public class HelloWorld {
 
 
 
-        PROJECT LOMBOK
+        PROJECT LOMBOK   - @ 03:02:55
 
   lombok is Java annotation library that helps us reduce the boilerplate code in our Java applications
  When working with Java applications, we tend to create a lot of Plain Old Java Objects(POJO's) aka Entities.
@@ -385,7 +385,7 @@ public class HelloWorld {
 
 
 
-        EXCEPTION HANDLING
+        EXCEPTION HANDLING   - @ 03:08:25
 
  Exception Handling helps us avoid getting error stack trace with all irrelevant details and thus customize the trace to particular relevant details that we need!
  Create a Package for the various Custom Error Handling Java Classes:
@@ -424,7 +424,7 @@ public class HelloWorld {
 
 
 
-            MIGRATING FROM H2 to POSTGRES DB
+            MIGRATING FROM H2 to POSTGRES DB   - @ 03:21:50
 
  Creating a new server on pgAdmin 4 which shall contain the Databases for projects in Development phases
  Then inside the server is where the various Databases for the projects shall be contained

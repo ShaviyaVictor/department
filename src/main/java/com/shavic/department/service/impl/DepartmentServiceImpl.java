@@ -98,7 +98,7 @@ public class DepartmentServiceImpl implements DepartmentService {
 
     @Override
     public Optional<Department> fetchDepartmentByName(String departmentName) throws DepartmentNotFoundException {
-        log.info("\n\nFetching Department Object by Name - " + departmentName + "\n");
+        log.info("\n\nFetching Department Object by Name - {}\n", departmentName);
 //        return departmentRepository.findByDepartmentNameIgnoreCase(departmentName);
         
 //        logic to throw an exception when trying to find a departmentByName for an Object that does not exist
