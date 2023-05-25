@@ -213,11 +213,14 @@ public class HelloWorld {
   JpaRepository gives us several commonly used built-in methods that we can use directly for interacting our Entity with the DB eg. findAll(), findById(),
 
 
+            CREATING REST APIs FLOW
+
   In the created Controller, Inject the Service Layer Interface that will pass the created methods to the Service Impl class that passes the same to the DAO;
 
 
     Design Flow for the saveDepartment POST API call
     ***   Controller Layer Flow
+
   Create the saveDepartment method with the @RequestBody annotation referencing to the Entity where the Data Object is to be mapped to in the DB;
   @PostMapping() annotation is used with the path parameter defined inside the parenthesis as a String
   Then return the Autowired Service Interface calling the saveDepartment method which takes in the Method-level created Entity Object called as a RequestBody.
@@ -232,6 +235,7 @@ public class HelloWorld {
 
     Design Flow for the fetchDepartment GET All Departments API call
     ***   Controller Layer Flow
+
   Create the fetchDepartment method which fetches the Data available in the Entity as a List<> that takes in the Department Entity;
   @GetMapping() annotation is used with the URL path defined inside the parenthesis as a String parameter
   fetchDepartment() will not take in any input since we are fetching Data from the Entity
@@ -248,6 +252,7 @@ public class HelloWorld {
 
     Design Flow for the fetchDepartment GET By ID API call
     ***   Controller Layer Flow
+
   Create the fetchDepartmentById method which will make the Request
   This method will take in the @GetMapping() ...
       which takes in the url path that ends with a Variable declaration call for the particular Entity property needed; @GetMapping("/departments/{id}"
@@ -268,6 +273,7 @@ public class HelloWorld {
 
     Design Flow for the deleteById DELETE By ID API call
     ***   Controller Layer Flow
+
   Create the deleteDepartmentById() method/function which is to make the API request
   This method is to take the @DeleteMapping() annotation ...
       which takes in the basic same URL path just as the GetById URL path which ends with a Variable call for the particular Entity property needed; @DeleteMapping("/departments/{id}"
@@ -288,6 +294,7 @@ public class HelloWorld {
 
     Design Flow for the updateDepartment UPDATE By ID API call
     ***   Controller Layer Flow
+
   Create the updateDepartment method which is to make the API request
   This method is to take the @PutMapping annotation ...
       which is to take in the URL path with the {id} path variable for updating the particular declared Id
@@ -309,6 +316,7 @@ public class HelloWorld {
 
     Design Flow for the fetchDepartment another Entity Property, say GET Department By Name API call
     ***   Controller Layer Flow
+
   Create the fetchDepartmentByName method which will make the Request
   This method will take in the @GetMapping() ...
       which takes in the url path that ends with a Variable call for the particular Entity property needed; @GetMapping("/departments/{name}"
@@ -364,6 +372,7 @@ public class HelloWorld {
 
 
         PROJECT LOMBOK
+
   lombok is Java annotation library that helps us reduce the boilerplate code in our Java applications
  When working with Java applications, we tend to create a lot of Plain Old Java Objects(POJO's) aka Entities.
     And the POJO's come with creation of their respective  Properties; Getters; Setters; POJO Constructors: Default Constructors and the toString method for the POJO
@@ -377,6 +386,7 @@ public class HelloWorld {
 
 
         EXCEPTION HANDLING
+
  Exception Handling helps us avoid getting error stack trace with all irrelevant details and thus customize the trace to particular relevant details that we need!
  Create a Package for the various Custom Error Handling Java Classes:
     Inside the package Create the Custom Exception Handling Class
@@ -411,6 +421,15 @@ public class HelloWorld {
  Just implemented Exception Handling for throwing an Exception when trying to UPDATE a Department Object which does not exist
  Then also implemented another Exception Handling Logic that entailed changing the Department object Instance of the DAO custom method turned to Class Type Optional;
     Then adjusting all the method level Department Instances to Optional Type and adding the signature to the inherited methods and throwing the NotFoundException
+
+
+
+            MIGRATING FROM H2 to POSTGRES DB
+
+ Creating a new server on pgAdmin 4 which shall contain the Databases for projects in Development phases
+ Then inside the server is where the various Databases for the projects shall be contained
+
+
 
 
  *
