@@ -465,7 +465,10 @@ public class HelloWorld {
         choose Tests
         choose setUp/@Before default function which we'll use in Mocking
         don't choose the Methods, we'll create our own Test names since we'll be writing tests for both scenarios, passing and failing scenarios
-
+ To enable Spring Boot recognize the newly created Class as a Test add: @SpringBootTest annotation
+ Then create the first test method:
+    The method should be void since we are not returning any value after execution
+    The method name should as descriptive as possible for ease of identification of the purpose of the method
 
 
 
