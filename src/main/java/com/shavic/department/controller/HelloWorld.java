@@ -469,6 +469,9 @@ public class HelloWorld {
  Then create the first test method:
     The method should be void since we are not returning any value after execution
     The method name should as descriptive as possible for ease of identification of the purpose of the method
+ Within the method Test Case, we will need to find the departmentName and through calling the method that we are testing from the Service layer;
+    For that reason we need to inject the Service layer Interface that we are testing its method using @Autowired annotation
+ Then annotate the custom method with @Test annotation to tell Spring Boot that is a Test case
 
 
 
