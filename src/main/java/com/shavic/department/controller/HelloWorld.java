@@ -457,6 +457,14 @@ public class HelloWorld {
 
             UNIT TESTING    -   Service Layer       @ 03:30:00
     *** Testing getDepartmentByName() method of the Service Layer
+ We'll write tests for all the layers from the -> Service layer -> Repository layer -> Controller layer
+    And implement mocking
+ Create the Class Test file:
+    - Go to the Service layer Interface on the Class level and;
+        use ALT + Enter OR Right-Click and go to Generate
+        choose Tests
+        choose setUp/@Before default function which we'll use in Mocking
+        don't choose the Methods, we'll create our own Test names since we'll be writing tests for both scenarios, passing and failing scenarios
 
 
 
