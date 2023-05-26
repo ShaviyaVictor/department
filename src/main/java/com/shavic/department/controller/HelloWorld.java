@@ -444,6 +444,16 @@ public class HelloWorld {
  Spring Boot provides by default 2 libraries to help with the testing:
     1) JUnit
     2) Mockito
+            MOCKING CONCEPT
+ The Application flow is usually dependent on various layers:
+    The Controller layer requests for Data or passes data through the Service layer;
+    the Service layer on the other hand will request/pass data through the Repository layer;
+    and then the Repository layer interacts with the Database to either get data or populate data.
+ So whenever we are Testing methods within an individual layer, we wouldn't be concerned with the external layers that it depends on;
+    let's say we are testing the Controller layer, we will Mock data required from/to the Service layer and Provide a Mocked data,
+    so as to avoid calling the Service layer
+    Same case when dealing with the Repository layer, we Mock the data we would want from the DB,
+    so as to avoid hitting the DB.
 
 
 
