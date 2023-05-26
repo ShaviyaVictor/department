@@ -436,6 +436,30 @@ public class HelloWorld {
 
 
 
+            UNIT TESTING   - @ 03:27:30
+
+ Every application should have Unit Tests to test:
+    1) Integration Testing - Testing the Entire End-2-End functionality of the application, or
+    2) Unit Tests - Testing the individual functionalities of the application
+ Spring Boot provides by default 2 libraries to help with the testing:
+    1) JUnit
+    2) Mockito
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
  *
  **/
