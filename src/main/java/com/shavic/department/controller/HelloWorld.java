@@ -455,6 +455,10 @@ public class HelloWorld {
     Same case when dealing with the Repository layer, we Mock the data we would want from the DB,
     so as to avoid hitting the DB.
 
+            UNIT TESTING    -   Service Layer       @ 03:30:00
+    *** Testing getDepartmentByName() method of the Service Layer
+
+
 
 
 
