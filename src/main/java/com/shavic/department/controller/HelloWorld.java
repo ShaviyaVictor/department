@@ -476,6 +476,21 @@ public class HelloWorld {
     Define the expected value upon the test call
     Create a variable holding the Object obtained from the method call from the Autowired Service Interface
     Then assert the values against each other
+ The method call as of now, will try to retrieve the data from the DAO/repository which is not the behavior we want:
+    Thus mock the a dummy Object from the repository Repository
+ The Mocked Object will be created inside the @BeforeEach annotated method which is usually created before each Test method is run;
+ First, unlike the autowiring convention, here we @MockBean the DAO class privately to bring in the method call we need as a dummy object rather than the real object
+    Then define what you want when the mocked bean method is called within the @BeforeEach annotated setUp() method.
+    You can manually create the Constructor yourself but that will be much work;
+    We use the @Builder annotation that we earlier added in our Entity Class to help us in building the Desired Object here
+ @Builder annotation provides us with a Builder Pattern:
+    Builder Pattern --> is used when you have multiple fields available in the Entity, yet you want to use different sets of fields/properties every time
+                        essentially, it allows us not to have to define all the Entity properties to get the dummy value that we want;
+                        unlike with manually creating the Constructor where we would have had to create all the Property fields for the Constructor to be valid.
+ Then in the setUp() create the desired mock object using the builder() method from the Entity annotation
+ To then ensure that the mocked data is being passed when the DAO is called, use Mockito to define the data u want provided for validation
+    i.e Mockito.when()
+                .thenReturn();
 
 
 
