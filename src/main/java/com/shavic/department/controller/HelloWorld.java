@@ -472,6 +472,10 @@ public class HelloWorld {
  Within the method Test Case, we will need to find the departmentName and through calling the method that we are testing from the Service layer;
     For that reason we need to inject the Service layer Interface that we are testing its method using @Autowired annotation
  Then annotate the custom method with @Test annotation to tell Spring Boot that is a Test case
+ Create a logic for the Test case validation:
+    Define the expected value upon the test call
+    Create a variable holding the Object obtained from the method call from the Autowired Service Interface
+    Then assert the values against each other
 
 
 
