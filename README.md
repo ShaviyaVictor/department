@@ -29,8 +29,9 @@ Database Migration H2 -> MySQL/Postgres   - @ 03:21:50
 
   Phase 2
 Creating Different Layers of the Application      
-Implementing Unit Testing     
-Implementing JUnit and Mockito for all layers.      
+Implementing Unit Testing (service layer)   - @ 03:27:30     
+    Implementing Unit Testing (repository layer)   - @ 03:44:30     
+Implementing JUnit and Mockito for all layers.   - @ 03:38:40    
 Managing Configuration      
 Managing Profiles     
 Spring Boot Actuator      

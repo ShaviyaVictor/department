@@ -4,6 +4,8 @@ import com.shavic.department.entity.Department;
 import com.shavic.department.exception.DepartmentNotFoundException;
 import com.shavic.department.repository.DepartmentRepository;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,6 +45,8 @@ class DepartmentServiceTest {
     }
 
     @Test
+    @DisplayName("Get Data Based On Valid Department Name") //to allow a more readable name to be displayed on the console when the test runs
+//    @Disabled //to disable a test from running
     public void whenValidDepartment_thenDepartmentShouldBeFound(){
 
 //        defining the expected value
@@ -52,8 +56,6 @@ class DepartmentServiceTest {
 
 //        validate the values against each other, the expected value against the value found in the object returned form the test method call
         assertEquals(departmentName, nameFound.getDepartmentName());
-
-
 
     }
 
