@@ -22,6 +22,7 @@ public interface DepartmentService {
 
     Department updateDepartment(Long departmentId, Department department) throws DepartmentNotFoundException;
 
-    Optional<Department> fetchDepartmentByName(String departmentName) throws DepartmentNotFoundException;
+    Department fetchDepartmentByName(String departmentName);
+//    Optional<Department> fetchDepartmentByName(String departmentName) throws DepartmentNotFoundException;
 
 }

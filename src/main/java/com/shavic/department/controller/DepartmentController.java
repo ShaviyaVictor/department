@@ -65,7 +65,10 @@ public class DepartmentController {
 //    Getting this error with current setup: https://stackoverflow.com/questions/35155916/handling-ambiguous-handler-methods-mapped-in-rest-application-with-spring
 //    Adding a difference in the path URL to avoid the ambiguity
     @GetMapping("/departmentByName/{name}")
-    public Optional<Department> fetchDepartmentByName(@PathVariable("name") String departmentName) throws DepartmentNotFoundException {
+    public Department fetchDepartmentByName(@PathVariable("name") String departmentName) {
         return departmentService.fetchDepartmentByName(departmentName);
     }
+//    public Optional<Department> fetchDepartmentByName(@PathVariable("name") String departmentName) throws DepartmentNotFoundException {
+//        return departmentService.fetchDepartmentByName(departmentName);
+//    }
 }
