@@ -45,9 +45,9 @@ class DepartmentServiceTest {
     }
 
     @Test
-    @DisplayName("Get Data Based On Valid Department Name") //to allow a more readable name to be displayed on the console when the test runs
+    @DisplayName("Get Department Object Based On Valid Department Name") //to allow a more readable name to be displayed on the console when the test runs
 //    @Disabled //to disable a test from running
-    public void whenValidDepartment_thenDepartmentShouldBeFound(){
+    public void whenValidDepartmentName_thenDepartmentShouldBeFound(){
 
 //        defining the expected value
         String departmentName = "Group IT";

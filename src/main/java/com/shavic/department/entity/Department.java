@@ -16,7 +16,7 @@ import lombok.NoArgsConstructor;
  * JPA Department Entity with 4 fields/properties
  *
  */
-@Entity
+//@Entity
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
