@@ -516,6 +516,7 @@ public class HelloWorld {
                 .thenReturn();
 
 
+
             UNIT TESTING    -   Repository Layer       @ 03::00
  Testing the Repository layer is a little bit tricky since it is our interface to the DB hence DAO;
     and so you don't want to store any junk data values or change stuff in the DB
@@ -532,6 +533,8 @@ public class HelloWorld {
   *** Testing findById() method of the Repository Layer
  Since for the testing we need the Data, we need to create the dummy Data Object we'll persist for Testing in the SetUp() function
  Then use the AUtowired EntityManager Class to persist the dummy data object
+ Now that the dummy data is persisted, you can now create the Test case that'll call the persisted data
+ Inside the class, call the method to be tested and then use Assertions to validate the values against the persisted data
 
 
 
