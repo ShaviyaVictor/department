@@ -24,6 +24,8 @@ class DepartmentRepositoryTest {
                 .departmentRole("Human Resources")
                 .build();
 
+        testEntityManager.persist(department);
+
     }
 
 }
