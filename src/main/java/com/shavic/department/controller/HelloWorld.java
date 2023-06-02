@@ -139,6 +139,28 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 
+
+    UNIT TEST ANNOTATIONS
+
+ https://stackoverflow.com/questions/59097035/springboottest-vs-webmvctest-datajpatest-service-unit-tests-what-is-the-b
+ https://www.baeldung.com/lombok-builder
+
+ @SpringBootTest --> annotation that helps to load the full application context;
+                    exactly like how you start a Spring container when you run your Spring Boot application
+                    Typically a general annotation but you would annotate this on Test Class written for the Service layer Interface
+ @DataJpaTest --> annotation that loads only configuration for JPA.
+                It uses an embedded in-memory H2 if not specified otherwise
+                Typically annotated on tests Class for the Repository layer
+ @WebMvcTest --> annotation that loads only the Web layer, which includes security, filter, interceptors, etc
+                essentially centered around handling requests/responses.
+                Thus, you would typically write tests for methods under @Controller/@RestController and annotate the class with this
+ The Service Layer Impl class Tests should ideally not have any annotations(except for ones that aid in mocking);
+    this is because The ServiceImpl Class is where ur business logic(independent of any configurations) reside
+
+ @Builder --> annotation added to our POJOs to help with creating object  mocks of our POJOs
+            It creates a builder class for a fibal Class
+
+
  *
  **
  ***
@@ -503,6 +525,7 @@ public class HelloWorld {
  You can alternatively create an entirely different testing DB, either in-memory DB or containerized DB; though this is too much work
 
  Create the Test Class for the repository layer with the @BeforeEach setUp() function
+ Then annotate the Repository layer Test Class with the special @DataJpaTest annotation
   *** Testing getDepartmentByName() method of the Service Layer
 
 

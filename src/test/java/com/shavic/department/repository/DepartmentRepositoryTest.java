@@ -1,11 +1,12 @@
 package com.shavic.department.repository;
 
 import org.junit.jupiter.api.BeforeEach;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@SpringBootTest
+@DataJpaTest
 class DepartmentRepositoryTest {
 
     @BeforeEach
