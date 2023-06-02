@@ -527,6 +527,8 @@ public class HelloWorld {
  Create the Test Class for the repository layer with the @BeforeEach setUp() function
  Then annotate the Repository layer Test Class with the special @DataJpaTest annotation
  Autowire the Repository Class which we'll be testing its methods
+ Then add the Entity Manager; since we choose to use an Entity Manager, we get the default Test Entity Manager that will still save & persist data
+    Thus Autowire the TestEntityManager Class
   *** Testing getDepartmentByName() method of the Service Layer
 
 
