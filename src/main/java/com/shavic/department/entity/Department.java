@@ -74,7 +74,7 @@ public class Department {
 
     */
 
-//    constructors for the Entity properties
+//    AllArgsConstructor - constructors for the Entity properties
     /*
 
     public Department(Long departmentId, String departmentName, String departmentHead, String departmentRole) {
@@ -86,7 +86,7 @@ public class Department {
 
     */
 
-//    default constructor
+//    NoArgsConstructor - default constructor
     /*
 
     public Department() {
