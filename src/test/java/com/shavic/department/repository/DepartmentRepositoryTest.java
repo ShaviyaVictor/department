@@ -1,5 +1,6 @@
 package com.shavic.department.repository;
 
+import com.shavic.department.entity.Department;
 import org.junit.jupiter.api.BeforeEach;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
@@ -16,6 +17,13 @@ class DepartmentRepositoryTest {
 
     @BeforeEach
     void setUp() {
+
+        Department department = Department.builder()
+                .departmentName("Group HR")
+                .departmentHead("Brian")
+                .departmentRole("Human Resources")
+                .build();
+
     }
 
 }

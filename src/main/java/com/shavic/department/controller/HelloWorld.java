@@ -529,7 +529,8 @@ public class HelloWorld {
  Autowire the Repository Class which we'll be testing its methods
  Then add the Entity Manager; since we choose to use an Entity Manager, we get the default Test Entity Manager that will still save & persist data
     Thus Autowire the TestEntityManager Class
-  *** Testing getDepartmentByName() method of the Service Layer
+  *** Testing findById() method of the Repository Layer
+ Since for the testing we need the Data, we need to create the dummy Data Object we'll persist for Testing in the SetUp() function
 
 
 
