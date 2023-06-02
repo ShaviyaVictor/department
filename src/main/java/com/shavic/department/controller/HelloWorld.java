@@ -500,8 +500,9 @@ public class HelloWorld {
  This is where Spring Boot comes in handy with the @DataJpaTest annotation to test the Repository layer;
     the annotation persists data at the time of execution for the data in question and when the operation is completed, the data is flushed out
 
- You can alternatively create an entirely different testing DB, either in-memory DB or containerised DB; though this is too much work
+ You can alternatively create an entirely different testing DB, either in-memory DB or containerized DB; though this is too much work
 
+ Create the Test Class for the repository layer with the @BeforeEach setUp() function
   *** Testing getDepartmentByName() method of the Service Layer
 
 
