@@ -494,6 +494,15 @@ public class HelloWorld {
                 .thenReturn();
 
 
+            UNIT TESTING    -   Repository Layer       @ 03::00
+ Testing the Repository layer is a little bit tricky since it is our interface to the DB hence DAO;
+    and so you don't want to store any junk data values or change stuff in the DB
+ This is where Spring Boot comes in handy with the @DataJpaTest annotation to test the Repository layer;
+    the annotation persists data at the time of execution for the data in question and when the operation is completed, the data is flushed out
+
+ You can alternatively create an entirely different testing DB, either in-memory DB or containerised DB; though this is too much work
+
+  *** Testing getDepartmentByName() method of the Service Layer
 
 
 
