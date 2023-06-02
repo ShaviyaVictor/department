@@ -536,6 +536,8 @@ public class HelloWorld {
  Now that the dummy data is persisted, you can now create the Test case that'll call the persisted data
  Inside the class, call the method to be tested and then use Assertions to validate the values against the persisted data
 
+ ** check the issue with the dialect conflict btwn H2, PostgreSQL and the both test cases
+
 
 
 
