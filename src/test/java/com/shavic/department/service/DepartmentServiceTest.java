@@ -60,3 +60,6 @@ class DepartmentServiceTest {
     }
 
 }
+
+//test passed after setting the below jpa configuration to true
+//        spring.jpa.properties.hibernate.temp.use_jpa_metadata_defaults=true
