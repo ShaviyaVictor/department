@@ -45,7 +45,7 @@ class DepartmentServiceTest {
     }
 
     @Test
-    @DisplayName("Get Department Object Based On Valid Department Name") //to allow a more readable name to be displayed on the console when the test runs
+    @DisplayName("Testing fetch department by Name") //to allow a more readable name to be displayed on the console when the test runs
 //    @Disabled //to disable a test from running
     public void whenValidDepartmentName_thenDepartmentShouldBeFound(){
 
@@ -61,5 +61,8 @@ class DepartmentServiceTest {
 
 }
 
-//test passed after setting the below jpa configuration to true
-//        spring.jpa.properties.hibernate.temp.use_jpa_metadata_defaults=true
+/**
+ * * Tests were failing coz of the below DB configuration:
+ *      *  #spring.jpa.properties.hibernate.dialect
+ */
+

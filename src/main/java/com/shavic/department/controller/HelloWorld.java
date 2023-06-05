@@ -532,12 +532,14 @@ public class HelloWorld {
     Thus Autowire the TestEntityManager Class
   *** Testing findById() method of the Repository Layer
  Since for the testing we need the Data, we need to create the dummy Data Object we'll persist for Testing in the SetUp() function
- Then use the AUtowired EntityManager Class to persist the dummy data object
+ Then use the Autowired EntityManager Class to persist the dummy data object using the persist() function
  Now that the dummy data is persisted, you can now create the Test case that'll call the persisted data
  Inside the class, call the method to be tested and then use Assertions to validate the values against the persisted data
 
  ** check the issue with the dialect conflict btwn H2, PostgreSQL and the both test cases
-
+ * Tests were failing coz of the below DB configuration:
+ *  #spring.jpa.properties.hibernate.dialect
+ * Commented it out and streamlined the configurations and as of 05062023, everything was working as expected
 
 
 
