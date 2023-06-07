@@ -150,10 +150,11 @@ import org.springframework.web.bind.annotation.RestController;
                     Typically a general annotation but you would annotate this on Test Class written for the Service layer Interface
  @DataJpaTest --> annotation that loads only configuration for JPA.
                 It uses an embedded in-memory H2 if not specified otherwise
-                Typically annotated on tests Class for the Repository layer
+                Typically annotated on test Classes for the Repository layer
  @WebMvcTest --> annotation that loads only the Web layer, which includes security, filter, interceptors, etc
                 essentially centered around handling requests/responses.
                 Thus, you would typically write tests for methods under @Controller/@RestController and annotate the class with this
+
  The Service Layer Impl class Tests should ideally not have any annotations(except for ones that aid in mocking);
     this is because The ServiceImpl Class is where ur business logic(independent of any configurations) reside
 
@@ -517,7 +518,7 @@ public class HelloWorld {
 
 
 
-            UNIT TESTING    -   Repository Layer       @ 03::00
+            UNIT TESTING    -   Repository Layer       @ 03:44:00
  Testing the Repository layer is a little bit tricky since it is our interface to the DB hence DAO;
     and so you don't want to store any junk data values or change stuff in the DB
  This is where Spring Boot comes in handy with the @DataJpaTest annotation to test the Repository layer;
@@ -541,6 +542,9 @@ public class HelloWorld {
  *  #spring.jpa.properties.hibernate.dialect
  * Commented it out and streamlined the configurations and as of 05062023, everything was working as expected
 
+
+
+            UNIT TESTING    -   Controller Layer       @ 03:50:00
 
 
 
