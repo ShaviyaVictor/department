@@ -45,7 +45,7 @@ class DepartmentServiceTest {
     }
 
     @Test
-    @DisplayName("Testing fetch department by Name") //to allow a more readable name to be displayed on the console when the test runs
+    @DisplayName("Fetch Department by Name Happy Test-case ") //to allow a more readable name to be displayed on the console when the test runs
 //    @Disabled //to disable a test from running
     public void whenValidDepartmentName_thenDepartmentShouldBeFound(){
 

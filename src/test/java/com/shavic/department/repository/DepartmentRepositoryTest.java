@@ -33,7 +33,7 @@ class DepartmentRepositoryTest {
     }
 
     @Test
-    @DisplayName("Testing FindById method")
+    @DisplayName("FindById Method Happy Test-case")
     public void whenFindById_thenReturnDepartment() {
 
         Department department = departmentRepository.findById(1L).get();
