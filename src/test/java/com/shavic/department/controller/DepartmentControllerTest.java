@@ -8,7 +8,10 @@ import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
+import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -49,6 +52,16 @@ class DepartmentControllerTest {
 //        mock the object for persistence during the test
         Mockito.when(departmentService.saveDepartment(inputtedDepartment))
                 .thenReturn(outputtedDepartment);
+
+//        use the Autowired final class to make the Endpoint call
+        mockMvc.perform(MockMvcRequestBuilders.post("add/department")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content("{\n" +
+                        "\t\"departmentName\":\"Grp IT\",\n" +
+                        "\t\"departmentHead\":\"Shaviya\",\n" +
+                        "\t\"departmentRole\":\"IT services\",\n" +
+                        "}"))
+                .andExpect(MockMvcResultMatchers.status().isOk());
 
     }
 

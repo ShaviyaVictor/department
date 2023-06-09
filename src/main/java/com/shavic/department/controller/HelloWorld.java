@@ -560,6 +560,16 @@ public class HelloWorld {
  To ensure that the mocked data is being passed when the Service layer is called, use Mockito to define:
     the data u want provided as an input in the i.e Mockito.when() mocked service method call;
     and then the data u want outputted in the .thenReturn() call;
+ Now that our input and output data have have been persisted using the Mockito call;
+    we need to make the appropriate Endpoint call.
+ The Endpoint call is made using the Autowired MockMvc class which uses the perform() method;
+    which again takes in the MockMvcRequestBuilders abstract class that calls:
+        the appropriate Endpoint call;
+        then defines the appropriate contentType;
+        and the mocked content sample in the expected contentType
+ After using the perform() method, the Autowired MockMvc class will then use the andExpect() method;
+    which takes in the MockMvcResultMatchers abstract class that calls:
+        the status() method which then defines afterwards the expected Status response
 
 
 
