@@ -14,6 +14,8 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @WebMvcTest(DepartmentController.class)
 class DepartmentControllerTest {
@@ -54,7 +56,9 @@ class DepartmentControllerTest {
                 .thenReturn(outputtedDepartment);
 
 //        use the Autowired final class to make the Endpoint call
-        mockMvc.perform(MockMvcRequestBuilders.post("/add/department")
+        /*
+        Using the long Static class names from the MockMvc class for the builders and matchers
+        * mockMvc.perform(MockMvcRequestBuilders.post("/add/department")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content("{\n" +
                         "\t\"departmentName\":\"Grp IT\",\n" +
@@ -62,6 +66,18 @@ class DepartmentControllerTest {
                         "\t\"departmentRole\":\"IT services\",\n" +
                         "}"))
                 .andExpect(MockMvcResultMatchers.status().isOk());
+         */
+
+//        After Adding the on-demand Static import to shorten the Request and Result class name:
+//        Using the ALT + ENTER keyboard shortcut keys
+        mockMvc.perform(post("/add/department")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content("{\n" +
+                        "\t\"departmentName\":\"Grp IT\",\n" +
+                        "\t\"departmentHead\":\"Shaviya\",\n" +
+                        "\t\"departmentRole\":\"IT services\",\n" +
+                        "}"))
+                .andExpect(status().isOk());
 
     }
 
