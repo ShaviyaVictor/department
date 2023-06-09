@@ -552,6 +552,8 @@ public class HelloWorld {
  Given the Controller layer calls are centered around the WebMvc, we need to Autowire the MockMvc Interface;
     as well as Mock the Service layer since this layer is called when an endpoint is hit yet we don't actually want to interfere with the external layer calls
     we thus annotate it with the @MockBean annotation to indicate we just want to mock the class
+ Call the Department Object which is to be simulated for the endpoint calls
+    Then create the dummy object test case inside the @BeforeEach setUp() method call
 
 
 

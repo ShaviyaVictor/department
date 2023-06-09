@@ -1,5 +1,6 @@
 package com.shavic.department.controller;
 
+import com.shavic.department.entity.Department;
 import com.shavic.department.service.DepartmentService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -19,8 +20,18 @@ class DepartmentControllerTest {
     @MockBean
     private DepartmentService departmentService;
 
+    private Department department;
+
     @BeforeEach
     void setUp() {
+
+        department = Department.builder()
+                .departmentId(1L)
+                .departmentName("Grp IT")
+                .departmentHead("Shaviya")
+                .departmentRole("IT services")
+                .build();
+
     }
 
     @Test
