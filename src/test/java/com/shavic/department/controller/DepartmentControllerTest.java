@@ -65,7 +65,7 @@ class DepartmentControllerTest {
                 .content("{\n" +
                         "\t\"departmentName\":\"Grp IT\",\n" +
                         "\t\"departmentHead\":\"Shaviya\",\n" +
-                        "\t\"departmentRole\":\"IT services\",\n" +
+                        "\t\"departmentRole\":\"IT services\",\n" +         // this comma here will make the test to FAIL
                         "}"))
                 .andExpect(MockMvcResultMatchers.status().isOk());
          */
@@ -77,7 +77,7 @@ class DepartmentControllerTest {
                 .content("{\n" +
                         "\t\"departmentName\":\"Grp IT\",\n" +
                         "\t\"departmentHead\":\"Shaviya\",\n" +
-                        "\t\"departmentRole\":\"IT services\",\n" +
+                        "\t\"departmentRole\":\"IT services\"\n" +
                         "}"))
                 .andExpect(status().isOk());
 
