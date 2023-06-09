@@ -148,7 +148,7 @@ import org.springframework.web.bind.annotation.RestController;
  @SpringBootTest --> annotation that helps to load the full application context;
                     exactly like how you start a Spring container when you run your Spring Boot application
                     Typically a general annotation but you would annotate this on Test Class written for the Service layer Interface
- @DataJpaTest --> annotation that loads only configuration for JPA.
+ @DataJpaTest --> annotation that loads only the configuration for JPA.
                 It uses an embedded in-memory H2 if not specified otherwise
                 Typically annotated on test Classes for the Repository layer
  @WebMvcTest --> annotation that loads only the Web layer, which includes security, filter, interceptors, etc
@@ -156,10 +156,10 @@ import org.springframework.web.bind.annotation.RestController;
                 Thus, you would typically write tests for methods under @Controller/@RestController and annotate the class with this
 
  The Service Layer Impl class Tests should ideally not have any annotations(except for ones that aid in mocking);
-    this is because The ServiceImpl Class is where ur business logic(independent of any configurations) reside
+    this is because The ServiceImpl Class is where your business logic(independent of any configurations) reside
 
- @Builder --> annotation added to our POJOs to help with creating object  mocks of our POJOs
-            It creates a builder class for a fibal Class
+ @Builder --> annotation added to our POJOs to help with creating object mocks of our POJOs
+            It creates a builder class for a final Class
 
 
  *
@@ -545,7 +545,9 @@ public class HelloWorld {
 
 
             UNIT TESTING    -   Controller Layer       @ 03:50:00
-
+ Testing the Controller layer is also a little different since this layer is only called when a particular endpoint has been hit
+ This is where Spring Boot again comes in handy with the @WebMvcTest annotation to test the Controller layer;
+    the annotation helps us create the testing context for the endpoints
 
 
 
