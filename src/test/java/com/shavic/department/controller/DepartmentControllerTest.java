@@ -54,7 +54,7 @@ class DepartmentControllerTest {
                 .thenReturn(outputtedDepartment);
 
 //        use the Autowired final class to make the Endpoint call
-        mockMvc.perform(MockMvcRequestBuilders.post("add/department")
+        mockMvc.perform(MockMvcRequestBuilders.post("/add/department")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content("{\n" +
                         "\t\"departmentName\":\"Grp IT\",\n" +
