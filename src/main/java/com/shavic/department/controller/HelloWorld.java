@@ -570,6 +570,7 @@ public class HelloWorld {
  After using the perform() method, the Autowired MockMvc class will then use the andExpect() method;
     which takes in the MockMvcResultMatchers abstract class that calls:
         the status() method which then defines afterwards the expected Status response
+ Finally add Exception to the method signature expected by the perform() method call.
 
 
 
