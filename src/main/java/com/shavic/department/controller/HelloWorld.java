@@ -547,7 +547,11 @@ public class HelloWorld {
             UNIT TESTING    -   Controller Layer       @ 03:50:00
  Testing the Controller layer is also a little different since this layer is only called when a particular endpoint has been hit
  This is where Spring Boot again comes in handy with the @WebMvcTest annotation to test the Controller layer;
-    the annotation helps us create the testing context for the endpoints
+    the annotation helps us create the testing context for the endpoints.
+    Then Inside the Annotation, define the Controller class whose mock context is to be created
+ Given the Controller layer calls are centered around the WebMvc, we need to Autowire the MockMvc Interface;
+    as well as Mock the Service layer since this layer is called when an endpoint is hit yet we don't actually want to interfere with the external layer calls
+    we thus annotate it with the @MockBean annotation to indicate we just want to mock the class
 
 
 
