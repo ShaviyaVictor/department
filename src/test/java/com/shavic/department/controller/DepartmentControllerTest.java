@@ -85,6 +85,11 @@ class DepartmentControllerTest {
 
     @Test
     void fetchDepartmentById() {
+
+        Mockito.when(departmentService.fetchDepartmentById(1L))
+                .thenReturn(outputtedDepartment);
+
+
     }
 
 }
