@@ -58,9 +58,10 @@ class DepartmentControllerTest {
         Mockito.when(departmentService.saveDepartment(inputtedDepartment))
                 .thenReturn(outputtedDepartment);
 
-//        use the Autowired final class to make the Endpoint call
+//        use the Autowired final class to make the PostMapping Endpoint call
         /*
-        Using the long Static class names from the MockMvc class for the builders and matchers
+        * Using the long Static class names from the MockMvc class for the builders and matchers
+        *
         * mockMvc.perform(MockMvcRequestBuilders.post("/add/department")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content("{\n" +
@@ -88,9 +89,11 @@ class DepartmentControllerTest {
     @DisplayName("fetchDepartmentById method Test Case - happy scenario")
     void fetchDepartmentById() throws Exception {
 
+//        mock the object for persistence during the test
         Mockito.when(departmentService.fetchDepartmentById(1L))
                 .thenReturn(outputtedDepartment);
 
+//        simulate the GetMapping endpoint call and provide the expected endpoint response
         mockMvc.perform(get("/departmentById/1")
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
