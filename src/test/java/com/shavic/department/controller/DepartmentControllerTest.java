@@ -1,6 +1,7 @@
 package com.shavic.department.controller;
 
 import com.shavic.department.entity.Department;
+import com.shavic.department.exception.DepartmentNotFoundException;
 import com.shavic.department.service.DepartmentService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -84,11 +85,17 @@ class DepartmentControllerTest {
     }
 
     @Test
-    void fetchDepartmentById() {
+    @DisplayName("fetchDepartmentById method Test Case - happy scenario")
+    void fetchDepartmentById() throws Exception {
 
         Mockito.when(departmentService.fetchDepartmentById(1L))
                 .thenReturn(outputtedDepartment);
 
+        mockMvc.perform(get("/departmentById/1")
+                .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.departmentName")
+                        .value(outputtedDepartment.getDepartmentName()));
 
     }
 
