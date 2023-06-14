@@ -8,12 +8,13 @@ welcome:
 
 #  database connection information
 spring:
-  datasource:
-    continue-on-error: true
-    initialization-mode: always
-    initialize: true
   jpa:
     hibernate:
       ddl-auto: update
       show-sql: true
-#  Add Crucial DB details for department_API project below
+  datasource:
+    continue-on-error: true
+    initialization-mode: always
+    initialize: true
+    #  Add Crucial DB details for department_API project below
+
