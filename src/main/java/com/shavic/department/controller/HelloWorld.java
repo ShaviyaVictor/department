@@ -613,12 +613,22 @@ public class HelloWorld {
  Create a key-value pair in the application.properties file;
     then create a private variable of the type of value you wanna call, either Int or String
     then annotate the variable with the @Value() annotation that will take in the key being referenced in the application.properties file "${key}"
-That simple, now just pass the variable where you want the data called in your code and simply fetch the data
-So, the data is fetched from the properties file and will be attached to our custom variable which is now called in our code.
-You can also add custom values in different files and you'll just need to reference those files and the data will be fetched.
+ That simple, now just pass the variable where you want the data called in your code and simply fetch the data
+ So, the data is fetched from the properties file and will be attached to our custom variable which is now called in our code.
+ You can also add custom values in different files and you'll just need to reference those files and the data will be fetched.
 
 
 
+
+                        Adding application.yml file for our application from application.properties file    - @ 04:03:00
+
+ Spring Boot also supports the yaml file support for the application configurations.
+ Why opt for the yaml file:
+    - Yaml file is in a more human readable format
+    - Yaml file helps in reducing duplicacy where it's indentation format helps cut out the redundant duplicates
+    - It's an easy formatted file that is embraced by most technologies eg. Docker, Kubernetes & even AWS configurations
+ There are different Plugins that can help with converting application.properties file contents to application.yml files;
+    or Online resources that help with the conversion.
 
 
 
