@@ -1,5 +1,6 @@
 package com.shavic.department.controller;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -178,10 +179,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloWorld {
 
+//    pulling data from the application.properties file
+    @Value("${welcome.message}")
+    private String welcomeMessage;
 //    @RequestMapping(value = "/", method = RequestMethod.GET)
     @GetMapping("/")
     public String helloWorld() {
-        return "Hello World Java!";
+        return welcomeMessage;
     }
 
 }
@@ -606,11 +610,12 @@ public class HelloWorld {
  This is instrumental when u have some data that u need to add to ur application or for data that should be dynamic every now and then;
  Adding such data to the application.properties file is the best approach.
     This enables us to just be changing the values in the application.properties file instead of messing around with the code hard-coding values
-
-
-
-
-
+ Create a key-value pair in the application.properties file;
+    then create a private variable of the type of value you wanna call, either Int or String
+    then annotate the variable with the @Value() annotation that will take in the key being referenced in the application.properties file "${key}"
+That simple, now just pass the variable where you want the data called in your code and simply fetch the data
+So, the data is fetched from the properties file and will be attached to our custom variable which is now called in our code.
+You can also add custom values in different files and you'll just need to reference those files and the data will be fetched.
 
 
 
