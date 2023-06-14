@@ -1,2 +1,19 @@
+#  Custom Tomcat server port
 server:
   port: 8088
+
+#  Custom referenced value
+welcome:
+  message: Hello World, welcome to CodePrac with Shaviya!
+
+#  database connection information
+spring:
+  datasource:
+    continue-on-error: true
+    initialization-mode: always
+    initialize: true
+  jpa:
+    hibernate:
+      ddl-auto: update
+      show-sql: true
+#  Add Crucial DB details for department_API project below

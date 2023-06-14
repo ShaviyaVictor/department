@@ -629,6 +629,7 @@ public class HelloWorld {
     - It's an easy formatted file that is embraced by most technologies eg. Docker, Kubernetes & even AWS configurations
  There are different Plugins that can help with converting application.properties file contents to application.yml files;
     or Online resources that help with the conversion.
+    eg. https://www.javainuse.com/app2yaml
  Either the .yml or .yaml file extensions can do.
  And Indentation is very important.
 
