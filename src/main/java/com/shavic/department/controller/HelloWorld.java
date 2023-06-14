@@ -601,6 +601,14 @@ public class HelloWorld {
 
 
 
+                        Managing Configuration - Adding Configurations in the properties file   - @ 04:00:00
+
+ This is instrumental when u have some data that u need to add to ur application or for data that should be dynamic every now and then;
+ Adding such data to the application.properties file is the best approach.
+    This enables us to just be changing the values in the application.properties file instead of messing around with the code hard-coding values
+
+
+
 
 
 
