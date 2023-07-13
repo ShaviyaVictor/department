@@ -65,7 +65,7 @@ import org.springframework.web.bind.annotation.RestController;
               --> when Autowiring a class that is Implementing an Interface that is being Implemented more than once by different classes;
               Spring will throw a NoUniqueBeanDefinitionException exception. This is avoided by narrowing the Implementation using a @Qualifier annotation
                   Check here:--> https://stackoverflow.com/questions/40830548/spring-autowired-and-qualifier#:~:text=The%20%40Qualifier%20annotation%20is%20used,constructor%20arguments%20or%20method%20parameters.
-  @Qualifier --> annotation used to resolve the autowiring conflict, when there are multiple beans of the same type
+  @Qualifier --> annotation used to resolve the auto wiring conflict, when there are multiple beans of the same type
 
 
 
