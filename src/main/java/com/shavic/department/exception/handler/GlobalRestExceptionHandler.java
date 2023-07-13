@@ -16,7 +16,7 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
  */
 @RestControllerAdvice
 @ResponseStatus
-public class GlobalRestResponseEntityExceptionHandler
+public class GlobalRestExceptionHandler
         extends ResponseEntityExceptionHandler {
 
     @ExceptionHandler(DepartmentNotFoundException.class)
