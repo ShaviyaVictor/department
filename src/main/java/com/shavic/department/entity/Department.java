@@ -29,6 +29,7 @@ public class Department {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long departmentId;
+//    Hibernate validations captured in the controller by the @Valid annotation
     @NotBlank(message = "Please add the department name")
 //    @Size(min = 5, message = "The Name should be at least 5 characters")
 //    @Size(max = 16, message = "The Name should at most be 16 characters")
