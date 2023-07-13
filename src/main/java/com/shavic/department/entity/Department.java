@@ -38,7 +38,7 @@ public class Department {
     private String departmentHead;
     private String departmentRole;
 
-    //    Getters and Setters for the pro perties provided by the @Data annotation now
+    //    @Data annotation provides the Getters and Setters for the properties
     /*
 
     public Long getDepartmentId() {
@@ -96,6 +96,7 @@ public class Department {
     */
 
 //    call toString() method for the properties
+//    @Data annotation provides the toString() method
     /*
 
     @Override

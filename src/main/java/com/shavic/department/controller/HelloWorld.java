@@ -106,14 +106,14 @@ import org.springframework.web.bind.annotation.RestController;
 
  @Data --> is a Lombok convenient shortcut annotation that bundles the features of @Getter; @Setter; @ToString; @EqualsAndHashCode and @RequiredArgsConstructor annotations all together in one annotation
        --> this annotation basically generates all the boilerplate code that is normally associated with simple Plain Old Java Objects(POJOs) and beans;
-            --> generating setters for all fields
+            --> generating getters & setters for all fields
             --> generating setters for all non-final fields
             --> generating all appropriate toString, equals and hashCode implementations that involve the fields of the class
             --> generating a Constructor that initializes all final fields, as well as non-final fields with no initializer that have been marked with @NonNull, in order to ensure the fields are never null.
 
  https://stackoverflow.com/questions/68314072/why-to-use-allargsconstructor-and-noargsconstructor-together-over-an-entity
 
- @ALlArgsConstructor --> generates a constructor requiring an argument for every field in the annotated class
+ @AllArgsConstructor --> generates a constructor requiring an argument for every field in the annotated class
                      --> it also allows the creation of static factory methods using the staticName attribute
  @NoArgsConstructor --> generates a default constructor with no parameters
                     --> it can create a static factory method for construction purposes
