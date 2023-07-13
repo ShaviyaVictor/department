@@ -22,7 +22,7 @@ public interface DepartmentRepository extends JpaRepository<Department, Long> {
     Department findByDepartmentName(String departmentName);
 
 //    to loosen the check on the name by ignoring the Case checks we add the Keyword: IgnoreCase in our custom method
-//    and now with the below method call, as long as the method matches an object in the DB, regardless of the case mismatch, the results will be found
+//    and now with the below method call, as long as the departmentName matches an object in the DB, regardless of the case mismatch, the results will be found
     Department findByDepartmentNameIgnoreCase(String departmentName);
 //    Optional<Department> findByDepartmentNameIgnoreCase(String departmentName);
 

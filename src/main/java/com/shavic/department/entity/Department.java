@@ -37,7 +37,7 @@ public class Department {
     private String departmentHead;
     private String departmentRole;
 
-    //    Getters and Setters for the pro perties
+    //    Getters and Setters for the pro perties provided by the @Data annotation now
     /*
 
     public Long getDepartmentId() {
