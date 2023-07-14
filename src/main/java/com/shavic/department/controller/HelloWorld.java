@@ -161,10 +161,11 @@ import org.springframework.web.bind.annotation.RestController;
     this is because The ServiceImpl Class is where your business logic(independent of any configurations) reside
 
  @Builder --> annotation added to our POJOs to help with creating object mocks of our POJOs
+            Added to the Entity class and called in tests to create dummy test cases of the POJOs
             It creates a builder class for a final Class
 
  @Mock --> annotation used for mocking objects that are not part of the Spring context
- @MockBean --> annotation used for mocking objects that are part of the Spring context
+ @MockBean --> annotation used for mocking objects that are part of the Spring context(check the service && controller layer test cases)
                 this annotation is not aware of the Spring context;
                 and thus is typically used for unit testing isolated components without the need for a full Spring context setup.
  Check the above provided link
