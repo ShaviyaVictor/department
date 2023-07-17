@@ -127,12 +127,12 @@ import org.springframework.web.bind.annotation.RestController;
  https://stackoverflow.com/questions/43124391/restcontrolleradvice-vs-controlleradvice
  https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/bind/annotation/ControllerAdvice.html
 
- @ControllerAdvioce --> Is a Specialization of @Component annotation for classes that declare @ExceptionHandler; @InitBinder; or @ModelAttribute methods
+ @ControllerAdvice --> Is a Specialization of @Component annotation for classes that declare @ExceptionHandler; @InitBinder; or @ModelAttribute methods
                         which are to be shared across multiple @Controller classes
                     --> can be used in REST web services but you will need to add the @ResponseBody annotation
  @RestControllerAdvice --> Is a syntactic sugar for @ControllerAdvice + @ResponseBody annotations bundled up together
  @ExceptionHandler --> Annotation for handling exceptions in specific handler classes and/or handler methods
- @ResponseStatus --> Annotation used to mark a method or exception class with the status code and reason message that should be returned
+ @ResponseStatus --> Annotation used to mark a method or exception class that contains a status code and the reason message that should be returned
 
  Optional<> --> Is a container object which may or may not contain a non-null value;
                 if a value is present, isPresent() will return TRUE and get() will return the value

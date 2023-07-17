@@ -87,6 +87,7 @@
 </project>
 
 <!--IntelliJ IDEA keyboard shortcuts-->
+
 <!--
 
 Ctrl + Shift + F 	=== to search for files
@@ -102,6 +103,7 @@ Alt + Enter	   === to show you options on a red highlighted method that needs an
 
 Alt + 1	   === to open the project tool window and focus on it
 Shift + Esc 	=== to close the terminal/run window
-
+Ctrl + Alt + 7 	 === to find all usages of a Class in a file
+Ctrl + W 	 === to expand a code selection
 
 -->
