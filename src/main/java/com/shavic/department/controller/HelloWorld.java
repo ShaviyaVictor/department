@@ -161,7 +161,7 @@ import org.springframework.web.bind.annotation.RestController;
     this is because The ServiceImpl Class is where your business logic(independent of any configurations) reside
 
  @Builder --> annotation added to our POJOs to help with creating object mocks of our POJOs
-            Added to the Entity class and called in tests to create dummy test cases of the POJOs
+            Added to the Entity class and called in tests to create dummy test case instances of the POJOs
             It creates a builder class for a final Class
 
  @Mock --> annotation used for mocking objects that are not part of the Spring context
@@ -197,8 +197,8 @@ public class HelloWorld {
  **
  *
     Web Development architectural structure:
-    1. Then the Back End team is responsible for creating the APIs
-    2. The Front End technologies will consume the APIs to communicate with the DB
+    1. The Back End team is responsible for creating the APIs that enable Communication/ Data manipulation
+    2. Then the Front End technologies will consume the APIs to communicate with the DB
 
          Spring Boot's REST API architecture:
              1. Controller Layer      ===> this is the Presentational layer
@@ -207,17 +207,18 @@ public class HelloWorld {
                                       ===> this is a Java Class
              2. Service Layer     ===> this is the Business logic layer
                                   ===> it contains the logic for our APIs
-                                  ===> the layer as general will have an Interface and an Implementation class for the Interface
+                                  ===> the layer in general will have an Interface and an Implementation class for the Interface
                                   ===> the Interface layer takes in the client request methods created in the Controller layer
                                   ===> the Implementation layer then Implements the methods defined in its Interface with added business logic and then calling the Autowired DAO layer for actioning in the DB
-                                  ===> this comprises an Interface and a Java Impl Class that implements the Interface
+                                  ===> thus comprising an Interface and a Java Impl Class that implements the Interface
              3. Repository layer       ===> this is the Data Access Object(DAO) layer or the Persistence layer
                                        ===> it is the Data Access Layer of our API since it is the layer that interacts with the DataBase
                                        ===> it extends JpaRepository interface that takes in the Entity/Bean Object defining our DB and the Entity property Type defined as our Primary Key for the DB
                                        ===> this is an Interface and thus allows us to work with the Spring Data JPA through extending it
-             4. DataBase      ===> where our Data is stored
+             4. DataBase      ===> this is where our Data is stored
                               ===> Spring Boot offers H2 in-memory DB which can later be switched to a real DB such as PostgreSQL or mySQL or MSSQL
                               ===> Spring Boot h2 dependency provides us with a browser-based console that helps us interact with our H2 in-memory DB
+                              ===> Check the application.properties file on how the configuration for the H2 DB is done
 
   Entity   - @ 01:35:10
     A default Model can be equated to an Entity in Spring Boot
