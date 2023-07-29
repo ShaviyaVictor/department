@@ -18,14 +18,13 @@ Advantages of Spring Boot
 Spring Initializr         
 Spring Boot Starters           
 Spring Boot DevTools    
-    #########
+    
 Creating REST APIs with Spring Boot   - @ 01:22:54   
 Hibernate validations   - @ 02:47:20
 Logging in Spring Boot    - @ 02:57:15
 Project Lombok   - @ 03:02:55
 Exception handling   - @ 03:08:25       
 Database Migration H2 -> MySQL/Postgres   - @ 03:21:50
-    #########
 
   #### Phase 2
 Creating Different Layers of the Application      
@@ -33,7 +32,6 @@ Implementing Unit Testing (service layer)   - @ 03:27:30
     Implementing Unit Testing (repository layer)   - @ 03:44:30   
   Implementing Unit Testing (controller layer)   - @ 03:50:30    
 Implementing JUnit and Mockito for all layers during the test implementation.   - @ 03:38:40
-    #########
 
   #### Phase 3
 Managing Configuration - Adding Configurations in the properties file   - @ 04:00:00    
@@ -62,13 +60,13 @@ Implementing Complete registration and Login flow with Email validation
 * [Github](https://github.com/ShaviyaVictor/shaviya)
 
 ## Getting Started
-#### - Installation Process
+### - Installation Process
 
 1.	Clone project
 2.	Open project in you IDE as a Maven project
 3.	Ensure all dependencies in the *pom.xml* file are resolved.
 
-#### - Software Dependencies
+### - Software Dependencies
 For building and running the application you need:
 - JDK 17
 - Maven 3
@@ -85,13 +83,13 @@ For testing the endpoints of the application you need:
 [//]: # (- Added Profile "UPDATEMSISDNCOUNTERProfile" to digicel-lib-customer-profile.)
 
 ## Build and Test
-#### Build
+### Build
 - Build the project and run all tests by running the `mvn clean package` command.
 - Then spin up the application by clicking the `run` button along the file name tab or the one in DepartmentApplication file right beside the numbers
 - Ensure the db_credentials are added in the yaml file within the resources directory for data transfer
 - - Or check application.properties file and get the H2 connections and spin up the in-memory db
 
-#### Test
+### Test
 - You can run only tests by running the `mvn test` command.
 - Navigate to the test directory for the test cases of the respective application layers
 
