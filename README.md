@@ -53,7 +53,7 @@ Implementing OAuth 2.0 with Spring Security and Spring Boot
 Implementing Custom Auth Server, Resource Server, and Clients.      
 Implementing Complete registration and Login flow with Email validation     
 
-<img src="#" width="600" height="350" alt="">             
+<img src="https://github.com/ShaviyaVictor/department/blob/master/src/main/resources/images/2023-07-28%2020-41-54_postman_collection_of_the_endpoints.png?raw=true" width="600" height="350" alt="">             
 
 ## Built With
 
