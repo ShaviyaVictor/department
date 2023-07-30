@@ -18,9 +18,9 @@ import lombok.NoArgsConstructor;
  */
 @Entity
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
-@Builder
+@AllArgsConstructor // for the main Constructor
+@NoArgsConstructor // for the default Constructor
+@Builder // for building mock objects in tests
 public class Department {
 
 //    Entity properties

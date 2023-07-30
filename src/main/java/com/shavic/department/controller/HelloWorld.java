@@ -180,7 +180,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloWorld {
 
-//    pulling data from the application.properties file
+//    pulling data from the application.properties file and attaching the value to this new String variable
     @Value("${welcome.message}")
     private String welcomeMessage;
 //    @RequestMapping(value = "/", method = RequestMethod.GET)
@@ -207,9 +207,10 @@ public class HelloWorld {
                                       ===> this is a Java Class
              2. Service Layer     ===> this is the Business logic layer
                                   ===> it contains the logic for our APIs
-                                  ===> the layer in general will have an Interface and an Implementation class for the Interface
+                                  ===> this layer in general will have an Interface and an Implementation class for the Interface
                                   ===> the Interface layer takes in the client request methods created in the Controller layer
-                                  ===> the Implementation layer then Implements the methods defined in its Interface with added business logic and then calling the Autowired DAO layer for actioning in the DB
+                                  ===> the Implementation layer then Implements the methods defined in its Interface with added business logic
+                                        and then calling the Autowired DAO layer for actioning in the DB
                                   ===> thus comprising an Interface and a Java Impl Class that implements the Interface
              3. Repository layer       ===> this is the Data Access Object(DAO) layer or the Persistence layer
                                        ===> it is the Data Access Layer of our API since it is the layer that interacts with the DataBase
