@@ -1,4 +1,4 @@
-# custom_setup_template
+# Department API
 Demo project for Spring Boot Department System Backend.
 
 This Spring Boot Master Class covers a wide range of topics to Master Spring and Spring Boot Framework and accelerate your growth in your career.
@@ -20,17 +20,17 @@ Spring Boot Starters
 Spring Boot DevTools    
     
 Creating REST APIs with Spring Boot   - @ 01:22:54   
-Hibernate validations   - @ 02:47:20
-Logging in Spring Boot    - @ 02:57:15
-Project Lombok   - @ 03:02:55
+Hibernate validations   - @ 02:47:20      
+Logging in Spring Boot    - @ 02:57:15  
+Project Lombok   - @ 03:02:55   
 Exception handling   - @ 03:08:25       
 Database Migration H2 -> MySQL/Postgres   - @ 03:21:50
 
   #### Phase 2
 Creating Different Layers of the Application      
 Implementing Unit Testing (service layer)   - @ 03:27:30     
-    Implementing Unit Testing (repository layer)   - @ 03:44:30   
-  Implementing Unit Testing (controller layer)   - @ 03:50:30    
+Implementing Unit Testing (repository layer)   - @ 03:44:30   
+Implementing Unit Testing (controller layer)   - @ 03:50:30    
 Implementing JUnit and Mockito for all layers during the test implementation.   - @ 03:38:40
 
   #### Phase 3
@@ -98,7 +98,7 @@ For testing the endpoints of the application you need:
 
 This project is licensed under the [Apache License 2.0](https://github.com/ShaviyaVictor/custom_setup_template/blob/main/LICENSE).
 
-## Resources && Acknowledgments
+## Acknowledgments
 - [Spring Initializr](https://start.spring.io/#!type=maven-project&language=java&platformVersion=3.0.6&packaging=jar&jvmVersion=17&groupId=com.shavic&artifactId=department&name=department&description=Spring%20Boot%20Department%20RESTful%20API%20project%20geared%20towards%20learning%20Spring%20Boot%20and%20its%20convention...&packageName=com.shavic.department&dependencies=web,h2)
 - [@daily_code_buffer](https://www.youtube.com/watch?v=zvR-Oif_nxg&t=7665s)
 - [@shaviyavictor](https://www.youtube.com/watch?v=xz_7l0qyVrw)
