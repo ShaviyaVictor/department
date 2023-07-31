@@ -379,7 +379,7 @@ public class HelloWorld {
 
       HIBERNATE VALIDATIONS   - @ 02:47:20
 
-  Add the validation dependency
+  Add the validation dependency in the POM file
   Then add the @NotBlank annotation on the Entity property you want to always be present on the JSON RequestBody
       and you can also add a message within the parenthesis for printing when the property is passed blank
     Then add @Valid annotation just before the @RequestBody of our POST method call;

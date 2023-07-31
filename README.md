@@ -77,7 +77,7 @@ For testing the endpoints of the application you need:
 
 [//]: # (### Latest releases)
 
-[//]: # ()
+[//]: # Check HelloWorld file in the controller directory for Documentation on the project
 [//]: # (#### 1.3.0)
 
 [//]: # (- Added Profile "UPDATEMSISDNCOUNTERProfile" to digicel-lib-customer-profile.)
