@@ -18,3 +18,6 @@ spring:
     initialize: true
     #  Add Crucial DB details for department_API project below
 
+    password: Adm!n_p0stgr3s
+    url: jdbc:postgresql://localhost:5432/department_api
+    username: postgres

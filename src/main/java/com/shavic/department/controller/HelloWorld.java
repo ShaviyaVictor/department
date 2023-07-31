@@ -232,7 +232,7 @@ public class HelloWorld {
   Controller
     Create the EntityController Class where the RESTful APIs will be created';
       and annotate it with the @RestController annotation
-    After creating the Controller, you call the Service Layer Interface which will pass the methods created to the Service Implementation class for Implementation
+    After creating the Controller, you inject by autowiring the Service Layer Interface which will pass the methods created to the Service Implementation class for Implementation
 
   Service
     The convention is Creating an Interface for our service and then create the Class Implementing the service interface;
@@ -240,13 +240,12 @@ public class HelloWorld {
     Thus the Interface in the Service package and then create the Impl package that'll contain the Impl Classes for the Interfaces.
     This Interface shouldn't have the @Repository annotation, but the ServiceImpl Class must have the @Service annotation
 
-
-    Repository
-  The Repository Class must have the @Repository annotation.
-  JpaRepository will be extended for this project which will take in 2 properties;
+  Repository
+   The Repository Class must have the @Repository annotation.
+   JpaRepository will be extended for this project which will take in 2 properties;
       1st one will be the Entity defining our DB Properties, then the
       2nd one will be the Type for the Entity Property being used as the Primary Key, having the @Id annotation
-  JpaRepository gives us several commonly used built-in methods that we can use directly for interacting our Entity with the DB eg. findAll(), findById(),
+   JpaRepository gives us several commonly used built-in methods that we can use directly for interacting our Entity with the DB eg. findAll(), findById(),
 
 
             CREATING REST APIs FLOW   - @ 01:56:35
@@ -291,7 +290,7 @@ public class HelloWorld {
 
   Create the fetchDepartmentById method which will make the Request
   This method will take in the @GetMapping() ...
-      which takes in the url path that ends with a Variable declaration call for the particular Entity property needed; @GetMapping("/departments/{id}"
+      which takes in the url path that ends with a Variable declaration call for the particular Entity property needed; @GetMapping("/departments/{id}")
   In our case we'll request for the data present in the Id as declared in the URL path
   The method itself will not take in List but will Call the Department Entity since we just want a particular set of Data for the specified ID: public Department fetch...()
   The method now will Define the Entity being used as the Primary Key, which in this case is the ID: Long departmentId which will be taken in as an input
@@ -317,7 +316,7 @@ public class HelloWorld {
   The method creation itself won't have the Entity defined on it since we are not returning an Object after the call but instead we'll be deleting an Object after the request is actioned
   The method in this case will have a String definition which will help us define the return String message to be printed for us once the API request has been actioned successfully;
   The method then will take in the @PathVariable() annotation that takes in the variable defined in the Mapping annotation
-      and after the PathVariable definition the Entity defined as the Primary Key is defined with its Type
+      and after the PathVariable definition the Entity property defined as the Primary Key is defined with its Type
   Then call the Service Interface that was Autowired which then calls the just created method taking in the Entity property as an input: departmentService.deleteById(departmentId)
   Then return a String statement that will be printed on the REST client(Postman) after a successful actioning of the API call
     ***   Service Layer Flow
@@ -373,7 +372,7 @@ public class HelloWorld {
       and then take in the Entity Property Type and Identity as Input Parameters
   Then get back to the ServiceImpl Class and call the custom method created in the DAO through the Autowired DAO;
       And this time round we don't need to add the get() method after the call since we custom created the method ourselves and thus the DAO shall get the depertmentByName
-      if tye naming convention is okay!
+      if the naming convention is okay!
 
 
 

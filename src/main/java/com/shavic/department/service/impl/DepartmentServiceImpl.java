@@ -66,11 +66,11 @@ public class DepartmentServiceImpl implements DepartmentService {
 //        get the object Entity of the specified Id from the DB
 //        Department departmentObject = departmentRepository.findById(departmentId).get();
 
-//        Logic trial to throw an exception when updating an object that is npt present - is working!! Thank You Jesus!
+//        Logic trial to throw an exception when updating an object that is not present - is working!! Thank You Jesus!
 //        !departmentObject1.isPresent() == departmentObject1.isEmpty()
         Optional<Department> departmentObject1 = departmentRepository.findById(departmentId);
         if (departmentObject1.isEmpty()) {
-            throw new DepartmentNotFoundException("Department with ID - " + departmentId + " is NOT present for an UPDATE to occur");
+            throw new DepartmentNotFoundException("Department with ID: " + departmentId + " is NOT present for an UPDATE to occur");
         }
         Department departmentObject = departmentObject1.get();
 
