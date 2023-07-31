@@ -562,10 +562,11 @@ public class HelloWorld {
  This is where Spring Boot again comes in handy with the @WebMvcTest annotation to test the Controller layer;
     the annotation helps us create the testing context for the endpoints.
     Then Inside the Annotation, define the Controller class whose mock context is to be created
- Given the Controller layer calls are centered around the WebMvc, we need to Autowire the MockMvc final class of the servlet context;
+ Given that Controller layer calls are centered around the WebMvc, we need to Autowire the MockMvc final class of the servlet context;
     as well as Mock the Service layer since this layer is called when an endpoint is hit yet we don't actually want to interfere with the external layer calls
     we thus annotate it with the @MockBean annotation to indicate we just want to mock the class
- Call the Department Object which is to be simulated for the endpoint calls
+ Create an instance of the Department Object which is to be simulated for the provision of output data for the endpoint calls
+    The instance is created outside as a class instance of its own since it is to called in several simulations
     Then create the dummy outputted object test case inside the @BeforeEach setUp() method call which will act as the Output object for the endpoint calls
  ---> Save() Method Test Case
  Since the Save() method endpoint takes in the Department object as an input param as a RequestBody and then Outputs the same entire Department object;
@@ -578,9 +579,9 @@ public class HelloWorld {
     we need to make the appropriate Endpoint call.
  The Endpoint call is made using the Autowired MockMvc class which uses the perform() method;
     which again takes in the MockMvcRequestBuilders abstract class that calls:
-        the appropriate RequestMapping Endpoint call that takes in the url path;
+        the appropriate RequestMapping Endpoint call that takes in the correct url path;
         then defines the appropriate contentType that takes in the type definition;
-        and the mocked content sample in the expected/above defined contentType
+        and the mocked content replica in the expected/above defined contentType
  After using the perform() method, the Autowired MockMvc class will then use the andExpect() method;
     which takes in the MockMvcResultMatchers abstract class that calls:
         the status() method which then defines afterwards the expected Status response
