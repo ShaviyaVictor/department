@@ -484,22 +484,22 @@ public class HelloWorld {
     The Controller layer requests for Data or passes data through the Service layer;
     the Service layer on the other hand will request/pass data through the Repository layer;
     and then the Repository layer interacts with the Database to either get data or populate data.
- So whenever we are Testing methods within an individual layer, we wouldn't be concerned with the external layers that it depends on;
+ So whenever we are Testing methods within an individual layer, we don't want to be concerned with the external layers that it depends on;
     let's say we are testing the Controller layer, we will Mock data required from/to the Service layer and Provide a Mocked data,
     so as to avoid calling the Service layer
     Same case when dealing with the Repository layer, we Mock the data we would want from the DB,
     so as to avoid hitting the DB.
 
             UNIT TESTING    -   Service Layer       @ 03:30:00
-    *** Testing getDepartmentByName() method of the Service Layer
+    *** Testing fetchDepartmentByName() method of the Service Layer
  We'll write tests for all the layers from the -> Service layer -> Repository layer -> Controller layer
     And implement mocking
  Create the Class Test file:
     - Go to the Service layer Interface on the Class level and;
         use ALT + Enter OR Right-Click and go to Generate
         choose Tests
-        choose setUp/@Before default function which we'll use in Mocking
-        don't choose the Methods, we'll create our own Test names since we'll be writing tests for both scenarios, passing and failing scenarios
+        choose setUp/@BeforeEach default function which we'll use in Mocking
+        don't choose the Methods, we'll create our own Test names since we'll be writing tests for both scenarios, passing(+) and failing(-) scenarios
  To enable Spring Boot recognize the newly created Class as a Test add: @SpringBootTest annotation
  Then create the first test method:
     The method should be void since we are not returning any value after execution
@@ -508,14 +508,14 @@ public class HelloWorld {
     For that reason we need to inject the Service layer Interface that we are testing its method using @Autowired annotation
  Then annotate the custom method with @Test annotation to tell Spring Boot that that is a Test case
  Create a logic for the Test case validation:
-    Define the expected value upon the test call
+    Declare the expected value upon the test call
     Create a variable holding the Object obtained from the method call from the Autowired Service Interface
     Then assert the values against each other
 
  The method call as of now, will try to retrieve the data from the DAO/repository which is not the behavior we want:
     Thus create a dummy mock Object from the Repository
  The Mocked Object will be created inside the @BeforeEach annotated method which is usually created before each Test method is run;
- First, unlike the autowiring convention, here we @MockBean the DAO class privately to bring in the method call we need as a dummy object rather than the real object
+ First, unlike the @autowiring convention, here we @MockBean the DAO class privately to bring in the method call we need as a dummy object rather than the real object
     Then define what you want when the mocked bean method is called within the @BeforeEach annotated setUp() method.
     You can manually create the Constructor yourself, but that will be much work;
     We use the @Builder annotation that we earlier added in our Entity Class to help us in building the Desired Object here
