@@ -541,7 +541,7 @@ public class HelloWorld {
  Create the Test Class for the repository layer with the @BeforeEach setUp() function
  Then annotate the Repository layer Test Class with the special @DataJpaTest annotation
  Autowire the Repository Class which we'll be testing its methods
- Then add the Entity Manager; since we choose to use an Entity Manager, we get the default Test Entity Manager that will still save & persist data
+ Then add the Test Entity Manager; since we choose to use an Entity Manager, we get the default Test Entity Manager that will still save & persist data
     Thus Autowire the TestEntityManager Class
   *** Testing findById() method of the Repository Layer
  Since for the testing we need the Data, we need to create the dummy Data Object we'll persist for Testing in the SetUp() function
@@ -553,6 +553,7 @@ public class HelloWorld {
  * Tests were failing coz of the below DB configuration:
  *  #spring.jpa.properties.hibernate.dialect
  * Commented it out and streamlined the configurations and as of 05062023, everything was working as expected
+  * - The goodness of God, now 31 days to go and am out of Jamaica, just doing my revision here 31072023
 
 
 
