@@ -587,7 +587,7 @@ public class HelloWorld {
         the status() method which then defines afterwards the expected Status response
  Finally add Exception to the method signature expected by the perform() method call.
 
- Since the Static MockMvnRequestBuilders and the MockMvcResultMatchers are longer;
+ Since the Static MockMvcRequestBuilders and the MockMvcResultMatchers are longer;
     you can use the shortcut: ALT + ENTER to use the Import operation which allows us to shorten the Static class names by;
         adding the on-demand static import for the long static class names.
  And now we are good to go,
