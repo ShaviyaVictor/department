@@ -1,6 +1,14 @@
 #  Custom Tomcat server port
 server:
   port: 8088
+#spring:
+#  profiles:
+#    active: dev
+#  config:
+#    use-legacy-processing: true
+
+#the 3 hyphens define the start of a new document
+---
 
 #  Custom referenced value
 welcome:
@@ -8,6 +16,7 @@ welcome:
 
 #  database connection information
 spring:
+#  profiles: dev
   jpa:
     hibernate:
       ddl-auto: update
@@ -17,4 +26,28 @@ spring:
     initialization-mode: always
     initialize: true
     #  Add Crucial DB details for department_API project below
+
+
+---
+#TODO - failed to work for the Profiles, look into into it
+#  Custom referenced value
+#welcome:
+#  message: Hello World, welcome to CodePrac with Shaviya!
+#
+##  database connection information
+#spring:
+#  config:
+#    activate:
+#      on-profile: qa
+##  profiles: qa
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#      show-sql: true
+#  datasource:
+#    continue-on-error: true
+#    initialization-mode: always
+#    initialize: true
+#    #  Add Crucial DB details for department_API project below
+#
 
