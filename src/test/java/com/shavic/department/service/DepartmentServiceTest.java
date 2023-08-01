@@ -41,6 +41,8 @@ class DepartmentServiceTest {
 //        tell Mockito to be providing the provided dummy data whenever the DAO method is called
         Mockito.when(departmentRepository.findByDepartmentNameIgnoreCase("Group IT"))
                 .thenReturn((department));
+        Mockito.when(departmentRepository.findById(1L))
+                .thenReturn(Optional.ofNullable(department));
 
     }
 
@@ -56,6 +58,20 @@ class DepartmentServiceTest {
 
 //        validate the values against each other, the expected value against the value found in the object returned form the test method call
         assertEquals(departmentName, nameFound.getDepartmentName());
+
+    }
+    @Test
+    @DisplayName("Fetch Department by Id: Happy Test-case ") //to allow a more readable name to be displayed on the console when the test runs
+//    @Disabled //to disable a test from running
+    public void whenValidDepartmentId_thenDepartmentShouldBeFound() throws DepartmentNotFoundException {
+
+//        defining the expected value
+        Long departmentId = 1L;
+//        calling the method being tested thru the autowired layer that contains the method being tested
+        Department nameFound = departmentService.fetchDepartmentById(departmentId);
+
+//        validate the values against each other, the expected value against the value found in the object returned form the test method call
+        assertEquals(departmentId, nameFound.getDepartmentId());
 
     }
 
