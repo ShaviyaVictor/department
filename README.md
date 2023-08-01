@@ -35,7 +35,8 @@ Implementing JUnit and Mockito for all layers during the test implementation.   
 
   #### Phase 3
 Managing Configuration - Adding Configurations in the properties file   - @ 04:00:00    
-Managing Profiles     - @ 04:08:05
+Managing Profiles     - @ 04:08:05        
+Deploying to Prod with different Profiles     - @ 04:13:00
 Spring Boot Actuator      
 Custom Actuator Endpoints and managing endpoints.     
 What is Spring Data JPA?      
