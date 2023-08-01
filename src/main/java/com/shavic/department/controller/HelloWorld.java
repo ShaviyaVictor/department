@@ -641,5 +641,26 @@ public class HelloWorld {
 
 
 
+                    Profiles - Profiles allows us to set various environments for our application    - @ 04:08:00
+
+ To setup the DBs of various environments, say Dev, QA, Staging and the Prod environments...
+ In the yaml file, we create multiple documents in the single file;
+ The new document is recognized by 3 hyphens
+ And add the profiles keyword under the spring tree
+ Then define the active profiles in the global document declaring the profile to be activated
+
+ TODO - Didn't work though, to get back to it...
+
+
+
+
+
+
+                    Running Springboot with multiple profiles    - @ 04:13:00
+
+ Start here...
+
+
+
  *
  **/
