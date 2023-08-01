@@ -105,20 +105,19 @@ class DepartmentControllerTest {
 
     }
 
-    // TODO: 31/07/2023 - revisit this test 
-//    @Test
-//    @DisplayName("getDepartments Test Case: happy case")
-//    void fetchDepartmentList() throws Exception {
-//
-//        Mockito.when(departmentService.fetchDepartmentList())
-//                .thenReturn((List<Department>) outputtedDepartment);
-//
-//        mockMvc.perform(get("/departments")
-//                .contentType(MediaType.APPLICATION_JSON))
-//                .andExpect(status().isOk())
-//                .andExpect(jsonPath("$.departmentName")
-//                        .value(outputtedDepartment.getDepartmentName()));
-//
-//    }
+    @Test
+    @DisplayName("fetchDepartmentByName Test Case: happy case")
+    void fetchDepartmentByName() throws Exception {
+
+        Mockito.when(departmentService.fetchDepartmentByName("Grp IT"))
+                .thenReturn(outputtedDepartment);
+
+        mockMvc.perform(get("/departmentByName/Grp IT")
+                .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.departmentName")
+                        .value(outputtedDepartment.getDepartmentName()));
+
+    }
 
 }
