@@ -682,5 +682,23 @@ public class HelloWorld {
 
 
 
+
+
+
+                    Spring Boot Actuator    - @ 04:17:00
+
+ Actuator - is for managing and monitoring our application perfomance;
+ - health    - beans created     - info     - memnory utilization and more
+ Just add the Spring Actuator dependency in the pom file
+ Run the application and some 2 default endpoints will be added
+ one for Health and the other for Application Info
+ You can enable the others by adding a configuration in the configuration yaml file
+ management > endpoints > web/jmx > exposure > includes:"*"
+
+ TODO - there's more you can do with the Actuator, find the time and go read the Docs and play around with it
+
+
+
+
  *
  **/
