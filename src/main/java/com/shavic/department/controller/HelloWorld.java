@@ -658,7 +658,27 @@ public class HelloWorld {
 
                     Running Springboot with multiple profiles - Deploying in the Prod environment    - @ 04:13:00
 
- Start here...
+ DEPLOYMENT
+ Define the application version in the pom file
+ The the versioning format should be:
+    major release:minor release:bugfix
+ Then run:
+    $ mvn clean install
+ The command will clean/clear the target folder while the install creates the packages
+ This is basically creating the deployment.jar file
+ Now cd into the target folder && dir
+    $ cd target && dir
+ - to view the deployment .jar file name for our deployed application
+ And yeah, to deploy run the following command:
+    $ java -jar <jar-filename&version>.jar
+ The above as you saw in the target dir and all this too is happening inside the target dir
+ Then if you had added the env profiling technique, trail the above command with;
+    --spring.profiles.active=<desired env>
+ - to define the desired environment with which to point the application to in prod
+ And yeah, given it has an embedded tomcat, you will see the profile printed on the console during deployment, if u added
+
+ TODO - test the above theory
+
 
 
 
