@@ -678,6 +678,9 @@ public class HelloWorld {
  And yeah, given it has an embedded tomcat, you will see the profile printed on the console during deployment, if u added
 
  TODO - test the above theory
+ Yup! The application gets deployed in that the application is running but not the actual running, but the terminal is the one that will be in use;
+ I even tend to think you can do simultaneous calls to both DB's as long as the ip is localhost and the terminal for prod is active
+ and the terminal for local is active and if we invoke a call, actions will occur in both servers!
 
 
 
