@@ -3,29 +3,47 @@ Demo project for Spring Boot Department System Backend.
 
 This Spring Boot Master Class covers a wide range of topics to Master Spring and Spring Boot Framework and accelerate your growth in your career.
 
-[//]: # ()
+
 [//]: # (We will understand all below topics in detail in this Spring Boot complete Course [Master Class/Boot Camp])
 
-  #### Phase 1
-Why Spring Framework?           
-Features and Advantages of Spring Framework           
-Spring Bean Lifecycle         
-Dependency Injection    
-Different ways to configure Spring application      
-What is Aspect Oriented Programming (AOP)?      
-Understanding AOP with Complete Example implementation        
-What is Spring Boot?            
-Advantages of Spring Boot         
-Spring Initializr         
-Spring Boot Starters           
-Spring Boot DevTools    
-    
-Creating REST APIs with Spring Boot   - @ 01:22:54   
-Hibernate validations   - @ 02:47:20      
-Logging in Spring Boot    - @ 02:57:15  
-Project Lombok   - @ 03:02:55   
-Exception handling   - @ 03:08:25       
-Database Migration H2 -> MySQL/Postgres   - @ 03:21:50
+[//]: # (  #### Phase 1)
+
+[//]: # (Why Spring Framework?           )
+
+[//]: # (Features and Advantages of Spring Framework           )
+
+[//]: # (Spring Bean Lifecycle         )
+
+[//]: # (Dependency Injection    )
+
+[//]: # (Different ways to configure Spring application      )
+
+[//]: # (What is Aspect Oriented Programming &#40;AOP&#41;?      )
+
+[//]: # (Understanding AOP with Complete Example implementation        )
+
+[//]: # (What is Spring Boot?            )
+
+[//]: # (Advantages of Spring Boot         )
+
+[//]: # (Spring Initializr         )
+
+[//]: # (Spring Boot Starters           )
+
+[//]: # (Spring Boot DevTools    )
+
+[//]: # (    )
+[//]: # (Creating REST APIs with Spring Boot   - @ 01:22:54   )
+
+[//]: # (Hibernate validations   - @ 02:47:20      )
+
+[//]: # (Logging in Spring Boot    - @ 02:57:15  )
+
+[//]: # (Project Lombok   - @ 03:02:55   )
+
+[//]: # (Exception handling   - @ 03:08:25       )
+
+[//]: # (Database Migration H2 -> MySQL/Postgres   - @ 03:21:50)
 
   #### Phase 2
 Creating Different Layers of the Application      
