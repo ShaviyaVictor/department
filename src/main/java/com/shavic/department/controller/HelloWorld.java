@@ -678,9 +678,24 @@ public class HelloWorld {
  And yeah, given it has an embedded tomcat, you will see the profile printed on the console during deployment, if u added
 
  TODO - test the above theory
- Yup! The application gets deployed in that the application is running but not the actual running, but the terminal is the one that will be in use;
+ Yup! The application gets deployed in that the application is running but not the actual normal button play running, but the terminal is the one that will be in use for log printing;
  I even tend to think you can do simultaneous calls to both DB's as long as the ip is localhost and the terminal for prod is active
  and the terminal for local is active and if we invoke a call, actions will occur in both servers!
+
+ And YES, both the deployed and the dev applications can run at the same time;
+    the deoplyed one, takes up its terminal that should be open for the application to print and run
+    the dev one opened up with play button opens up on its Run window where it prints its logs
+ The Port is what should be defined differently for both application instances;
+    Just as the DB credentials should be different for deployed and dev instances
+    and just like that you can add data to both application instances in different env
+
+ * Logging is important: The Deployed machine does not print exceptions, and this is where using exceptionhandling is important to print on Postman relevant & custom understood logs
+  * The Dev Run window will print the exceptionhandling message printed on Postman,
+ Otherwise without proper exceptionhandling it will be very difficult to catch certain application bounces,
+ Good experimentation generally
+
+ TODO - Build my own API and have t consumed in Angular or React
+
 
 
 
