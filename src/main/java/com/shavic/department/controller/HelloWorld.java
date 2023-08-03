@@ -694,6 +694,12 @@ public class HelloWorld {
  Otherwise without proper exceptionhandling it will be very difficult to catch certain application bounces,
  Good experimentation generally
 
+ This is where DEPLOYMENT you have to purchase some RAM space on a Virtual Machine somewhere
+    then deploy your machine there with a public IP in place of localhost
+ And boom, the VM should run 24/4 unlike your machine which will have to be shut down at some point and it's not public like the cloud with a public IP
+ Hence the backend is deployed and then the Frontend consumes the API via the running endpoints.
+ Then frontend can get its domain name and get deployed in Netlify or somewhere while consuming our API
+
  TODO - Build my own API and have t consumed in Angular or React
 
 
