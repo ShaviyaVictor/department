@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.shavic</groupId>
 	<artifactId>department</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>department</name>
 	<description>Spring Boot Department RESTful API project geared towards learning Spring Boot and its convention...</description>
 	<properties>
