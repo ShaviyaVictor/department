@@ -45,12 +45,17 @@ This Spring Boot Master Class covers a wide range of topics to Master Spring and
 
 [//]: # (Database Migration H2 -> MySQL/Postgres   - @ 03:21:50)
 
-  #### Phase 2
-Creating Different Layers of the Application      
-Implementing Unit Testing (service layer)   - @ 03:27:30     
-Implementing Unit Testing (repository layer)   - @ 03:44:30   
-Implementing Unit Testing (controller layer)   - @ 03:50:30    
-Implementing JUnit and Mockito for all layers during the test implementation.   - @ 03:38:40
+[//]: # (  #### Phase 2)
+
+[//]: # (Creating Different Layers of the Application      )
+
+[//]: # (Implementing Unit Testing &#40;service layer&#41;   - @ 03:27:30     )
+
+[//]: # (Implementing Unit Testing &#40;repository layer&#41;   - @ 03:44:30   )
+
+[//]: # (Implementing Unit Testing &#40;controller layer&#41;   - @ 03:50:30    )
+
+[//]: # (Implementing JUnit and Mockito for all layers during the test implementation.   - @ 03:38:40)
 
   #### Phase 3
 Managing Configuration - Adding Configurations in the properties file   - @ 04:00:00    
