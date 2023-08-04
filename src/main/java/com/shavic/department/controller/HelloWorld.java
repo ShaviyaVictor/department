@@ -717,6 +717,7 @@ public class HelloWorld {
  Run the application and some 2 default endpoints will be added; - " Exposing 1 endpoint(s) beneath base path '/actuator' " - one for Health
  You can enable the others by adding a configuration in the configuration yaml file - & with web 12 more endpoints will be added
  management > endpoints > web/jmx > exposure > include:"*"
+ - JMX seems to be having a different way of implementation, read more on that and implement
 
  TODO - there's more you can do with the Actuator, find the time and go read the Docs and play around with it
 
