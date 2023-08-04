@@ -52,6 +52,12 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-validation</artifactId>
 		</dependency>
+<!--		Supports built in (or custom) endpoints that lets me monitor and manage my application-->
+<!--		helps with checking the application health, info, metrics, sessions, etc.-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
 
 <!--		provides us with the testing kits including JUnit and Mockito-->
 		<dependency>

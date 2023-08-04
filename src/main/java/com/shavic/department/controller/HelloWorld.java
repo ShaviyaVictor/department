@@ -700,7 +700,7 @@ public class HelloWorld {
  Hence the backend is deployed and then the Frontend consumes the API via the running endpoints.
  Then frontend can get its domain name and get deployed in Netlify or somewhere while consuming our API
 
- TODO - Build my own API and have t consumed in Angular or React
+ TODO - Build my own API and have it consumed in Angular or React
 
 
 
@@ -714,8 +714,8 @@ public class HelloWorld {
  Actuator - is for managing and monitoring our application perfomance;
  - health    - beans created     - info     - memnory utilization and more
  Just add the Spring Actuator dependency in the pom file
- Run the application and some 2 default endpoints will be added
- one for Health and the other for Application Info
+ Run the application and some 2 default endpoints will be added;
+    one for Health and the other for Application Info
  You can enable the others by adding a configuration in the configuration yaml file
  management > endpoints > web/jmx > exposure > includes:"*"
 
