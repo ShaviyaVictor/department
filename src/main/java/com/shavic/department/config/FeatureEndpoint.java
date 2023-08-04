@@ -20,6 +20,9 @@ public class FeatureEndpoint {
     @AllArgsConstructor
     @NoArgsConstructor
     private static class Feature {
+        // create the different properties for the Entity class
+        private boolean isEnabled;
+
     }
 
 }
