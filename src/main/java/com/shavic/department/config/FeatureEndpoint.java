@@ -1,5 +1,8 @@
 package com.shavic.department.config;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.boot.actuate.endpoint.annotation.Endpoint;
 import org.springframework.stereotype.Component;
 
@@ -12,5 +15,11 @@ public class FeatureEndpoint {
 
     private final Map<String, Feature> featureMap = new ConcurrentHashMap<>();
 
+
+    @Data
+    @AllArgsConstructor
+    @NoArgsConstructor
+    private static class Feature {
+    }
 
 }
