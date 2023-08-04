@@ -60,9 +60,9 @@ This Spring Boot Master Class covers a wide range of topics to Master Spring and
   #### Phase 3
 Managing Configuration - Adding Configurations in the properties file   - @ 04:00:00    
 Managing Profiles     - @ 04:08:05        
-Deploying to Prod with different Profiles     - @ 04:13:00
-Spring Boot Actuator      
-Custom Actuator Endpoints and managing endpoints.     
+Deploying to Prod with different Profiles     - @ 04:13:00      
+Spring Boot Actuator      - @ 04:17:00      
+Custom Actuator Endpoints and managing endpoints.     - @ 04:23:00      
 What is Spring Data JPA?      
 Creating Entities and mapping to DB     
 All the different annotations and methods from Spring Data      

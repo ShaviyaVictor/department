@@ -714,7 +714,7 @@ public class HelloWorld {
  Actuator - is for managing and monitoring our application perfomance;
  - health    - beans created     - info     - memnory utilization and more
  Just add the Spring Actuator dependency in the pom file
- Run the application and some 2 default endpoints will be added;
+ Run the application and some 2 default endpoints will be added; - " Exposing 1 endpoint(s) beneath base path '/actuator' "
     one for Health and the other for Application Info
  You can enable the others by adding a configuration in the configuration yaml file
  management > endpoints > web/jmx > exposure > includes:"*"
