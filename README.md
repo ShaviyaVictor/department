@@ -63,6 +63,7 @@ Managing Profiles     - @ 04:08:05
 Deploying to Prod with different Profiles     - @ 04:13:00      
 Spring Boot Actuator      - @ 04:17:00      
 Custom Actuator Endpoints and managing endpoints.     - @ 04:23:00      
+Exclude Actuator Endpoint     - @ 04:30:00
 What is Spring Data JPA?      
 Creating Entities and mapping to DB     
 All the different annotations and methods from Spring Data      
