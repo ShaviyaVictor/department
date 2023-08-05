@@ -42,7 +42,7 @@ public class FeatureEndpoint {
     @AllArgsConstructor
     private static class Feature {
 //         create the different properties for the Entity class
-        public boolean isEnabled;
+        private boolean isEnabled;
 
 //        constructor for the Entity property - not needed since the constructor is already here
 //        The Main Class constructor will still grab the boolean even with the danger signs in the Feature value declaration
