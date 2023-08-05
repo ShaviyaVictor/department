@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.boot.actuate.endpoint.annotation.Endpoint;
 import org.springframework.boot.actuate.endpoint.annotation.ReadOperation;
+import org.springframework.boot.actuate.endpoint.annotation.Selector;
 import org.springframework.stereotype.Component;
 
 import java.util.Map;
@@ -24,10 +25,14 @@ public class FeatureEndpoint {
     }
 
 //    ceating the endpoints to return the list of features inside the map and;
-//      then another endpoint to get the values of the features in the map
+//      then another endpoint to get the values of the feature selected from the map Feature Object
     @ReadOperation
     public Map<String, Feature> features() {
         return featureMap;
+    }
+    @ReadOperation
+    public Feature feature(@Selector String featureName) {
+        return featureMap.get(featureName);
     }
 
 
