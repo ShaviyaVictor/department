@@ -38,15 +38,16 @@ public class FeatureEndpoint {
 
     //    Feature Entity being called in the Map instance
     @Data
-    @AllArgsConstructor
     @NoArgsConstructor
+    @AllArgsConstructor
     private static class Feature {
 //         create the different properties for the Entity class
-        private boolean isEnabled;
+        public boolean isEnabled;
 
-//        constructor for the Entity property
-        public Feature(boolean b) {
-        }
+//        constructor for the Entity property - not needed since the constructor is already here
+//        The Main Class constructor will still grab the boolean even with the danger signs in the Feature value declaration
+//        public Feature(boolean b) {
+//        }
     }
 
 }
