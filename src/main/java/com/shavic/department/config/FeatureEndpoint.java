@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.boot.actuate.endpoint.annotation.Endpoint;
+import org.springframework.boot.actuate.endpoint.annotation.ReadOperation;
 import org.springframework.stereotype.Component;
 
 import java.util.Map;
@@ -22,6 +23,14 @@ public class FeatureEndpoint {
         featureMap.put("Authentication", new Feature(true));
     }
 
+//    ceating the endpoints to return the list of features inside the map and;
+//      then another endpoint to get the values of the features in the map
+    @ReadOperation
+    public Map<String, Feature> features() {
+        return featureMap;
+    }
+
+
     //    Feature Entity being called in the Map instance
     @Data
     @AllArgsConstructor
@@ -30,6 +39,7 @@ public class FeatureEndpoint {
 //         create the different properties for the Entity class
         private boolean isEnabled;
 
+//        constructor for the Entity property
         public Feature(boolean b) {
         }
     }
