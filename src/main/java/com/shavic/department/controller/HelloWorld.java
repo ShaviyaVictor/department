@@ -738,7 +738,19 @@ public class HelloWorld {
     > @Endpoint - annotation to to create the feature endpoint as an endpoint for Actuator and pass
         - for this, we need to add an input parameter <id="endpoint-name> inside tha annotation
             this will act as our endpoint name
- -
+ - Create a ConcurrentHashMap that will contain the various features of our application as a list
+ The Map will be a Private Final class
+    Map<Key-Type, Entity-Name> custom-map-name = new ConcurrentHashMap<>();
+ Then below the Map create a public class of our Endpoint Entity Object that will contain our various feature properties
+ OR hover on the Entity-Name decared during Map creation and go to more actions and create an inner class that will be the Entity Object
+    Hover on the Entity name created to add a static declaration to the class
+ Then annotate the class with the necessary Entity annotations; @Data, @AllArgs..., @NoArgs...
+ Now add the different properties for our features; these could include: isEnabled and much more props
+ - Right click above the created Entity and click Generate and select Constructor to create a Constructor;
+    this Constructor will enable us to add the various features of our application to the earlier created Map using the .put() method
+
+
+
 
 
 
