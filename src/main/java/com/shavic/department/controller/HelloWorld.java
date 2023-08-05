@@ -748,6 +748,17 @@ public class HelloWorld {
  Now add the different properties for our features; these could include: isEnabled and much more props
  - Right click above the created Entity and click Generate and select Constructor to create a Constructor;
     this Constructor will enable us to add the various features of our application to the earlier created Map using the .put() method
+ - Then below the Constructor, we create our 1st endpoint method/function that will be calling the unique id we defined in our file Class @Endpoint annotation for the Actuator to connect
+ This method will return the custom Map we earlier created that with the help of our constructor now has Features put to it
+ Then since we are getting and reading Data, we annotate this method with @ReadOperation annotation for the Actuator to grab the data
+    * we also have @WriteOperation && @DeleteOperation annotations
+ - Now we create our other Endpoint that is to read the earlier created endpoint and get the values from the Features read from the Map
+ This endpoint will have a different method name given it is a selector based on the feature
+ Since to get the details of the various features we'll need the get() method call, the get() method shall take in a key to know the format in which to select what and read from what
+ This will thus warrant the main method call taking in an input parameter of the key type defined during Map creation and give it a name that will be called in the get() method
+ Then annotate this method again with the @ReadOperation annotation
+ And then inside the main method, add the @Selector annotation to indicate that the following Type and Name is our selector for the Features available
+
 
 
 
