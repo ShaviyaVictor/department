@@ -730,7 +730,15 @@ public class HelloWorld {
 
                     Custom Actuator Endpoint    - @ 04:23:00
 
- Start here...
+ The Actuator might not show all analytics that you would want, and hence, Spring Boot gives us the opportunity to create our own endpoints and expose them in Actuator
+ - Create a new package for the new custome endpoint, we can create a <config> directory since this is some sought of configuration
+ Inside the package create a Class <FeatureEndpoint> that will act as our management endpoint for displaying the features available in our application
+ Annotate the Class with:
+    > @Component - annotation to enable Spring recognize the class as a Spring Component
+    > @Endpoint - annotation to to create the feature endpoint as an endpoint for Actuator and pass
+        - for this, we need to add an input parameter <id="endpoint-name> inside tha annotation
+            this will act as our endpoint name
+ -
 
 
 
