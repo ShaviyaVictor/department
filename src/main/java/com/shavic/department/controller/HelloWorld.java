@@ -759,6 +759,7 @@ public class HelloWorld {
  Then annotate this method again with the @ReadOperation annotation
  And then inside the main method, add the @Selector annotation to indicate that the following Type and Name is our selector for the Features available
 
+ And BOOM! Run the application and an additional endpoint should be added! - Exposing 14 endpoint(s) beneath base path '/actuator'
 
 
 
