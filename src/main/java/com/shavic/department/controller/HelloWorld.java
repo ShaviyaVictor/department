@@ -766,5 +766,16 @@ public class HelloWorld {
 
 
 
+
+
+                        Excluding Actuator Endpoint    - @ 04:30:00
+
+ All you gotta do is add the exlude keyword on the endpoints management tree in the yaml file
+ Then in double quotes declare the STring names of the endpoints you want excluded.
+
+
+
+
+
  *
  **/
