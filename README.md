@@ -139,7 +139,7 @@ For testing the endpoints of the application you need:
 - Build the project and run all tests by running the `mvn clean package` command.
 - Then spin up the application by clicking the `run` button along the file name tab or the one in DepartmentApplication file right beside the numbers
 - Ensure the db_credentials are added in the yaml file within the resources directory for data transfer
-- - Or check application.properties file and get the H2 connections and spin up the in-memory db
+  - Or check application.properties file and get the H2 connections and spin up the in-memory db
 
 ### Test
 - You can run only tests by running the `mvn test` command.
@@ -155,8 +155,6 @@ This project is licensed under the [Apache License 2.0](https://github.com/Shavi
 - [@daily_code_buffer](https://www.youtube.com/watch?v=zvR-Oif_nxg&t=7665s)
 - [@shaviyavictor](https://www.youtube.com/watch?v=xz_7l0qyVrw)
 
-
-* **Victor Shaviya**
     - [BioLink](https://bio.link/shaviya)
     - [LinkedIn](https://www.linkedin.com/in/ShaviyaVictor/)
     - [Instagram](https://www.instagram.com/shaviyavictor/)
