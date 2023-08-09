@@ -21,9 +21,11 @@ management:
 #the 3 hyphens define the start of a new document
 ---
 
-#  Custom referenced value
+#  Custom referenced value - for both documentation in my HelloWord files
 welcome:
-  message: Hello World, welcome to CodePrac with Shaviya!
+  message: Hello World, welcome to CodePrac with Shaviya! Phase1 of Spring Boot
+brief:
+  introduction: This now is phase2 of Spring Boot learning where we dive deeper into more cool stuff
 
 #  database connection information
 spring:

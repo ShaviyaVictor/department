@@ -184,7 +184,7 @@ public class HelloWorld {
     @Value("${welcome.message}")
     private String welcomeMessage;
 //    @RequestMapping(value = "/", method = RequestMethod.GET)
-    @GetMapping("/")
+    @GetMapping("/phase1")
     public String helloWorld() {
         return welcomeMessage;
     }
