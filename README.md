@@ -77,19 +77,31 @@ Demo project for Spring Boot Department System Backend.
 [//]: # (Check the next School System project for Phase4 continuation)
 
 
-  #### Phase 4 
-What is Spring Data JPA?      - @ 04:33:00
-Creating Entities and mapping to DB     
-All the different annotations and methods from Spring Data      
-Transaction Management in Spring Data     
-Entity Relationships in detail with all variants.     
-Paging and Sorting data in JPA.       
-Spring Security     
-Implementing Spring Security with Spring Boot     
-What is OAuth 2.0 and OpenID Connect?     
-Implementing OAuth 2.0 with Spring Security and Spring Boot     
-Implementing Custom Auth Server, Resource Server, and Clients.      
-Implementing Complete registration and Login flow with Email validation     
+[//]: # (  #### Phase 4 )
+
+[//]: # (What is Spring Data JPA?      - @ 04:33:00  )
+
+[//]: # (Creating Entities and mapping to DB     )
+
+[//]: # (All the different annotations and methods from Spring Data      )
+
+[//]: # (Transaction Management in Spring Data     )
+
+[//]: # (Entity Relationships in detail with all variants.     )
+
+[//]: # (Paging and Sorting data in JPA.       )
+
+[//]: # (Spring Security     )
+
+[//]: # (Implementing Spring Security with Spring Boot     )
+
+[//]: # (What is OAuth 2.0 and OpenID Connect?     )
+
+[//]: # (Implementing OAuth 2.0 with Spring Security and Spring Boot     )
+
+[//]: # (Implementing Custom Auth Server, Resource Server, and Clients.      )
+
+[//]: # (Implementing Complete registration and Login flow with Email validation     )
 
 <img src="https://github.com/ShaviyaVictor/department/blob/master/src/main/resources/images/2023-07-28%2020-41-54_postman_collection_of_the_endpoints.png?raw=true" width="600" height="350" alt="">             
 
