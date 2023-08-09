@@ -10,11 +10,13 @@ server:
 #    use-legacy-processing: true
 
 #enabling other actuator endpoints
+#you can also exclude
 management:
   endpoints:
     web:
       exposure:
         include: "*"
+        exclude: "beans, caches, configprops, env, heapdump, threaddump, scheduledtasks"
 
 #the 3 hyphens define the start of a new document
 ---
