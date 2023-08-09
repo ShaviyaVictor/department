@@ -1,5 +1,5 @@
 # Department API
-Demo project for Spring Boot Department System Backend.
+Demo project for a Spring Boot project building a Department Backend System.
 
 [//]: # (This Spring Boot Master Class covers a wide range of topics to Master Spring and Spring Boot Framework and accelerate your growth in your career.)
 
@@ -129,7 +129,7 @@ For testing the endpoints of the application you need:
 
 [//]: # (### Latest releases)
 
-[//]: # Check HelloWorld file in the controller directory for Documentation on the project
+[//]: # ([//]: # Check HelloWorld file in the controller directory for Documentation on the project)
 [//]: # (#### 1.3.0)
 
 [//]: # (- Added Profile "UPDATEMSISDNCOUNTERProfile" to digicel-lib-customer-profile.)
