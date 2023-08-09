@@ -57,13 +57,25 @@ This Spring Boot Master Class covers a wide range of topics to Master Spring and
 
 [//]: # (Implementing JUnit and Mockito for all layers during the test implementation.   - @ 03:38:40)
 
-  #### Phase 3
-Managing Configuration - Adding Configurations in the properties file   - @ 04:00:00    
-Managing Profiles     - @ 04:08:05        
-Deploying to Prod with different Profiles     - @ 04:13:00      
-Spring Boot Actuator      - @ 04:17:00      
-Custom Actuator Endpoints and managing endpoints.     - @ 04:23:00      
-Exclude Actuator Endpoint     - @ 04:30:00
+[//]: # (  #### Phase 3)
+
+[//]: # (Managing Configuration - Adding Configurations in the properties file   - @ 04:00:00    )
+
+[//]: # (Managing Profiles     - @ 04:08:05        )
+
+[//]: # (Deploying to Prod with different Profiles     - @ 04:13:00      )
+
+[//]: # (Spring Boot Actuator      - @ 04:17:00      )
+
+[//]: # (Custom Actuator Endpoints and managing endpoints.     - @ 04:23:00      )
+
+[//]: # (Exclude Actuator Endpoint     - @ 04:30:00  )
+
+
+[//]: # (The above topics are some major backborns of Spring Boot! Hooray **#08082023**)
+
+
+  #### Phase 4
 What is Spring Data JPA?      
 Creating Entities and mapping to DB     
 All the different annotations and methods from Spring Data      
