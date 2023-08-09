@@ -1,7 +1,7 @@
 # Department API
 Demo project for Spring Boot Department System Backend.
 
-This Spring Boot Master Class covers a wide range of topics to Master Spring and Spring Boot Framework and accelerate your growth in your career.
+[//]: # (This Spring Boot Master Class covers a wide range of topics to Master Spring and Spring Boot Framework and accelerate your growth in your career.)
 
 
 [//]: # (We will understand all below topics in detail in this Spring Boot complete Course [Master Class/Boot Camp])
